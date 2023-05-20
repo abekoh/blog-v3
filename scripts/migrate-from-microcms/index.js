@@ -1,29 +1,29 @@
-import * as dotenv from 'dotenv';
-import {createClient} from 'microcms-js-sdk';
-import * as fs from 'fs';
+import * as dotenv from "dotenv";
+import { createClient } from "microcms-js-sdk";
+import * as fs from "fs";
 
 dotenv.config();
 
 const client = createClient({
-    serviceDomain: 'abekoh-tech-blog',
-    apiKey: process.env.MICROCMS_API_KEY,
+  serviceDomain: "abekoh-tech-blog",
+  apiKey: process.env.MICROCMS_API_KEY,
 });
 
 const posts = await client.get({
-    endpoint: 'posts',
-    queries: {
-        limit: 100,
-    }
-})
+  endpoint: "posts",
+  queries: {
+    limit: 100,
+  },
+});
 posts.contents.forEach((post) => {
-    const body = post.isHtml ? post.htmlBody : post.body;
-    const content = `---
+  const body = post.isHtml ? post.htmlBody : post.body;
+  const content = `---
 title: '${post.title}'
 summary: '${post.summary} ?? '''
-categories: [${post.categories.map(c => `'${c.name}'`)}]
-tags: [${post.tags.map(p => `'${p.name}'`)}]
+categories: [${post.categories.map((c) => `'${c.name}'`)}]
+tags: [${post.tags.map((p) => `'${p.name}'`)}]
 publishedAt: ${post.publishedAt}
-modifiedAt: ${post.modifiedAt ?? ''}
+modifiedAt: ${post.modifiedAt ?? ""}
 draft: ${post.isDraft}
 isHtml: ${post.isHtml}
 microCMSId: '${post.id}'
@@ -33,5 +33,5 @@ microCMSRevisedAt: ${post.revisedAt}
 ---
 ${body}
     `;
-    fs.writeFileSync(`content/${post.id}.md`, content);
+  fs.writeFileSync(`content/${post.id}.md`, content);
 });
