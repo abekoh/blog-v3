@@ -17,20 +17,19 @@ const posts = await client.get({
 })
 posts.contents.forEach((post) => {
     const body = post.isHtml ? post.htmlBody : post.body;
-    const content = `<!-- migrate from abekoh-tech-blog.microcms.io  -->
----
+    const content = `---
 title: '${post.title}'
-summary: '${post.summary}'
-isHtml: ${post.isHtml}
+summary: '${post.summary} ?? '''
 categories: [${post.categories.map(c => `'${c.name}'`)}]
 tags: [${post.tags.map(p => `'${p.name}'`)}]
 publishedAt: ${post.publishedAt}
-modifiedAt: ${post.modifiedAt}
+modifiedAt: ${post.modifiedAt ?? ''}
+draft: ${post.isDraft}
+isHtml: ${post.isHtml}
 microCMSId: '${post.id}'
 microCMSCreatedAt: ${post.createdAt}
 microCMSUpdatedAt: ${post.updatedAt}
 microCMSRevisedAt: ${post.revisedAt}
-draft: ${post.isDraft}
 ---
 ${body}
     `;
