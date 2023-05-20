@@ -15,6 +15,9 @@ devDependencies:
   eslint:
     specifier: ^8.41.0
     version: 8.41.0
+  eslint-config-prettier:
+    specifier: ^8.8.0
+    version: 8.8.0(eslint@8.41.0)
   eslint-plugin-astro:
     specifier: ^0.27.0
     version: 0.27.0(eslint@8.41.0)
@@ -2056,6 +2059,18 @@ packages:
       }
     engines: { node: ">=12" }
     dev: false
+
+  /eslint-config-prettier@8.8.0(eslint@8.41.0):
+    resolution:
+      {
+        integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==,
+      }
+    hasBin: true
+    peerDependencies:
+      eslint: ">=7.0.0"
+    dependencies:
+      eslint: 8.41.0
+    dev: true
 
   /eslint-plugin-astro@0.27.0(eslint@8.41.0):
     resolution:
