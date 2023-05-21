@@ -21,7 +21,7 @@ posts.contents.forEach((post) => {
   const body = post.isHtml ? post.htmlBody : post.body;
   const content = `---
 title: '${post.title}'
-summary: '${post.summary} ?? '''
+summary: '${post.summary ?? ""}
 categories: [${post.categories.map((c) => `'${c.name}'`)}]
 tags: [${post.tags.map((p) => `'${p.id}'`)}]
 publishedAt: ${post.publishedAt}

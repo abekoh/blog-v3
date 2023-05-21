@@ -57,6 +57,9 @@ const { postPage } = Astro.props;
                         <Tag name={tagMap.get(tagId).name ?? ''} href={`/tags/${tagId}`} />
                       ))}
                     </div>
+                    <div class="prose max-w-none test-gray-500">
+                      {post.data.summary}
+                    </div>
                   </div>
                 </div>
               </div>
