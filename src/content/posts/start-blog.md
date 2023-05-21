@@ -1,6 +1,6 @@
 ---
 title: 'ブログはじめました'
-summary: 'undefined ?? '''
+summary: ''
 categories: ['diary']
 tags: ['diary']
 publishedAt: 2019-12-10T15:48:56.000Z

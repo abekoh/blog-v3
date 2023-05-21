@@ -1,6 +1,6 @@
 ---
 title: 'ここ半年で読んだ技術書レビュー 2021/02'
-summary: 'DDD,オブジェクト指向,アジャイル関連の本を中心にいろいろ読んでみた感想です。 ?? '''
+summary: 'DDD,オブジェクト指向,アジャイル関連の本を中心にいろいろ読んでみた感想です。'
 categories: ['tech']
 tags: ['oop','agile','reactjs','ddd','reading-book']
 publishedAt: 2021-02-21T05:30:00.000Z

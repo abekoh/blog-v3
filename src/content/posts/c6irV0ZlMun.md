@@ -2,7 +2,7 @@
 title: '[Zenn] ZIP圧縮したファイルの更新日時にタイムゾーンが考慮されない問題について調べてみた'
 summary: '[ZIP圧縮したファイルの更新日時にタイムゾーンが考慮されない問題について調べてみた - Zenn](https://zenn.dev/abekoh/articles/3222ffca0f9ca5)
 
-久しぶりにZennに投稿しました。割とちゃんと調査して書きました。 ?? '''
+久しぶりにZennに投稿しました。割とちゃんと調査して書きました。'
 categories: ['tech']
 tags: ['zenn','golang']
 publishedAt: 2022-10-15T16:39:00.000Z

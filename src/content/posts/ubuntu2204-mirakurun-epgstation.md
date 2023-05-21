@@ -1,7 +1,7 @@
 ---
 title: 'Ubuntu 22.04, Mirakurun, EPGStationでテレビ録画サーバーを構築する'
 summary: 'もともと Ubuntu 20.04 で構築してたサーバーを、適当にアプデしてあれこれしたら壊れてしまったので、何度目かわからない構築作業やってみた。
-特に詰まりそうなところか、覚え書き書いておく。 ?? '''
+特に詰まりそうなところか、覚え書き書いておく。'
 categories: ['tech']
 tags: ['ubuntu','linux','tv-recording']
 publishedAt: 2022-10-01T11:55:00.000Z

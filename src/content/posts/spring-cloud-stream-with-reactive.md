@@ -1,6 +1,6 @@
 ---
 title: '[Zenn] Spring Cloud Stream, Reactorを使ってノンブロッキングなストリーム処理を実装する'
-summary: 'Zennに「Spring Cloud Stream, Reactorを使ってノンブロッキングなストリーム処理を実装する」という記事を投稿しました。 ?? '''
+summary: 'Zennに「Spring Cloud Stream, Reactorを使ってノンブロッキングなストリーム処理を実装する」という記事を投稿しました。'
 categories: ['tech']
 tags: ['java','spring','message-queue','reactor','zenn']
 publishedAt: 2021-10-13T11:45:00.000Z

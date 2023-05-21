@@ -1,6 +1,6 @@
 ---
 title: 'Hugo, Github Pages, CircleCIつかってブログ構築'
-summary: 'undefined ?? '''
+summary: ''
 categories: ['tech']
 tags: ['hugo','circle-ci','github-pages','google-domains']
 publishedAt: 2019-12-14T04:40:05.000Z

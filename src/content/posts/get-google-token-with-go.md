@@ -1,6 +1,6 @@
 ---
 title: 'Google API の OAuth 2.0トークン取得するツールつくった'
-summary: 'undefined ?? '''
+summary: ''
 categories: ['tech']
 tags: ['golang','google-photos']
 publishedAt: 2019-12-21T04:52:48.000Z

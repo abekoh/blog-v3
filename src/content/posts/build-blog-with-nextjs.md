@@ -1,6 +1,6 @@
 ---
 title: 'Next.js+Vercel+microCMSでブログをリニューアルしました'
-summary: '流行りの構成でブログリニューアルしてみました。 ?? '''
+summary: '流行りの構成でブログリニューアルしてみました。'
 categories: ['tech']
 tags: ['nextjs','reactjs','vercel','javascript','microcms','typescript']
 publishedAt: 2021-04-24T08:10:00.000Z

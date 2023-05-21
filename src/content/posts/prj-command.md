@@ -1,6 +1,6 @@
 ---
 title: 'fish,tmux,neovim,ghq,pecoで開発スペース構築を快適にする'
-summary: 'undefined ?? '''
+summary: ''
 categories: ['tech']
 tags: ['vim','neovim','fish','tmux','shell']
 publishedAt: 2020-03-13T16:43:00.000Z

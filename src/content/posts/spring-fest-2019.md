@@ -1,6 +1,6 @@
 ---
 title: 'Spring Fest 2019 参加レポート'
-summary: 'undefined ?? '''
+summary: ''
 categories: ['tech']
 tags: ['spring','java','seminar']
 publishedAt: 2019-12-29T17:05:02.000Z

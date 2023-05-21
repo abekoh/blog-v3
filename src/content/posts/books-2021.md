@@ -1,6 +1,6 @@
 ---
 title: '今年読んだ本まとめ2021'
-summary: '今年読んだ本のひとことまとめ、備忘録的なもの。 ?? '''
+summary: '今年読んだ本のひとことまとめ、備忘録的なもの。'
 categories: ['tech']
 tags: ['reading-book','agile','oop','ddd','golang','html','css']
 publishedAt: 2021-12-26T13:57:00.000Z
