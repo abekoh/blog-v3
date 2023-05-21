@@ -1,6 +1,10 @@
 ---
 import { CollectionEntry } from "astro:content";
 import Tag from "@/components/Tag.astro";
+import { getCollection } from "astro:content";
+
+const tags = await getCollection("tags");
+const tagMap = new Map(tags.map((tag) => [tag.data.id, tag.data]));
 
 // modify https://github.com/withastro/astro/blob/0616ef255145bf173386b94474dede376e1f2037/packages/astro/src/%40types/astro.ts#L1534
 export interface Page<T = any> {
@@ -49,8 +53,8 @@ const { postPage } = Astro.props;
                       </a>
                     </h2>
                     <div class="flex flex-wrap">
-                      {post.data.tags.map((tag) => (
-                        <Tag name={tag} href={`/tags/${tag}`} />
+                      {post.data.tags.map((tagId) => (
+                        <Tag name={tagMap[tagId]} href={`/tags/${tagId}`} />
                       ))}
                     </div>
                   </div>

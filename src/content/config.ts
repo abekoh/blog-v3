@@ -11,6 +11,15 @@ const posts = defineCollection({
     draft: z.boolean(),
   }),
 });
+
+const tags = defineCollection({
+  type: "data",
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+  }),
+});
 export const collections = {
   posts: posts,
+  tags: tags,
 };
