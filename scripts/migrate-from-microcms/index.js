@@ -44,11 +44,12 @@ const tags = await client.get({
     limit: 100,
   },
 });
+fs.mkdirSync("content/tags", { recursive: true });
 
-const tagContent = JSON.stringify(
-  tags.contents.map((tag) => ({
+tags.contents.forEach((tag) => {
+  const content = {
     id: tag.id,
     name: tag.name,
-  }))
-);
-fs.writeFileSync(`content/tags.json`, tagContent);
+  }
+  fs.writeFileSync(`content/tags/${tag.id}.json`, JSON.stringify(content));
+});

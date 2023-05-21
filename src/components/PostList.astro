@@ -54,7 +54,7 @@ const { postPage } = Astro.props;
                     </h2>
                     <div class="flex flex-wrap">
                       {post.data.tags.map((tagId) => (
-                        <Tag name={tagMap[tagId]} href={`/tags/${tagId}`} />
+                        <Tag name={tagMap.get(tagId).name ?? ''} href={`/tags/${tagId}`} />
                       ))}
                     </div>
                   </div>
