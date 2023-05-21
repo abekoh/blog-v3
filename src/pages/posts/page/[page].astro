@@ -1,8 +1,8 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
-import BaseLayout from "src/layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { Page } from "astro";
-import PostList from "src/components/PostList.astro";
+import PostList from "@/components/PostList.astro";
 import { postsDefaultSortFunc } from "../../../content/utils";
 
 export async function getStaticPaths({ paginate }) {

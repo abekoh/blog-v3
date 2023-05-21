@@ -1,8 +1,8 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
-import BaseLayout from "src/layouts/BaseLayout.astro";
-import PostList from "src/components/PostList.astro";
-import { postsDefaultSortFunc } from "src/content/utils";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PostList from "@/components/PostList.astro";
+import { postsDefaultSortFunc } from "@/content/utils";
 
 const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
 // .slice(0, 10);
