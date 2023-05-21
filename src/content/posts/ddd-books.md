@@ -2,7 +2,7 @@
 title: '「ドメイン駆動設計」関連書籍の紹介・オススメの読み順'
 summary: 'DDD関連の本を読み漁って、それぞれの感想一言メモと、どの順で読んだらいいか考えてみたやつを紹介します。 ?? '''
 categories: ['tech']
-tags: ['ドメイン駆動設計']
+tags: ['ddd']
 publishedAt: 2020-10-17T17:58:00.000Z
 modifiedAt: 2021-05-15T13:00:00.000Z
 draft: false

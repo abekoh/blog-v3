@@ -2,7 +2,7 @@
 title: '[Zenn] 業務アプリケーション開発にGoを採用する理由'
 summary: 'MICIN Advent Calendar 2022に参加しまして、「業務アプリケーション開発にGoを採用する理由」という記事をZennに投稿しました。 ?? '''
 categories: ['tech']
-tags: ['Go']
+tags: ['golang']
 publishedAt: 2022-12-30T07:25:00.000Z
 modifiedAt: 
 draft: false

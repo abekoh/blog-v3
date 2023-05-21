@@ -4,7 +4,7 @@ summary: '[ZIP圧縮したファイルの更新日時にタイムゾーンが考
 
 久しぶりにZennに投稿しました。割とちゃんと調査して書きました。 ?? '''
 categories: ['tech']
-tags: ['Zenn','Go']
+tags: ['zenn','golang']
 publishedAt: 2022-10-15T16:39:00.000Z
 modifiedAt: 
 draft: false

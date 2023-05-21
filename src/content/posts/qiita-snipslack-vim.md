@@ -2,7 +2,7 @@
 title: '[Qiita] Slackでスニペットを共有するためのVimプラグインつくってみた'
 summary: 'undefined ?? '''
 categories: ['tech']
-tags: ['Vim','Neovim','Slack','Qiita']
+tags: ['vim','neovim','slack','qiita']
 publishedAt: 2019-12-11T14:52:09.000Z
 modifiedAt: 
 draft: false

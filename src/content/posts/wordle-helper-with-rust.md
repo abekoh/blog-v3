@@ -6,7 +6,7 @@ summary: 'Wordle、流行ってますね。
 
 …というのは建前で、Rustの勉強がてら何か作ってみたかったというのが発端です。 ?? '''
 categories: ['tech']
-tags: ['Rust']
+tags: ['rust']
 publishedAt: 2022-02-04T16:06:00.000Z
 modifiedAt: 
 draft: false

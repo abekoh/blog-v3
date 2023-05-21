@@ -2,7 +2,7 @@
 title: '『開眼! JavaScript』読んだ'
 summary: 'undefined ?? '''
 categories: ['tech']
-tags: ['JavaScript','読書']
+tags: ['javascript','reading-book']
 publishedAt: 2020-02-23T09:20:11.000Z
 modifiedAt: 
 draft: false

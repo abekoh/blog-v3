@@ -2,7 +2,7 @@
 title: 'GitHub Actions + PlantUMLでドメインモデルの管理を楽にする'
 summary: 'undefined ?? '''
 categories: ['tech']
-tags: ['GitHub Actions','PlantUML']
+tags: ['github-actions','plantuml']
 publishedAt: 2021-01-11T13:30:00.000Z
 modifiedAt: 
 draft: false

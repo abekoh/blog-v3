@@ -2,7 +2,7 @@
 title: 'ニコニコ実況の過去ログをアニメの放送情報から検索して見れるサービスをつくった'
 summary: 'タイトルの通りのものを開発して公開しました。 ?? '''
 categories: ['tech']
-tags: ['Go','Next.js','React.js','AWS']
+tags: ['golang','nextjs','reactjs','aws']
 publishedAt: 2022-03-13T05:51:00.000Z
 modifiedAt: 2022-07-24T06:27:00.000Z
 draft: false

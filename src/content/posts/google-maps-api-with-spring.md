@@ -2,7 +2,7 @@
 title: 'Google Maps APIをSpringで使ってみる'
 summary: 'undefined ?? '''
 categories: ['tech']
-tags: ['Java','Kotlin','Spring','Google Maps']
+tags: ['java','kotlin','spring','google-maps']
 publishedAt: 2020-04-05T14:43:00.000Z
 modifiedAt: 
 draft: false

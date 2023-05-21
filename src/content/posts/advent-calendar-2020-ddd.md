@@ -2,7 +2,7 @@
 title: '[Qiita] トランザクションスクリプトなシステムをもとに、Cleanなシステムを構築する'
 summary: 'ドメイン駆動設計 Advent Calendar 2020 に参加しました。 ?? '''
 categories: ['tech']
-tags: ['Clean Architecture','Qiita']
+tags: ['clean-architecture','qiita']
 publishedAt: 2020-12-21T11:39:03.000Z
 modifiedAt: 
 draft: false

@@ -4,7 +4,7 @@ summary: 'HotSpot JVMを用いた一般的なJavaは、起動直後はインタ�
 サービスインからすぐにパフォーマンスを出すためには、ウォームアップ(暖機運転)が必須です。
 本記事ではSpring Boot+Kubernetesという環境という前提で、その対応方法を紹介します。 ?? '''
 categories: ['tech']
-tags: ['Java','Spring','Kubernetes']
+tags: ['java','spring','kubernetes']
 publishedAt: 2021-05-04T02:00:00.150Z
 modifiedAt: 
 draft: false

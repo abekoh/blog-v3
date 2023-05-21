@@ -2,7 +2,7 @@
 title: '2022年上半期振り返り'
 summary: 'やったこと振り返りなどメモ程度に。もう7月後半だけど。 ?? '''
 categories: []
-tags: ['Rust','Go','読書','OSS','LeetCode','English']
+tags: ['rust','golang','reading-book','oss','leetcode','english']
 publishedAt: 2022-07-24T07:22:00.000Z
 modifiedAt: 
 draft: false

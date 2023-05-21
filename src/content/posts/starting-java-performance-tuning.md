@@ -3,7 +3,7 @@ title: 'Javaでパフォーマンスを意識した開発を行っていく上�
 summary: '仕事でパフォーマンス要件の厳しいJavaアプリケーションを開発することになったので、
 いくつかの書籍や実体験をもとに肝に銘じておくべきことをまとめてみます。 ?? '''
 categories: ['tech']
-tags: ['Java','JVM','パフォーマンスチューニング']
+tags: ['java','jvm','performance-tuning']
 publishedAt: 2021-05-02T15:24:00.000Z
 modifiedAt: 
 draft: false

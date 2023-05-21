@@ -2,7 +2,7 @@
 title: '今年読んだ本まとめ2021'
 summary: '今年読んだ本のひとことまとめ、備忘録的なもの。 ?? '''
 categories: ['tech']
-tags: ['読書','アジャイル開発','オブジェクト指向','ドメイン駆動設計','Go','HTML','CSS']
+tags: ['reading-book','agile','oop','ddd','golang','html','css']
 publishedAt: 2021-12-26T13:57:00.000Z
 modifiedAt: 
 draft: false

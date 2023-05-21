@@ -2,7 +2,7 @@
 title: 'あつ森のアイテムカタログサービスつくった、けれど公開はやめた話'
 summary: '自粛期間にNuxt.js,Firebaseなど使ってあつ森のアイテムカタログサービスつくってみた ?? '''
 categories: ['tech']
-tags: ['Firebase','Nuxt.js','Vue.js','JavaScript','個人開発']
+tags: ['firebase','nuxtjs','vuejs','javascript','personal-development']
 publishedAt: 2020-06-28T06:08:00.000Z
 modifiedAt: 
 draft: false

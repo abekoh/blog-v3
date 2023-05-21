@@ -2,7 +2,7 @@
 title: 'Cloud Storage経由でCloud Buildを動かしてデプロイする'
 summary: 'Cloud Storage上にアップロードしたファイルをもとにCloud Buildを動かしてデプロイするやり方について解説しました。 ?? '''
 categories: ['tech']
-tags: ['GCP','Cloud Functions','Cloud Build','Cloud Storage','Node.js','JavaScript']
+tags: ['gcp','cloud-functions','cloud-build','cloud-strage','nodejs','javascript']
 publishedAt: 2020-03-08T14:30:00.000Z
 modifiedAt: 
 draft: false

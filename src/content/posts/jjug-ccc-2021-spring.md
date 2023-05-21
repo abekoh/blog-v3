@@ -3,7 +3,7 @@ title: 'JJUG CCC 2021 Spring 参加メモ'
 summary: '2021/5/23に開催されたJJUG CCC 2021 Springで聞いたセッションのメモです。
 あくまで個人認識レベルのメモなので、誤りなどあるかもです。 ?? '''
 categories: ['tech']
-tags: ['Java','JVM']
+tags: ['java','jvm']
 publishedAt: 2021-05-26T14:35:00.000Z
 modifiedAt: 
 draft: false
