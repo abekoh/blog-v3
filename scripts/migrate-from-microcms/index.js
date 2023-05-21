@@ -15,13 +15,15 @@ const posts = await client.get({
     limit: 100,
   },
 });
+
+fs.mkdirSync("content/posts", { recursive: true });
 posts.contents.forEach((post) => {
   const body = post.isHtml ? post.htmlBody : post.body;
   const content = `---
 title: '${post.title}'
 summary: '${post.summary} ?? '''
 categories: [${post.categories.map((c) => `'${c.name}'`)}]
-tags: [${post.tags.map((p) => `'${p.name}'`)}]
+tags: [${post.tags.map((p) => `'${p.id}'`)}]
 publishedAt: ${post.publishedAt}
 modifiedAt: ${post.modifiedAt ?? ""}
 draft: ${post.isDraft}
@@ -33,5 +35,20 @@ microCMSRevisedAt: ${post.revisedAt}
 ---
 ${body}
     `;
-  fs.writeFileSync(`content/${post.id}.md`, content);
+  fs.writeFileSync(`content/posts/${post.id}.md`, content);
 });
+
+const tags = await client.get({
+  endpoint: "tags",
+  queries: {
+    limit: 100,
+  },
+});
+
+const tagContent = JSON.stringify(
+  tags.contents.map((tag) => ({
+    id: tag.id,
+    name: tag.name,
+  }))
+);
+fs.writeFileSync(`content/tags.json`, tagContent);
