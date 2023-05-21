@@ -24,12 +24,34 @@ interface Props {
 const { postPage } = Astro.props;
 ---
 
-<ul>
-  {
-    postPage.data.map((post) => (
-      <li>
-        <a href={`/posts/${post.slug}`}>{post.data.title}</a>
-      </li>
-    ))
-  }
-</ul>
+<section>
+  <ul class="divide-y divide-gray-200">
+    {
+      postPage.data.map((post) => (
+        <li class="py-12">
+          <article>
+            <div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+              <dl>
+                <dt class="sr-only">Published on</dt>
+                <dd class="text-base font-medium leading-6 text-gray-500">
+                  <time datetime={post.data.publishedAt}>
+                    {post.data.publishedAt.toISOString()}
+                  </time>
+                </dd>
+              </dl>
+              <div class="space-y-5 xl:col-span-3">
+                <div class="space-y-6">
+                  <div>
+                    <h2 class="text-2xl font-bold leading-8 tracking-tight">
+                      <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</section>

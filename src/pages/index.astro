@@ -10,10 +10,11 @@ const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
 ---
 
 <BaseLayout title="home">
-  <h1 class="font-bold">Home</h1>
-  <Pagination
-    postPage={{
-      data: allPosts,
-    }}
-  />
+  <div class="container mx-auto flex flex-wrap py-6">
+    <Pagination
+      postPage={{
+        data: allPosts,
+      }}
+    />
+  </div>
 </BaseLayout>
