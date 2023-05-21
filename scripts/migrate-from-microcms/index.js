@@ -50,6 +50,6 @@ tags.contents.forEach((tag) => {
   const content = {
     id: tag.id,
     name: tag.name,
-  }
+  };
   fs.writeFileSync(`content/tags/${tag.id}.json`, JSON.stringify(content));
 });
