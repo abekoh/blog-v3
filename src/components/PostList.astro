@@ -1,5 +1,6 @@
 ---
 import { CollectionEntry } from "astro:content";
+import Tag from "@/components/Tag.astro";
 
 // modify https://github.com/withastro/astro/blob/0616ef255145bf173386b94474dede376e1f2037/packages/astro/src/%40types/astro.ts#L1534
 export interface Page<T = any> {
@@ -43,8 +44,15 @@ const { postPage } = Astro.props;
                 <div class="space-y-6">
                   <div>
                     <h2 class="text-2xl font-bold leading-8 tracking-tight">
-                      <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                      <a href={`/posts/${post.slug}`} class="text-gray-900">
+                        {post.data.title}
+                      </a>
                     </h2>
+                    <div class="flex flex-wrap">
+                      {post.data.tags.map((tag) => (
+                        <Tag name={tag} href={`/tags/${tag}`} />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
