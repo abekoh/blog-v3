@@ -1,0 +1,35 @@
+---
+import { CollectionEntry } from "astro:content";
+
+// modify https://github.com/withastro/astro/blob/0616ef255145bf173386b94474dede376e1f2037/packages/astro/src/%40types/astro.ts#L1534
+export interface Page<T = any> {
+  data: T[];
+  start: number | undefined;
+  end: number | undefined;
+  total: number | undefined;
+  currentPage: number | undefined;
+  size: number | undefined;
+  lastPage: number | undefined;
+  url: {
+    current: string | undefined;
+    prev: string | undefined;
+    next: string | undefined;
+  };
+}
+
+interface Props {
+  postPage: Page<CollectionEntry<"posts">>;
+}
+
+const { postPage } = Astro.props;
+---
+
+<ul>
+  {
+    postPage.data.map((post) => (
+      <li>
+        <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+      </li>
+    ))
+  }
+</ul>
