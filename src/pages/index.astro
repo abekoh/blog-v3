@@ -1,8 +1,7 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
 import BaseLayout from "src/layouts/BaseLayout.astro";
-import { Page } from "astro";
-import Pagination from "src/components/Pagination.astro";
+import PostList from "src/components/PostList.astro";
 import { postsDefaultSortFunc } from "src/content/utils";
 
 const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
@@ -11,7 +10,7 @@ const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
 
 <BaseLayout title="home">
   <div class="container mx-auto flex flex-wrap py-6">
-    <Pagination
+    <PostList
       postPage={{
         data: allPosts,
       }}

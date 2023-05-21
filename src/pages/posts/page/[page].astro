@@ -2,7 +2,7 @@
 import { getCollection, CollectionEntry } from "astro:content";
 import BaseLayout from "src/layouts/BaseLayout.astro";
 import { Page } from "astro";
-import Pagination from "../../../components/Pagination.astro";
+import PostList from "src/components/PostList.astro";
 import { postsDefaultSortFunc } from "../../../content/utils";
 
 export async function getStaticPaths({ paginate }) {
@@ -19,5 +19,5 @@ const { page } = Astro.props;
 
 <BaseLayout title="page">
   <h1>Page {page.currentPage}</h1>
-  <Pagination postPage={page} />
+  <PostList postPage={page} />
 </BaseLayout>
