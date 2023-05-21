@@ -6,6 +6,7 @@ import Pagination from "src/components/Pagination.astro";
 import { postsDefaultSortFunc } from "src/content/utils";
 
 const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
+// .slice(0, 10);
 ---
 
 <BaseLayout title="home">
