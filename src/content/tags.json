@@ -1,0 +1,306 @@
+[
+  {
+    "id": "computer-science",
+    "name": "コンピュータサイエンス"
+  },
+  {
+    "id": "product-management",
+    "name": "プロダクトマネジメント"
+  },
+  {
+    "id": "tv-recording",
+    "name": "テレビ録画"
+  },
+  {
+    "id": "linux",
+    "name": "Linux"
+  },
+  {
+    "id": "ubuntu",
+    "name": "Ubuntu"
+  },
+  {
+    "id": "english",
+    "name": "English"
+  },
+  {
+    "id": "oss",
+    "name": "OSS"
+  },
+  {
+    "id": "leetcode",
+    "name": "LeetCode"
+  },
+  {
+    "id": "rails",
+    "name": "Ruby on Rails"
+  },
+  {
+    "id": "docker",
+    "name": "docker"
+  },
+  {
+    "id": "postgres",
+    "name": "PostgreSQL"
+  },
+  {
+    "id": "aws",
+    "name": "AWS"
+  },
+  {
+    "id": "zenn",
+    "name": "Zenn"
+  },
+  {
+    "id": "message-queue",
+    "name": "Message Queue"
+  },
+  {
+    "id": "reactor",
+    "name": "Reactor"
+  },
+  {
+    "id": "wsl2",
+    "name": "WSL2"
+  },
+  {
+    "id": "performance-tuning",
+    "name": "パフォーマンスチューニング"
+  },
+  {
+    "id": "jvm",
+    "name": "JVM"
+  },
+  {
+    "id": "bash",
+    "name": "Bash"
+  },
+  {
+    "id": "cassandra",
+    "name": "Apache Cassandra"
+  },
+  {
+    "id": "redis",
+    "name": "Redis"
+  },
+  {
+    "id": "haskell",
+    "name": "Haskell"
+  },
+  {
+    "id": "tensorflow",
+    "name": "Tensorflow"
+  },
+  {
+    "id": "python",
+    "name": "Python"
+  },
+  {
+    "id": "handmadekeyboard",
+    "name": "自作キーボード"
+  },
+  {
+    "id": "intellij",
+    "name": "IntelliJ IDEA"
+  },
+  {
+    "id": "oracledatabase",
+    "name": "Oracle Database"
+  },
+  {
+    "id": "mysql",
+    "name": "MySQL"
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes"
+  },
+  {
+    "id": "prometheus",
+    "name": "Prometheus"
+  },
+  {
+    "id": "css",
+    "name": "CSS"
+  },
+  {
+    "id": "html",
+    "name": "HTML"
+  },
+  {
+    "id": "kafka",
+    "name": "Apache Kafka"
+  },
+  {
+    "id": "groovy",
+    "name": "Groovy"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript"
+  },
+  {
+    "id": "microcms",
+    "name": "microCMS"
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel"
+  },
+  {
+    "id": "nextjs",
+    "name": "Next.js"
+  },
+  {
+    "id": "rust",
+    "name": "Rust"
+  },
+  {
+    "id": "ddd",
+    "name": "ドメイン駆動設計"
+  },
+  {
+    "id": "clean-architecture",
+    "name": "Clean Architecture"
+  },
+  {
+    "id": "qiita",
+    "name": "Qiita"
+  },
+  {
+    "id": "firebase",
+    "name": "Firebase"
+  },
+  {
+    "id": "nuxtjs",
+    "name": "Nuxt.js"
+  },
+  {
+    "id": "vuejs",
+    "name": "Vue.js"
+  },
+  {
+    "id": "personal-development",
+    "name": "個人開発"
+  },
+  {
+    "id": "gcp",
+    "name": "GCP"
+  },
+  {
+    "id": "cloud-functions",
+    "name": "Cloud Functions"
+  },
+  {
+    "id": "cloud-build",
+    "name": "Cloud Build"
+  },
+  {
+    "id": "cloud-strage",
+    "name": "Cloud Storage"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript"
+  },
+  {
+    "id": "golang",
+    "name": "Go"
+  },
+  {
+    "id": "google-photos",
+    "name": "Google Photos"
+  },
+  {
+    "id": "java",
+    "name": "Java"
+  },
+  {
+    "id": "kotlin",
+    "name": "Kotlin"
+  },
+  {
+    "id": "spring",
+    "name": "Spring"
+  },
+  {
+    "id": "google-maps",
+    "name": "Google Maps"
+  },
+  {
+    "id": "hugo",
+    "name": "Hugo"
+  },
+  {
+    "id": "circle-ci",
+    "name": "CircleCI"
+  },
+  {
+    "id": "github-pages",
+    "name": "Github Pages"
+  },
+  {
+    "id": "google-domains",
+    "name": "Google Domains"
+  },
+  {
+    "id": "reading-book",
+    "name": "読書"
+  },
+  {
+    "id": "github-actions",
+    "name": "GitHub Actions"
+  },
+  {
+    "id": "plantuml",
+    "name": "PlantUML"
+  },
+  {
+    "id": "vim",
+    "name": "Vim"
+  },
+  {
+    "id": "neovim",
+    "name": "Neovim"
+  },
+  {
+    "id": "fish",
+    "name": "fish"
+  },
+  {
+    "id": "tmux",
+    "name": "tmux"
+  },
+  {
+    "id": "shell",
+    "name": "shell"
+  },
+  {
+    "id": "slack",
+    "name": "Slack"
+  },
+  {
+    "id": "seminar",
+    "name": "勉強会"
+  },
+  {
+    "id": "diary",
+    "name": "diary"
+  },
+  {
+    "id": "oop",
+    "name": "オブジェクト指向"
+  },
+  {
+    "id": "agile",
+    "name": "アジャイル開発"
+  },
+  {
+    "id": "reactjs",
+    "name": "React.js"
+  }
+]
