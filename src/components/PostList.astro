@@ -3,6 +3,7 @@ import { CollectionEntry } from "astro:content";
 import Tag from "@/components/Tag.astro";
 import { getCollection } from "astro:content";
 import { formatDate } from "@/utils/date";
+import { marked } from 'marked';
 
 const tags = await getCollection("tags");
 const tagMap = new Map(tags.map((tag) => [tag.data.id, tag.data]));
@@ -60,15 +61,17 @@ const { postPage } = Astro.props;
               </div>
               {post.data.summary && (
                 <div class="text-base text-gray-900 leading-relaxed">
-                  <a href={`/posts/${post.slug}`}>{post.data.summary}</a>
+                  <a href={`/posts/${post.slug}`}>
+                    <p set:html={marked.parse(post.data.summary)}></p>
+                  </a>
                 </div>
               )}
               <div class="flex flex-wrap">
                 {post.data.tags.map((tagId) => (
-                    <Tag
-                        name={tagMap.get(tagId).name ?? ""}
-                        href={`/tags/${tagId}`}
-                    />
+                  <Tag
+                    name={tagMap.get(tagId).name ?? ""}
+                    href={`/tags/${tagId}`}
+                  />
                 ))}
               </div>
             </div>
