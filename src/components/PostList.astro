@@ -2,6 +2,7 @@
 import { CollectionEntry } from "astro:content";
 import Tag from "@/components/Tag.astro";
 import { getCollection } from "astro:content";
+import { formatDate } from "@/utils/date";
 
 const tags = await getCollection("tags");
 const tagMap = new Map(tags.map((tag) => [tag.data.id, tag.data]));
@@ -33,35 +34,42 @@ const { postPage } = Astro.props;
   <ul class="divide-y divide-gray-200">
     {
       postPage.data.map((post) => (
-        <li class="py-12">
+        <li class="py-6">
           <article>
-            <div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-              <dl>
-                <dt class="sr-only">Published on</dt>
-                <dd class="text-base font-medium leading-6 text-gray-500">
-                  <time datetime={post.data.publishedAt}>
-                    {post.data.publishedAt.toISOString()}
+            <div class="space-y-1">
+              <div class="space-x-1">
+                <time
+                  class="text-base text-gray-500"
+                  datetime={post.data.publishedAt}
+                >
+                  {formatDate(post.data.publishedAt)}
+                </time>
+                {post.data.modifiedAt && (
+                  <time
+                    class="text-base text-gray-500"
+                    datetime={post.data.modifiedAt}
+                  >
+                    ({formatDate(post.data.modifiedAt)} updated)
                   </time>
-                </dd>
-              </dl>
-              <div class="space-y-5 xl:col-span-3">
-                <div class="space-y-6">
-                  <div>
-                    <h2 class="text-2xl font-bold leading-8 tracking-tight">
-                      <a href={`/posts/${post.slug}`} class="text-gray-900">
-                        {post.data.title}
-                      </a>
-                    </h2>
-                    <div class="flex flex-wrap">
-                      {post.data.tags.map((tagId) => (
-                        <Tag name={tagMap.get(tagId).name ?? ''} href={`/tags/${tagId}`} />
-                      ))}
-                    </div>
-                    <div class="prose max-w-none test-gray-500">
-                      {post.data.summary}
-                    </div>
-                  </div>
+                )}
+              </div>
+              <div>
+                <h2 class="text-lg text-gray-900 font-bold leading-relaxed">
+                  <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                </h2>
+              </div>
+              {post.data.summary && (
+                <div class="text-base text-gray-900 leading-relaxed">
+                  <a href={`/posts/${post.slug}`}>{post.data.summary}</a>
                 </div>
+              )}
+              <div class="flex flex-wrap">
+                {post.data.tags.map((tagId) => (
+                    <Tag
+                        name={tagMap.get(tagId).name ?? ""}
+                        href={`/tags/${tagId}`}
+                    />
+                ))}
               </div>
             </div>
           </article>
