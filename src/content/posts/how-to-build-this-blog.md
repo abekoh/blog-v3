@@ -44,7 +44,10 @@ Orbはビルド手順のテンプレートみたいなの。</p>
 <a href="https://discuss.circleci.com/t/git-clone-fails-in-circle-2-0/15211">こちら</a>参考に、<code>StrictHostKeyChecking=no</code>にすれば解決しました。</p>
 <p>最終的に.circleci/config.ymlはこんな感じ。
 なれてきたらまた直していきたい。</p>
-<pre><code class="language-yaml">version: 2.1
+
+
+```yaml
+version: 2.1
 orbs:
   hugo: circleci/hugo@0.4.1
 jobs:
@@ -55,7 +58,7 @@ jobs:
       - add_ssh_keys:
           # CirlceCIのSSH Permissionsに設定したSSH Keyのfingerprintを設定
           fingerprints:
-            - &quot;SO:ME:FIN:G:ER:PR:IN:T&quot;
+            - "SO:ME:FIN:G:ER:PR:IN:T"
       # ビルドしたworkspaceをもってくる
       - attach_workspace:
           at: .
@@ -63,8 +66,8 @@ jobs:
           name: deploy to Github Pages
           command: |
             # ssh警告無視
-            echo &quot;HostName github.com&quot; &gt;&gt; ~/.ssh/config
-            echo &quot;StrictHostKeyChecking no&quot; &gt;&gt; ~/.ssh/config
+            echo "HostName github.com" >> ~/.ssh/config
+            echo "StrictHostKeyChecking no" >> ~/.ssh/config
 
             DEPLOY_DIR=deploy
             # USER_EMAILはCircleCIのEnvironment Variablesで設定
@@ -77,10 +80,10 @@ jobs:
             cp -v -R ../public/* ./
 
             # ドメイン設定
-            echo &quot;blog.abekoh.dev&quot; &gt; CNAME
+            echo "blog.abekoh.dev" > CNAME
 
             git add -f .
-            git commit -m &quot;Deploy #$CIRCLE_BUILD_NUM from CircleCI [ci skip]&quot;
+            git commit -m "Deploy #$CIRCLE_BUILD_NUM from CircleCI [ci skip]"
             git push origin master -f
 workflows:
   version: 2.1
@@ -96,7 +99,10 @@ workflows:
           filters:
             branches:
               only: master
-</code></pre>
+
+```
+
+
 <h2 id="ドメイン設定">ドメイン設定</h2>
 <p>ついでにドメインも取得してみたので設定。</p>
 <p>Google Domainsで、devドメインつくりました。

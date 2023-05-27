@@ -35,33 +35,39 @@ microCMSRevisedAt: 2021-10-13T11:26:38.575Z
 <p>
   ユーザ登録を行うだけのWebAPIを用意しています。実際にはDB書き込みなどは行わず、標準出力ログとして流れるだけです。
 </p>
-<pre><code class="language-bash">$ cat &#x2F;tmp&#x2F;req.json
+
+
+```bash
+$ cat /tmp/req.json
 {
-    &quot;firstName&quot;: &quot;Taro&quot;,
-    &quot;lastName&quot;: &quot;Yamada&quot;,
-    &quot;birthYear&quot;: 1990,
-    &quot;birthMonth&quot;: 5,
-    &quot;birthDate&quot;: 3
+    "firstName": "Taro",
+    "lastName": "Yamada",
+    "birthYear": 1990,
+    "birthMonth": 5,
+    "birthDate": 3
 }
-$ curl -s -X POST -H &quot;Content-Type: application&#x2F;json&quot; http:&#x2F;&#x2F;localhost:30080&#x2F;api&#x2F;users -d @&#x2F;tmp&#x2F;req.json | jq .
+$ curl -s -X POST -H "Content-Type: application/json" http://localhost:30080/api/users -d @/tmp/req.json | jq .
 {
-  &quot;isSucceeded&quot;: true,
-  &quot;userAddResponse&quot;: {
-    &quot;user&quot;: {
-      &quot;userId&quot;: {
-        &quot;id&quot;: &quot;59036d2f-55e5-4977-bbe7-caaa515ba030&quot;
+  "isSucceeded": true,
+  "userAddResponse": {
+    "user": {
+      "userId": {
+        "id": "59036d2f-55e5-4977-bbe7-caaa515ba030"
       },
-      &quot;name&quot;: {
-        &quot;firstName&quot;: &quot;Taro&quot;,
-        &quot;lastName&quot;: &quot;Yamada&quot;
+      "name": {
+        "firstName": "Taro",
+        "lastName": "Yamada"
       },
-      &quot;birthday&quot;: {
-        &quot;date&quot;: &quot;1990-05-03&quot;
+      "birthday": {
+        "date": "1990-05-03"
       },
-      &quot;isDummy&quot;: false
+      "isDummy": false
     }
   }
-}</code></pre>
+}
+```
+
+
 <h2 id="hd8259c9423">
   <br />
   ウォームアップ処理について
@@ -101,14 +107,20 @@ $ curl -s -X POST -H &quot;Content-Type: application&#x2F;json&quot; http:&#x2F;
   <br />
   k8sのdeployment.yamlは次のように設定します。
 </p>
-<pre><code class="language-yaml">livenessProbe:
+
+
+```yaml
+livenessProbe:
   httpGet:
-    path: &#x2F;actuator&#x2F;health&#x2F;liveness
+    path: /actuator/health/liveness
     port: 8080
 readinessProbe:
   httpGet:
-    path: &#x2F;actuator&#x2F;health&#x2F;readiness
-    port: 8080</code></pre>
+    path: /actuator/health/readiness
+    port: 8080
+```
+
+
 <p>
   ここではデフォルトのままですが、起動ループに陥る場合などは<code>periodSeconds</code>,
   <code>initialDelaySeconds</code>,
@@ -148,7 +160,10 @@ readinessProbe:
     >WebClient</a
   >がMVCでも使えるとのことで、それで実装してみました。
 </p>
-<pre><code class="language-java">@Slf4j
+
+
+```java
+@Slf4j
 @Component
 public class WarmupRunner implements ApplicationRunner {
 
@@ -159,39 +174,42 @@ public class WarmupRunner implements ApplicationRunner {
   public WarmupRunner(
       WebClient.Builder webClientBuilder,
       WarmupProperty warmupProperty,
-      @Value(&quot;${server.port}&quot;) Integer port) {
+      @Value("${server.port}") Integer port) {
     this.webClient =
-        webClientBuilder.baseUrl(String.format(&quot;http:&#x2F;&#x2F;localhost:%d&#x2F;api&#x2F;users&quot;, port)).build();
+        webClientBuilder.baseUrl(String.format("http://localhost:%d/api/users", port)).build();
     this.warmupProperty = warmupProperty;
   }
 
   @Override
   public void run(ApplicationArguments args) throws Exception {
-    if (warmupProperty.getRequestCount() == null || warmupProperty.getRequestCount() &lt;= 0) {
-      log.info(&quot;skip warmup&quot;);
+    if (warmupProperty.getRequestCount() == null || warmupProperty.getRequestCount() <= 0) {
+      log.info("skip warmup");
       return;
     }
     var request =
         WebApiUserAddRequest.builder()
-            .firstName(&quot;Taro&quot;)
-            .lastName(&quot;Yamada&quot;)
+            .firstName("Taro")
+            .lastName("Yamada")
             .birthYear(1970)
             .birthMonth(1)
             .birthDate(1)
             .isDummy(true)
             .build();
-    log.info(&quot;start warmup&quot;);
+    log.info("start warmup");
     webClient
         .post()
         .contentType(MediaType.APPLICATION_JSON)
         .bodyValue(request)
         .retrieve()
-        .bodyToMono(Object.class) &#x2F;&#x2F; 結果は使わないので適当なところにマッピング
+        .bodyToMono(Object.class) // 結果は使わないので適当なところにマッピング
         .repeat(warmupProperty.getRequestCount())
         .blockLast();
-    log.info(&quot;finish warmup&quot;);
+    log.info("finish warmup");
   }
-}</code></pre>
+}
+```
+
+
 <p>
   リクエストを実行する回数はWarmupPropertyというクラスに設定値が入るようにしております。<br />
 </p>
@@ -205,7 +223,13 @@ public class WarmupRunner implements ApplicationRunner {
     >vegeta</a
   >を使ってテストしました。
 </p>
-<pre><code class="language-bash">python3 scripts&#x2F;generate_requests.py | vegeta attack -rate=1000&#x2F;s -lazy -format=json -duration=60s &gt; &#x2F;tmp&#x2F;result.bin</code></pre>
+
+
+```bash
+python3 scripts/generate_requests.py | vegeta attack -rate=1000/s -lazy -format=json -duration=60s > /tmp/result.bin
+```
+
+
 <p>
   <br />
   対象はreplicas=2として2podsで動くアプリケーションで、1000RPSで60秒間投げてみました。<br />

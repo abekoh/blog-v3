@@ -24,48 +24,75 @@ microCMSRevisedAt: 2021-03-20T14:57:30.194Z
 <p>ここに書いてあるとおり順にやってく。<br><a href="https://developers.google.com/places/web-service/get-api-key">https://developers.google.com/places/web-service/get-api-key</a></p>
 <p>手順通り進めたら、API Keyが発行できる。このキーをクエリパラメータに含めるなどして扱う。</p>
 <p>発行できたらcurlつかってテスト。</p>
-<pre><code class="language-bash">curl &quot;https://maps.googleapis.com/maps/api/place/nearbysearch/json?key={replace your API Key}&amp;location=35.6812362,139.7649361&amp;radius=100&amp;language=ja&amp;keyword=ramen&quot;
-</code></pre>
+
+
+```bash
+curl "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key={replace your API Key}&location=35.6812362,139.7649361&radius=100&language=ja&keyword=ramen"
+
+```
+
+
 <p>上記は<a href="https://developers.google.com/places/web-service/search#PlaceSearchRequests">Nearby Search</a>を使って、東京駅周辺半径100mで、キーワード&quot;ramen&quot;でお店を探すサンプル。</p>
 <p>ドキュメントに書かれているとおり、API Keyには利用元の制限をかけるべき。IPアドレスやリファラなどで設定可能。</p>
 <h2 id="実装">実装</h2>
 <p>Java向け公式のクライアントがあったのでそれ利用。</p>
 <p><a href="https://github.com/googlemaps/google-maps-services-java">https://github.com/googlemaps/google-maps-services-java</a></p>
 <p>依存を追加。</p>
-<pre><code class="language-kotlin">// build.gradle.kts
+
+
+```kotlin
+// build.gradle.kts
 dependencies {
-    implementation(&quot;com.google.maps:google-maps-services:0.11.0&quot;)
+    implementation("com.google.maps:google-maps-services:0.11.0")
 }
-</code></pre>
+
+```
+
+
 <p>使い方は次のような感じ。</p>
-<pre><code class="language-java">// https://github.com/googlemaps/google-maps-services-java/blob/master/README.md より
+
+
+```java
+// https://github.com/googlemaps/google-maps-services-java/blob/master/README.md より
 GeoApiContext context = new GeoApiContext.Builder()
-    .apiKey(&quot;AIza...&quot;)
+    .apiKey("AIza...")
     .build();
 GeocodingResult[] results =  GeocodingApi.geocode(context,
-    &quot;1600 Amphitheatre Parkway Mountain View, CA 94043&quot;).await();
+    "1600 Amphitheatre Parkway Mountain View, CA 94043").await();
 Gson gson = new GsonBuilder().setPrettyPrinting().create();
 System.out.println(gson.toJson(results[0].addressComponents));
-</code></pre>
+
+```
+
+
 <p><code>GeoApiContext</code>にAPI Keyを詰めてインスタンス化、それを<code>GeocodingApi.geocode()</code>といったstatic methodの引数に詰めて実行できる。</p>
 <p>Springで実装するとき、このcontextをどう扱えばよいか。やっぱりDIしてしまうのが後々別のクラスでもAPI呼び出したいってとき便利なので、Bean登録する。</p>
-<pre><code class="language-kotlin">@Configuration
+
+
+```kotlin
+@Configuration
 class GeoApiConfig {
     @Bean
-    fun createGeoApiConfig(@Value(&quot;\${google.api.api-key}&quot;) apiKey: String): GeoApiContext {
+    fun createGeoApiConfig(@Value("\${google.api.api-key}") apiKey: String): GeoApiContext {
         return GeoApiContext.Builder()
                 .apiKey(apiKey)
                 .build()
     }
 }
-</code></pre>
+
+```
+
+
 <p>application.ymlやコマンドライン引数などで<code>google.api.api-key</code>を設定しておくこと。</p>
 <p>そして実際に使うところはこのような感じ。Kotlinだと<code>@Autowired</code>を省略できたりする。</p>
-<pre><code class="language-kotlin">@Service
+
+
+```kotlin
+@Service
 class PlaceApiService(private val context: GeoApiContext) {
 
     companion object {
-        const val langCode = &quot;ja&quot;
+        const val langCode = "ja"
     }
 
     override fun getLocationFromKeyword(keyword: String): PlacesSearchResponse {
@@ -75,11 +102,14 @@ class PlaceApiService(private val context: GeoApiContext) {
         try {
             return request.await()
         } catch (e: Exception) {
-            throw RuntimeException(&quot;Some error occured.&quot;)
+            throw RuntimeException("Some error occured.")
         }
     }
 }
-</code></pre>
+
+```
+
+
 <p>勿論エラーハンドリングはもう少し考えたほうなおよし。</p>
 <h2 id="まとめ">まとめ</h2>
 <p>Spring向けってわけではないJavaライブラリを扱うとき、うまくBean登録してあげるのが肝かなーと思った次第です。</p>

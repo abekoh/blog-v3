@@ -28,12 +28,24 @@ GCPサービスみたくサービスアカウント使う、ってことはで�
 <li><p>認証情報一覧から、ダウンロードボタンを押す。client_secret_XXX.apps.googleusercontent.com..jsonのようなjsonファイルが手に入る。</p>
 </li>
 <li><p>token取得ツールインストール</p>
-<pre><code class="language-bash">go get github.com/abekoh/get-google-tokens
-</code></pre>
+
+
+```bash
+go get github.com/abekoh/get-google-tokens
+
+```
+
+
 </li>
 <li><p>次を実行。例では、Google Photos APIにアップロードする権限のみ。</p>
-<pre><code class="language-none">get-google-tokens -json client_secret_XXX.apps.googleusercontent.com.json -scope https://www.googleapis.com/auth/photoslibrary.appendonly
-</code></pre>
+
+
+```none
+get-google-tokens -json client_secret_XXX.apps.googleusercontent.com.json -scope https://www.googleapis.com/auth/photoslibrary.appendonly
+
+```
+
+
 <p>photoのスコープはここ参照
 <a href="https://developers.google.com/photos/library/guides/authentication-authorization">https://developers.google.com/photos/library/guides/authentication-authorization</a></p>
 </li>

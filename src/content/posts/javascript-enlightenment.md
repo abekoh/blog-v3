@@ -21,38 +21,62 @@ microCMSRevisedAt: 2021-03-20T14:57:30.171Z
 <p>number, string, boolean, null, undefinedはプリミティブ、他はすべてオブジェクト扱い。
 Array、Functionも結局Objectを着色したようなイメージ。</p>
 <p>プリミティブであっても、それに対応するラッパーオブジェクト(numberならNumber)のプロパティ、メソッドが呼び出せる。呼び出したとき、そのときだけオブジェクトを生成→破棄という流れになる。</p>
-<pre><code class="language-javascript">&#39;hoge&#39;.length // -&gt; 4
-</code></pre>
+
+
+```javascript
+'hoge'.length // -> 4
+
+```
+
+
 <h3 id="jsのオブジェクトはミュータブル、基本なんでも挙動変えられる">JSのオブジェクトはミュータブル、基本なんでも挙動変えられる</h3>
 <p>Arrayなどネイティブコンストラクタを持つオブジェクトであっても、windowなどグローバルオブジェクトであっても、そのプロパティ・メソッドは書き換え可能。
 <code>window.alert()</code>でも書き換えて機能停止させることも可能。varつけず<code>foo = &#39;bar&#39;</code>とやればグローバルオブジェクトのプロパティをいじったことになる。</p>
 <p>もちろん、可能なだけで破壊的な変更は推奨されない。</p>
 <h3 id="thisはそれを呼び出すタイミングで指すものが決まる">thisはそれを呼び出すタイミングで指すものが決まる</h3>
-<pre><code class="language-javascript">var foo = &#39;foo&#39;;
-var myObject = { foo: &#39;I am myObject.foo&#39; };
+
+
+```javascript
+var foo = 'foo';
+var myObject = { foo: 'I am myObject.foo' };
 
 var sayFoo = function() {
-    console.log(this[&#39;foo&#39;]);
+    console.log(this['foo']);
 };
 
 // myObjectのsayFooメソッドにsayFoo()関数を与える
 myObject.sayFoo = sayFoo;
 
-myObject.sayFoo(); // myObject.sayFoo()内でのthisはmyObjectなので&#39;I am myObject.foo&#39;を出力
-sayFoo(); // sayFoo()内でのthisはグローバルオブジェクトなので&#39;foo&#39;を出力
-</code></pre>
+myObject.sayFoo(); // myObject.sayFoo()内でのthisはmyObjectなので'I am myObject.foo'を出力
+sayFoo(); // sayFoo()内でのthisはグローバルオブジェクトなので'foo'を出力
+
+```
+
+
 <p>(P.87より引用)</p>
 <p>定義時の&#39;foo&#39;が常に出ると予想されるかもだが、実際は実行時のコンテキストに依存する。</p>
 <h3 id="無名関数の即時実行">無名関数の即時実行</h3>
-<pre><code class="language-javascript">(function(){ console.log(&#39;hoge&#39;); })()
-</code></pre>
+
+
+```javascript
+(function(){ console.log('hoge'); })()
+
+```
+
+
 <p>functionの中身を即実行する書き方。
 何度かこんなコードみたことあったのに、意味理解できていなかった。。</p>
 <h3 id="関数の巻き上げ">関数の巻き上げ</h3>
 <p>function後ろのほうで定義、前のほうで実行でも問題なし。</p>
-<pre><code class="language-javascript">foo(); // -&gt; hoge
-function foo() { console.log(&#39;hoge&#39;); }
-</code></pre>
+
+
+```javascript
+foo(); // -> hoge
+function foo() { console.log('hoge'); }
+
+```
+
+
 <p>これを関数の巻き上げと呼ぶ。JS特有ですね。
 関数内で外側の変数つかってたりすると引っかかりそう。
 (参考: <a href="https://qiita.com/39_isao/items/d9d80e98b5bd1938bc1d">やっとわかったjsの「巻き上げ」 - Qiita</a>)</p>
@@ -63,15 +87,21 @@ function foo() { console.log(&#39;hoge&#39;); }
 <h3 id="numberのラッパーオブジェクトのメソッド呼び出し">numberのラッパーオブジェクトのメソッド呼び出し</h3>
 <p>本文に直接無い内容だけど、自分理解のため。
 数字をカンマ区切りにするとき、<code>toLocalString()</code>が使えるけど実際どう呼び出すんだろって色々ためすと</p>
-<pre><code class="language-javascript">10000.toLocalString() // -&gt; エラー
-&#39;10000&#39;.toLocalString() // -&gt; &#39;10000&#39;
-10000..toLocaleString() // -&gt; &#39;10,000&#39;
-(10000).toLocaleString() // &#39;10,000&#39;
-Number(10000).toLocaleString() // -&gt; &#39;10,000&#39;
-new Number(10000).toLocaleString() // -&gt; &#39;10,000&#39;
+
+
+```javascript
+10000.toLocalString() // -> エラー
+'10000'.toLocalString() // -> '10000'
+10000..toLocaleString() // -> '10,000'
+(10000).toLocaleString() // '10,000'
+Number(10000).toLocaleString() // -> '10,000'
+new Number(10000).toLocaleString() // -> '10,000'
 var a = 10000
-a.toLocaleString() // -&gt; &#39;10,000&#39;
-</code></pre>
+a.toLocaleString() // -> '10,000'
+
+```
+
+
 <p>という具合。<code>10000.toLocalString()</code>だと数値として評価できていない。
 3行目の<code>..</code>となるのは、最初のドットは小数点として評価されるため。</p>
 <h3 id="その他">その他</h3>

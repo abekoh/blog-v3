@@ -20,9 +20,15 @@ microCMSRevisedAt: 2021-04-10T13:43:27.212Z
 気になったものいくつか取り上げます。</p>
 <h4 id="health-indicator-group">Health Indicator Group</h4>
 <p>ヘルスチェックのエンドポイントを複数、グループ別で設定できる機能。</p>
-<pre><code class="language-none">management.endpoint.health.group.liveness.include=ping
+
+
+```none
+management.endpoint.health.group.liveness.include=ping
 management.endpoint.health.group.readiness.include=db,redis
-</code></pre>
+
+```
+
+
 <p>↑の設定の場合、
 <code>/actguator/health/liveness</code>と<code>/actuator/health/rediness</code>が提供される。</p>
 <p>サンプルの設定どおり、KubernetesのLiveness/Readiness Probeと相性よさげ。</p>
