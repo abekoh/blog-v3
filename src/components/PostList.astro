@@ -3,6 +3,7 @@ import { CollectionEntry } from "astro:content";
 import Tag from "@/components/Tag.astro";
 import { formatDate } from "@/utils/date";
 import { getTagMap } from "@/content/utils";
+import DateInfo from "@/components/DateInfo.astro";
 
 const tagMap = await getTagMap();
 
@@ -20,22 +21,10 @@ const { posts } = Astro.props;
         <li class="py-6">
           <article>
             <div class="space-y-1">
-              <div class="space-x-1">
-                <time
-                  class="text-sm text-base text-gray-500"
-                  datetime={post.data.publishedAt}
-                >
-                  {formatDate(post.data.publishedAt)}
-                </time>
-                {post.data.modifiedAt && (
-                  <time
-                    class="text-sm text-base text-gray-500"
-                    datetime={post.data.modifiedAt}
-                  >
-                    (updated: {formatDate(post.data.modifiedAt)})
-                  </time>
-                )}
-              </div>
+              <DateInfo
+                publishedAt={post.data.publishedAt}
+                modifiedAt={post.data.modifiedAt}
+              />
               <div>
                 <h2 class="text-lg text-gray-900 font-bold leading-relaxed">
                   <a href={`/posts/${post.slug}`}>{post.data.title}</a>
