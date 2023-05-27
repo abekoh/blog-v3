@@ -24,7 +24,7 @@ files.forEach((file) => {
       const lang = match[1];
       const code = match[2];
       const formatted =
-          "\n```" + lang + "\n" + he.decode(code) + "\n```\n";
+          "\n\n```" + lang + "\n" + he.decode(code) + "\n```\n\n";
         replaces.push([raw, formatted]);
     }
 
