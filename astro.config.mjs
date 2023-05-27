@@ -7,7 +7,7 @@ import image from "@astrojs/image";
 export default defineConfig({
   markdown: {
     shikiConfig: {
-        theme: "github-light",
+        theme: "github-dark",
       wrap: true,
     }
   },
