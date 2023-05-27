@@ -1,8 +1,6 @@
 ---
 title: '[Zenn] ドメイン駆動設計からオブジェクト指向、そしてアジャイル開発まで。関連書籍練り歩きのススメ'
-summary: 'ドメイン駆動設計(DDD) Advent Calendar 2021に参加しました。25日目、最終日の記事です。
-
-[ドメイン駆動設計からオブジェクト指向、そしてアジャイル開発まで。関連書籍練り歩きのススメ - Zenn](https://zenn.dev/abekoh/articles/90a9bb8698b091)'
+summary: 'ドメイン駆動設計(DDD) Advent Calendar 2021に参加しました。25日目、最終日の記事です。'
 categories: ['tech']
 tags: ['ddd','oop','zenn']
 publishedAt: 2021-12-25T04:37:00.000Z

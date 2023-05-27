@@ -3,7 +3,6 @@ import { CollectionEntry } from "astro:content";
 import Tag from "@/components/Tag.astro";
 import { getCollection } from "astro:content";
 import { formatDate } from "@/utils/date";
-import { marked } from 'marked';
 
 const tags = await getCollection("tags");
 const tagMap = new Map(tags.map((tag) => [tag.data.id, tag.data]));
@@ -62,7 +61,7 @@ const { postPage } = Astro.props;
               {post.data.summary && (
                 <div class="text-base text-gray-900 leading-relaxed">
                   <a href={`/posts/${post.slug}`}>
-                    <p set:html={marked.parse(post.data.summary)}></p>
+                    <p>{post.data.summary}</p>
                   </a>
                 </div>
               )}
