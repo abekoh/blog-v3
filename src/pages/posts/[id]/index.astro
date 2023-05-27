@@ -24,5 +24,5 @@ const { Content } = await post.render();
 ---
 
 <BaseLayout title={`${post.data.title} - ${BLOG_TITLE}`}>
-  <Post title={post.data.title} Content={Content} />
+  <Post title={post.data.title} publishedAt={post.data.publishedAt} modifiedAt={post.data.modifiedAt} Content={Content} />
 </BaseLayout>
