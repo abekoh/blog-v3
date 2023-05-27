@@ -37,13 +37,10 @@ microCMSRevisedAt: 2021-10-13T11:44:28.933Z
 <h2 id="tips">Tips</h2>
 <h3 id="block-は使わない">block は使わない</h3>
 <p>次のように書けば、Mono/Flux でラッピングしない通常オブジェクトとして扱える。</p>
-
-```java
-Result result = repository.get() // returns Mono<Result>
+<pre><code class="language-java">Result result = repository.get() // returns Mono&lt;Result&gt;
                   .block();      // returns Result
-```
-
-<p>しかし、こうするとブロッキング IO となってしまい WebFlux の利点が半減、通常のスレッドを多様するアプリケーションとなってしまう。In->Out 一貫して Mono/Flux で通信すること。</p>
+</code></pre>
+<p>しかし、こうするとブロッキング IO となってしまい WebFlux の利点が半減、通常のスレッドを多様するアプリケーションとなってしまう。In-&gt;Out 一貫して Mono/Flux で通信すること。</p>
 <h3 id="monoflux-の呼び出しの注意">Mono/Flux の呼び出しの注意</h3>
 <p><strong>2021/10/13追記: 以下の説明は認識不足で、誤解を招くかもなので訂正。</strong></p>
 <p>いわゆるHot vs Coldの話で、Cold Publisherの場合は2回呼び出されてしまう、ということになります。</p>
@@ -55,42 +52,36 @@ Result result = repository.get() // returns Mono<Result>
 <li><a href="https://www.vinsguru.com/reactor-hot-publisher-vs-cold-publisher/">Reactor Hot Publisher vs Cold Publisher | Vinsguru</a></li>
 </ul>
 <p><del>なんとなく Mono/Flux に置き換えるだけって感じでこんなコードを書いていた。</del></p>
-
-```java
-Mono<Context> context = contextRepository(contextKey);
-Mono<Item>item = itemRepository.get(context, itemKey);
+<pre><code class="language-java">Mono&lt;Context&gt; context = contextRepository(contextKey);
+Mono&lt;Item&gt;item = itemRepository.get(context, itemKey);
 Mono.zip(context, item)
   .subscribe();
-```
-
+</code></pre>
 <p><del>一見問題なさそうだが、これだと<strong>contextRepository.get()が 2 回呼び出されてしまい、無駄な IO が発生してしまう。</strong><br>Mono は subscribe されるたび、その開始時点の publisher からすべて実行されるためである。</del></p>
 <p><del>次のように書けば OK。</del></p>
-Mono<Context> context = contextRepository(contextKey);
+<pre><code class="language-java">Mono&lt;Context&gt; context = contextRepository(contextKey);
 Mono.zipWhen(context, itemRepository.get(context, itemKey)
   .subscribe();
-```
-
+</code></pre>
 <h3 id="api-ルーティング方法">API ルーティング方法</h3>
 <p>Spring WebFlux では、MVC と同様<code>@GetMapping</code>といったアノテーションでルーティングする方法のほかに、RouterFunctions を用いてルーティング可能。</p>
 <p><a href="https://www.baeldung.com/spring-5-functional-web">Introduction to the Functional Web Framework in Spring 5 | Baeldung</a></p>
 <p>より関数型を活かした感じで書けるのでおすすめ。</p>
 <h3 id="fire-and-forget-パターン">fire-and-forget パターン</h3>
 <p>「リクエスト投げっぱなしでレスポンスは待つ必要ない」ってパターンは次のように書くとよい。</p>
-
-```javarepository.get() // returns Mono<Result>
-  .doOnNext(result -> serv ice.doAsync(result).subscribe()) // serviceに投げっぱなし
+<pre><code class="language-java">repository.get() // returns Mono&lt;Result&gt;
+  .doOnNext(result -&gt; serv ice.doAsync(result).subscribe()) // serviceに投げっぱなし
   .subscribe();
-```
-
+</code></pre>
 <p>次のページを参考にしました。</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/57566465/fire-and-forget-with-reactor">spring - Fire and forget with reactor - Stack Overflow</a></li>
-<li><a href="https://stackoverflow.com/questions/53144086/how-make-fire-and-forget-request-sending-in-spring-webflux-webclient">java - How make "fire and forget" request sending in spring webflux webclient? - Stack Overflow</a></li>
+<li><a href="https://stackoverflow.com/questions/53144086/how-make-fire-and-forget-request-sending-in-spring-webflux-webclient">java - How make &quot;fire and forget&quot; request sending in spring webflux webclient? - Stack Overflow</a></li>
 </ul>
 <h3 id="キャッシュ">キャッシュ</h3>
 <p>Spring Cache の<code>@Cachable</code>みたいなのを使うにはどうすれば？ってことで調べると次の記事がヒットした。</p>
 <p><a href="https://stackoverflow.com/questions/48156424/spring-webflux-and-cacheable-proper-way-of-caching-result-of-mono-flux-type">Spring Webflux and @Cacheable - proper way of caching result of Mono / Flux type - Stack Overflow</a></p>
-<p>"Hack way"の通り Reactor の<code>.cache()</code>とアノテーションでも実現可能であるが、</p>
+<p>&quot;Hack way&quot;の通り Reactor の<code>.cache()</code>とアノテーションでも実現可能であるが、</p>
 <ul>
 <li>キャッシュ入れる or 入れないといった複雑な制御が難しい</li>
 <li>ブラックボックス感ある</li>
@@ -98,31 +89,25 @@ Mono.zipWhen(context, itemRepository.get(context, itemKey)
 といった理由で、後者の Reactor Addons を使うパターンがおすすめ。</li>
 </ul>
 <p><a href="https://github.com/reactor/reactor-addons">reactor/reactor-addons: Official modules for the Reactor project</a></p>
-
-```java
-var id = "785AC2D5-5CBE-4170-90A0-F9E327B09B5C";
-CacheMono.lookup(key -> Mono.justOrEmpty(cacheManager.getCache("CACHE_NAME").get(key, Result.class)))
+<pre><code class="language-java">var id = &quot;785AC2D5-5CBE-4170-90A0-F9E327B09B5C&quot;;
+CacheMono.lookup(key -&gt; Mono.justOrEmpty(cacheManager.getCache(&quot;CACHE_NAME&quot;).get(key, Result.class)))
   .map(Signal::next), id)
-  .onCacheMissResume(() -> repository.get(id)) // キャッシュヒットしない場合は取りに行く
-  .andWriteWith((key, signal) -> Mono.fromRunnable()
-    -> Optional.ofNullable(signal.get())
-        .ifPresent(result -> cacheManager.getCache("CACHE_NAME").put(key, result)) // 値がemptyやerrorでない場合、結果をキャッシュに保存
+  .onCacheMissResume(() -&gt; repository.get(id)) // キャッシュヒットしない場合は取りに行く
+  .andWriteWith((key, signal) -&gt; Mono.fromRunnable()
+    -&gt; Optional.ofNullable(signal.get())
+        .ifPresent(result -&gt; cacheManager.getCache(&quot;CACHE_NAME&quot;).put(key, result)) // 値がemptyやerrorでない場合、結果をキャッシュに保存
   );
-```
-
+</code></pre>
 <h3 id="webclient">WebClient</h3>
 <p>WebFlux の標準の HTTP クライアントとして WebClient が用意されている。</p>
-
-```java
-WebClient webClient = WebClient.builder().builder();
+<pre><code class="language-java">WebClient webClient = WebClient.builder().builder();
 webClient.post()
-  .uri("https://example.com/do")
+  .uri(&quot;https://example.com/do&quot;)
   .contentType(MediaType.APPLICATION_JSON)
   .body(BodyInserters.fromValue(new Request()))
   .retrieve()
   .bodyToMono(Response.class);
-```
-
+</code></pre>
 <p>Spring MVC などでも、<code>block()</code>すれば使える。</p>
 <p><del>(従来の RestTemplate はメンテモードに入って今後の機能拡張は WebClient のみって話をどこかで聞いた気がするが、出典見つからず不明…)</del><br>2021/07/05追記: <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html">RestTemplateのドキュメント</a>に記載がありました。</p>
 <blockquote>
@@ -132,39 +117,30 @@ webClient.post()
 <p>Mono で返却される値をテストする場合、<code>block()</code>を使って頑張るのもありだがもっと便利なのが reactor-test で用意されている。</p>
 <p><a href="https://projectreactor.io/docs/test/release/api/reactor/test/StepVerifier.html">StepVerifier (reactor-test 3.4.7)</a></p>
 <p>基本的に expectNextMatches で assertion</p>
-
-```java
-var actual = repository.get(key); // returns Mono<Result>
+<pre><code class="language-java">var actual = repository.get(key); // returns Mono&lt;Result&gt;
 StepVerifier.create(actual)
-  .expectNextMatches(result -> result.isOk())
+  .expectNextMatches(result -&gt; result.isOk())
   .verifyComplete();
-```
-
+</code></pre>
 <p>モックの verify をしたい場合、actual を complete させないといけない。</p>
-
-```java
-var actual = service.doAsync();
+<pre><code class="language-java">var actual = service.doAsync();
 StepVerifier.create(actual)
   .expectNextCount(1) // # of results are only 1
   .verifyComplete();
-verify(repository, times(1)).get(eq("key"));
-```
-
+verify(repository, times(1)).get(eq(&quot;key&quot;));
+</code></pre>
 <h3 id="logger">logger</h3>
 <p>ロガーとして従来どおり SLF4J + Logback が使えるが、ブロッキング IO なので非同期として設定しておいたほうがよい。<code>ch.qos.Logback.classic.AsyncAppender</code>を使うのがよい。</p>
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <appender name="ASYNC_STDOUT" class="ch.qos.logback.classic.AsyncAppender">
-        <appender-ref ref="STDOUT"/>
-    </appender>
-    <root level="INFO">
-        <appender-ref ref="ASYNC_STDOUT"/>
-    </root>
-</configuration>
-```
-
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+    &lt;appender name=&quot;ASYNC_STDOUT&quot; class=&quot;ch.qos.logback.classic.AsyncAppender&quot;&gt;
+        &lt;appender-ref ref=&quot;STDOUT&quot;/&gt;
+    &lt;/appender&gt;
+    &lt;root level=&quot;INFO&quot;&gt;
+        &lt;appender-ref ref=&quot;ASYNC_STDOUT&quot;/&gt;
+    &lt;/root&gt;
+&lt;/configuration&gt;
+</code></pre>
 <p>次のページを参考にした。</p>
 <p><a href="https://stackoverflow.com/questions/56037188/is-logging-a-non-blocking-operation-in-spring-webflux">maven 3 - Is logging a non-blocking operation in Spring Webflux? - Stack Overflow</a></p>
 <h2 id="まとめ">まとめ</h2>

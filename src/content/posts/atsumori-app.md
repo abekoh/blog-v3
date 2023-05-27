@@ -76,15 +76,12 @@ CSSを全く書くことなく、HTMLテンプレ書くだけでいい感じの�
 <p>きちんとレスポンシブを意識するにも、「スマホならこれくらい、タブレットならこれくらい」とサクッと設定可能です。
 例えば<a href="https://vuetifyjs.com/ja/components/grids/">Grids</a>を採用するとき、画面を水平に12ブロックに分けたものと考えるので</p>
 <p>「スマホ以下だと画面いっぱい、それ以上は半分くらい」にレイアウトしたいときは</p>
-
-```html
-<v-row>
-  <v-col cols="12" sm="6">
-    <v-card />
-  </v-col>
-</v-row>
-```
-
+<pre><code class="language-html">&lt;v-row&gt;
+  &lt;v-col cols=&quot;12&quot; sm=&quot;6&quot;&gt;
+    &lt;v-card /&gt;
+  &lt;/v-col&gt;
+&lt;/v-row&gt;
+</code></pre>
 <p>と、デフォルトでは画面いっぱい<code>cols=&quot;12&quot;</code>、スマホサイズより大きければ<code>sm=&quot;6&quot;</code>という設定が反映されます。
 これだけでいい感じにスマホ対応できるのでとにかく楽しいですね。</p>
 <h3 id="考えなしにssrやるとハマる">考えなしにSSRやるとハマる</h3>
@@ -119,21 +116,18 @@ CSSを全く書くことなく、HTMLテンプレ書くだけでいい感じの�
 またセキュリティまわりを整えるため、匿名認証も簡単に設定できます。</p>
 <p>今回は認可を受けたユーザーのみ、Cloud Firestoreのアイテムデータにアクセスできる、という設定にしたかったので
 Nuxt.jsのmiddlewareにて、次のように「認可されていなければ必ず匿名認証させる」という風にしました。</p>
-
-```js
-import { auth } from '~/plugins/firebase'
+<pre><code class="language-javascript">import { auth } from &#39;~/plugins/firebase&#39;
 
 export default async function({ store }) {
   // storeから自分のユーザー情報取得
-  const user = store.getters[‘users/getOwnUser’]
+  const user = store.getters[&#39;users/getOwnUser&#39;]
   // 保存されていなければ匿名認証、その結果をstoreに保存
   if (!user) {
     const result = await auth.signInAnonymously()
-    await store.dispatch(‘users/login’, result.user)
+    await store.dispatch(&#39;users/login&#39;, result.user)
   }
 }
-```
-
+</code></pre>
 <h3 id="nuxtの追加モジュールが素晴らしい">Nuxtの追加モジュールが素晴らしい</h3>
 <p>ちょっとこういう機能つけたいっていうときのモジュールが豊富に用意されています。</p>
 <p>例えば、「PWA対応させてスマホアプリっぽくしたいな」ってときはこちら入れて少し設定するだけ</p>

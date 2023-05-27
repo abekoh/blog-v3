@@ -46,13 +46,11 @@ microCMSRevisedAt: 2021-03-25T12:49:30.792Z
 <p>この組み合わせによって、レポジトリ管理・選択が劇的に楽になります。
 さらに小細工を入れてtmuxセッションを開くようにしました。</p>
 <p>prjコマンドはfish scriptで書いています。こんな感じ</p>
-
-```fish
-# prj.fish
-function prj -d "start project"
+<pre><code class="language-fish"># prj.fish
+function prj -d &quot;start project&quot;
   # 引数が設定されていれば、それをpecoにわたす
   if test (count $argv) -gt 0
-    set prjflag --query "$argv"
+    set prjflag --query &quot;$argv&quot;
   end
   set PRJ_PATH (ghq root)/(ghq list | peco $prjflag)
   # プロジェクトが選択されなければ終了
@@ -60,7 +58,7 @@ function prj -d "start project"
     return
   end
   # プロジェクト名は 所有者/リポジトリ名 の形式。その名前に`.`を含む場合は`_`に置換
-  set PRJ_NAME (echo (basename (dirname $PRJ_PATH))/(basename $PRJ_PATH) | sed -e 's/\./_/g')
+  set PRJ_NAME (echo (basename (dirname $PRJ_PATH))/(basename $PRJ_PATH) | sed -e &#39;s/\./_/g&#39;)
   # プロジェクトのtmuxセッションが存在しなければ作成
   if not tmux has-session -t $PRJ_NAME
     tmux new-session -c $PRJ_PATH -s $PRJ_NAME -d
@@ -74,56 +72,49 @@ function prj -d "start project"
     tmux switch-client -t $PRJ_NAME
   end
 end
-```
-
+</code></pre>
 <p>これでtmux連携が可能になりました。</p>
 <h3 id="セッション内で開くneovimを1つに">セッション内で開くNeovimを1つに</h3>
 <p>セッション内で自分は複数タブを使い、一方でNeovim、一方でファイル確認、一方でサーバー起動とかやります。そうやってると、ついついNeovimを複数タブで開いてしまい、どこでどのファイルを編集していたかわからなくなります。<br>それを回避するために、neovim-remoteを採用しました。</p>
 <p>neovim-remoteを使うと、すでに起動してあるNeovimに開くファイルを追加する、といった動きをさせることができます。</p>
 <p>socketファイルをわかりやすくプロジェクト名として/tmpに保存し、同プロジェクトで新た<code>nvim</code>すると<code>nvr --remote-tab --servername /tmp/{プロジェクト名}</code>で既存Neovimの新規タブとして開かれるようになります。</p>
 <p><code>nvim</code>コマンドをfishでラッピングし実現しました。</p>
-
-```fish
-# nvim.fish
-function nvim -d "neovim wrapping"
+<pre><code class="language-fish"># nvim.fish
+function nvim -d &quot;neovim wrapping&quot;
   # tmuxセッション内でなければそのまま
   if test -z $TMUX
     command nvim $argv
   else
     # /tmp/にtmuxセッションを保管
-    set socket_path /tmp/(echo (tmux display-message -p '#S') | sed 's/\//_/g' )
+    set socket_path /tmp/(echo (tmux display-message -p &#39;#S&#39;) | sed &#39;s/\//_/g&#39; )
     if test -S $socket_path
       # すでにソケットが存在してたらそれに接続
       nvr --remote-tab --servername $socket_path $argv
       # 該当のnvimに移動
-      set session_id (tmux list-panes -F '#{session_id}')
-      set pane_ids (tmux list-panes -a -F "#{session_id},#{window_index},#{pane_index},#{pane_current_command}" | grep "^$session_id,.*,nvim\$" | string split ',')
-      tmux select-window -t $pane_ids[2] && tmux select-pane -t $pane_ids[3]
+      set session_id (tmux list-panes -F &#39;#{session_id}&#39;)
+      set pane_ids (tmux list-panes -a -F &quot;#{session_id},#{window_index},#{pane_index},#{pane_current_command}&quot; | grep &quot;^$session_id,.*,nvim\$&quot; | string split &#39;,&#39;)
+      tmux select-window -t $pane_ids[2] &amp;&amp; tmux select-pane -t $pane_ids[3]
     else
       # ソケットがなければ作成して起動
       command env NVIM_LISTEN_ADDRESS=$socket_path nvim $argv
     end
   end
 end
-```
-
+</code></pre>
 <h3 id="cdコマンド空打ちでプロジェクトルートに移動">cdコマンド空打ちでプロジェクトルートに移動</h3>
 <p>デモに記録していませんでしたが、これも便利なので紹介。<br>tmuxセッション内で<code>cd</code>空打ちすると、homeではなくプロジェクトルートに移動するようにしています。</p>
 <p>例のごとく、fishでラッピング</p>
-
-```fish
-# cd.fish
-function cd --description "Change directory"
-  if test -n "$TMUX" -a -z "$argv"
-    set session_path (tmux show-environment | grep TMUX_SESSION_PATH | string replace "TMUX_SESSION_PATH=" "")
+<pre><code class="language-fish"># cd.fish
+function cd --description &quot;Change directory&quot;
+  if test -n &quot;$TMUX&quot; -a -z &quot;$argv&quot;
+    set session_path (tmux show-environment | grep TMUX_SESSION_PATH | string replace &quot;TMUX_SESSION_PATH=&quot; &quot;&quot;)
     if test $session_path
       builtin cd $session_path
       return $status
     end
   end
 end
-```
-
+</code></pre>
 <p>自分の設定では、<a href="https://github.com/fish-shell/fish-shell/blob/master/share/functions/cd.fish">標準のcd.fish</a>をコピーしてきて<a href="https://github.com/abekoh/dotfiles/blob/master/config/fish/functions/cd.fish">書き加えた</a>かたちにしています。</p>
 <h2 id="設定全体">設定全体</h2>
 <p>dotfilesを公開しているので、全体像はこちらから。今回のfishコマンドたちはconfig/fish/functionsに置いてます。</p>
