@@ -1,9 +1,10 @@
 ---
-import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 const { id } = Astro.params;
 import { getCollection, getEntryBySlug } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import {BLOG_TITLE} from "../../../constraint";
+import Post from "@/components/Post.astro";
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("posts");
@@ -23,8 +24,5 @@ const { Content } = await post.render();
 ---
 
 <BaseLayout title={`${post.data.title} - ${BLOG_TITLE}`}>
-  <article>
-    <h1 class="font-bold">{post.data.title}</h1>
-    <Content />
-  </article>
+  <Post title={post.data.title} Content={Content} />
 </BaseLayout>

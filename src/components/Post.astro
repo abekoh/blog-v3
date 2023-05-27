@@ -1,0 +1,19 @@
+---
+import { AstroComponentFactory } from "astro";
+interface Props {
+  title: string;
+  // summary: string;
+  // tags: {
+  //     name: string;
+  //     href: string;
+  // }[];
+  Content: AstroComponentFactory;
+}
+
+const { title, Content } = Astro.props;
+---
+
+<article>
+  <h1>{title}</h1>
+  <Content />
+</article>
