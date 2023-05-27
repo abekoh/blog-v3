@@ -7,7 +7,7 @@ import { postsDefaultSortFunc } from "../../../content/utils";
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await getCollection("posts");
-  return paginate(allPosts.sort(postsDefaultSortFunc), { pageSize: 5 });
+  return paginate(allPosts.sort(postsDefaultSortFunc), { pageSize: 10 });
 }
 
 interface Props {
@@ -15,9 +15,9 @@ interface Props {
 }
 
 const { page } = Astro.props;
+const posts = page.data;
 ---
 
-<BaseLayout title="page">
-  <h1>Page {page.currentPage}</h1>
-  <PostList postPage={page} />
+<BaseLayout title="abekoh's tech blog">
+  <PostList posts={posts} />
 </BaseLayout>
