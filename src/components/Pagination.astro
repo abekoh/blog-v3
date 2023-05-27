@@ -1,0 +1,54 @@
+---
+import { Page } from "astro";
+
+// copy and edit https://github.com/withastro/astro/blob/f2f18b44055c6334a39d6379de88fe41e518aa1e/packages/astro/src/%40types/astro.ts#L1534
+export interface Page {
+  start: number;
+  end: number;
+  total: number;
+  currentPage: number;
+  size: number;
+  lastPage: number;
+  url: {
+    current: string;
+    prev: string | undefined;
+    next: string | undefined;
+  };
+}
+
+interface Props {
+  page: Page;
+}
+
+const { page } = Astro.props;
+
+const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
+---
+
+<nav>
+  <div class="flex justify-center py-2">
+    <ul class="inline-flex items-center text-base text-gray-900">
+      <li>
+        <a href={page.url.prev} class="px-3 py-2 leading-tight">&lt;</a>
+      </li>
+      {
+        paginations.map((i) =>
+          i === page.currentPage ? (
+            <li>
+              <a class="px-3 py-2 leading-tight bg-gray-100 rounded">{i}</a>
+            </li>
+          ) : (
+            <li>
+              <a href={`/posts/page/${i}`} class="px-3 py-2 leading-tight">
+                {i}
+              </a>
+            </li>
+          )
+        )
+      }
+      <li>
+        <a href={page.url.next} class="px-3 py-2 leading-tight">&gt;</a>
+      </li>
+    </ul>
+  </div>
+</nav>
