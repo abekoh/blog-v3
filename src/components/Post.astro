@@ -38,15 +38,19 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
     }
 
     .post-content h2 {
-      @apply text-lg font-semibold text-gray-900 leading-relaxed py-1;
+      @apply text-lg font-semibold text-gray-900 leading-relaxed py-2;
     }
 
     .post-content h3 {
+      @apply text-base font-medium text-gray-900 leading-relaxed py-2;
+    }
+
+    .post-content h4 {
       @apply text-base font-medium text-gray-900 leading-relaxed py-1;
     }
 
     .post-content p {
-      @apply text-base text-gray-700 leading-relaxed py-1;
+      @apply text-base text-gray-700 leading-relaxed py-2;
     }
 
     .post-content a {
