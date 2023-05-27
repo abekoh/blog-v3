@@ -4,6 +4,9 @@ dependencies:
   glob:
     specifier: ^10.2.6
     version: 10.2.6
+  he:
+    specifier: ^1.2.0
+    version: 1.2.0
 
 packages:
 
@@ -108,6 +111,11 @@ packages:
       minimatch: 9.0.1
       minipass: 6.0.2
       path-scurry: 1.9.2
+    dev: false
+
+  /he@1.2.0:
+    resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
+    hasBin: true
     dev: false
 
   /is-fullwidth-code-point@3.0.0:
