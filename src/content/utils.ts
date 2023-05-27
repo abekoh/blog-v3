@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 export const postsDefaultSortFunc = (
   a: CollectionEntry<"posts">,
@@ -13,4 +14,9 @@ export const postsDefaultSortFunc = (
   } else {
     return 0;
   }
+};
+
+export const getTagMap = async () => {
+  const tags = await getCollection("tags");
+  return new Map(tags.map((tag) => [tag.data.id, tag.data]));
 };

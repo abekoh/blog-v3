@@ -1,11 +1,10 @@
 ---
 import { CollectionEntry } from "astro:content";
 import Tag from "@/components/Tag.astro";
-import { getCollection } from "astro:content";
 import { formatDate } from "@/utils/date";
+import { getTagMap } from "@/content/utils";
 
-const tags = await getCollection("tags");
-const tagMap = new Map(tags.map((tag) => [tag.data.id, tag.data]));
+const tagMap = await getTagMap();
 
 interface Props {
   posts: CollectionEntry<"posts">[];
