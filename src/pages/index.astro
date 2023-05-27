@@ -4,14 +4,14 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import PostList from "@/components/PostList.astro";
 import { postsDefaultSortFunc } from "@/content/utils";
 import Pagination from "@/components/Pagination.astro";
-import { PAGE_SIZE } from "../constraint";
+import {BLOG_TITLE, PAGE_SIZE} from "../constraint";
 
 const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
 
 const posts = allPosts.slice(0, PAGE_SIZE);
 ---
 
-<BaseLayout title="abekoh's tech blog">
+<BaseLayout title={BLOG_TITLE}>
   <PostList posts={posts} />
   <Pagination
     page={{
