@@ -37,6 +37,10 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
       @apply leading-relaxed;
     }
 
+    .post-content h1 {
+      @apply text-xl font-bold text-gray-900 leading-relaxed py-3;
+    }
+
     .post-content h2 {
       @apply text-lg font-semibold text-gray-900 leading-relaxed py-2;
     }
@@ -49,6 +53,10 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
       @apply text-base font-medium text-gray-900 leading-relaxed py-1;
     }
 
+    .post-content hr {
+      @apply my-4 border-gray-200;
+    }
+
     .post-content p {
       @apply text-base text-gray-700 leading-relaxed py-2;
     }
@@ -58,11 +66,31 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
     }
 
     .post-content ul {
-      @apply pl-6 list-disc list-outside leading-relaxed;
+      @apply pl-6 list-disc list-outside leading-relaxed text-gray-700;
+    }
+
+    .post-content ol {
+      @apply pl-6 list-decimal list-outside leading-relaxed text-gray-700;
+    }
+
+    .post-content blockquote {
+      @apply p-2 border-l-4 border-gray-200;
     }
 
     .post-content pre {
       @apply p-2 rounded;
+    }
+
+    .post-content table {
+      @apply w-full table-auto;
+    }
+
+    .post-content th {
+      @apply p-2 border border-gray-200 text-gray-900 bg-gray-100;
+    }
+
+    .post-content td {
+        @apply p-2 border border-gray-200 text-gray-700;
     }
 
     /* use github-light https://github.com/shikijs/shiki/blob/1706cb82deac8d88a2dc60c099b6cf92e42b76f4/packages/shiki/themes/github-light.json  */
