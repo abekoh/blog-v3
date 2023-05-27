@@ -9,9 +9,5 @@ const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
 ---
 
 <BaseLayout title="abekoh's tech blog">
-    <PostList
-      postPage={{
-        data: allPosts,
-      }}
-    />
+  <PostList posts={allPosts} />
 </BaseLayout>

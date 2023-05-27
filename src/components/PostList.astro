@@ -7,33 +7,17 @@ import { formatDate } from "@/utils/date";
 const tags = await getCollection("tags");
 const tagMap = new Map(tags.map((tag) => [tag.data.id, tag.data]));
 
-// modify https://github.com/withastro/astro/blob/0616ef255145bf173386b94474dede376e1f2037/packages/astro/src/%40types/astro.ts#L1534
-export interface Page<T = any> {
-  data: T[];
-  start: number | undefined;
-  end: number | undefined;
-  total: number | undefined;
-  currentPage: number | undefined;
-  size: number | undefined;
-  lastPage: number | undefined;
-  url: {
-    current: string | undefined;
-    prev: string | undefined;
-    next: string | undefined;
-  };
-}
-
 interface Props {
-  postPage: Page<CollectionEntry<"posts">>;
+  posts: CollectionEntry<"posts">[];
 }
 
-const { postPage } = Astro.props;
+const { posts } = Astro.props;
 ---
 
 <section>
   <ul class="divide-y divide-gray-200">
     {
-      postPage.data.map((post) => (
+      posts.map((post) => (
         <li class="py-6">
           <article>
             <div class="space-y-1">
