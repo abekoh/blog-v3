@@ -1,9 +1,9 @@
 import type { CollectionEntry } from "astro:content";
 
-export function postsDefaultSortFunc(
+export const postsDefaultSortFunc = (
   a: CollectionEntry<"posts">,
   b: CollectionEntry<"posts">
-) {
+) => {
   const aDate = a.data.publishedAt;
   const bDate = b.data.publishedAt;
   if (aDate > bDate) {
@@ -13,4 +13,4 @@ export function postsDefaultSortFunc(
   } else {
     return 0;
   }
-}
+};
