@@ -28,19 +28,37 @@ microCMSRevisedAt: 2021-10-13T11:25:00.038Z
 </p><h2 id="h6cdd50302f">Tips</h2><p>構築していく上でつまづいたところ、力入れたところなどをいくつか紹介します。<br>
 </p><h3 id="h15424c503e">Material-UIをNext.jsで使う</h3><p>Material-UIをNext.jsといったSSRなフレームワークで利用する際、一工夫が必要となります。</p><ul><li><a href="https://material-ui.com/guides/server-rendering/" target="_blank" rel="noopener noreferrer">Server Rendering - Material-UI</a></li></ul><p>公式にも書かれている通り、リクエストごとに<code>ServerStyleSheets</code>をサーバーサイドで生成、CSSとして埋め込むといったことをしないといけないようです。<br>
 Next.jsでのサンプルもここにあります。</p><ul><li><a href="https://github.com/mui-org/material-ui/tree/master/examples/nextjs" target="_blank" rel="noopener noreferrer">material-ui&#x2F;examples&#x2F;nextjs at master · mui-org&#x2F;material-ui</a></li></ul><p>罠でハマったのが、<code>&lt;Head&gt;</code>のimport元。<br>
-下記のように_document.tsxで呼ぶ場合とそれ以外で異なり、間違ってると正常にページが表示されませんでした。</p><pre><code class="language-tsx">&#x2F;&#x2F; _document.tsx
-import { Head } from &#x27;next&#x2F;document&#x27;;
-&#x2F;&#x2F; _app.tsx など
-import Head from &#x27;next&#x2F;head&#x27;;</code></pre><p><br>
+下記のように_document.tsxで呼ぶ場合とそれ以外で異なり、間違ってると正常にページが表示されませんでした。</p>
+
+```tsx
+// _document.tsx
+import { Head } from 'next/document';
+// _app.tsx など
+import Head from 'next/head';
+```
+
+<p><br>
 </p><h3 id="hfc6e96955b">各種環境向けアイコン&#x2F;favicon</h3><p>faviconといえば昔はfavicon.icoひとつ置くだけでOKでしたが、今はスマホ用ブラウザ用など規格が乱立しているようでした。<br>
 このGeneratorを使って一発で作成→設定することができました。</p><ul><li><a href="https://realfavicongenerator.net/" target="_blank" rel="noopener noreferrer">Favicon Generator for perfect icons on all browsers</a></li></ul><p>プレビューや設定されてるかチェックする機能もあって便利です。<br>
 </p><h3 id="h0be87c007c">技術系タグにアイコンをつける</h3><p>こだわりポイントです。<br>
-deviconというOSSに、さまざまな技術スタックのアイコンが用意されてます。</p><ul><li><a href="https://devicon.dev/" target="_blank" rel="noopener noreferrer">DEVICON | All programming languages and development tools related icons font</a></li></ul><p>これを_document.tsxにてインポートしておいて</p><pre><code class="language-tsx">&lt;Head&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;devicons&#x2F;devicon@v2.11.0&#x2F;devicon.min.css&quot;&gt;
-&lt;&#x2F;Head&gt;</code></pre><p>Material-UIの<a href="https://material-ui.com/components/icons/" target="_blank" rel="noopener noreferrer">Icon</a>コンポーネントで利用するようにしてみました。タグ自体は<a href="https://material-ui.com/components/chips/" target="_blank" rel="noopener noreferrer">Chip</a>を用いてます。</p><pre><code class="language-tsx">&lt;Chip
-  icon={tag.icon ? &lt;Icon className={tag.icon}&gt;&lt;&#x2F;Icon&gt; : undefined}
-  label={tag.name}
-&#x2F;&gt;</code></pre><p><br>
+deviconというOSSに、さまざまな技術スタックのアイコンが用意されてます。</p><ul><li><a href="https://devicon.dev/" target="_blank" rel="noopener noreferrer">DEVICON | All programming languages and development tools related icons font</a></li></ul><p>これを_document.tsxにてインポートしておいて</p>
+
+```tsx
+<Head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+</Head>
+```
+
+<p>Material-UIの<a href="https://material-ui.com/components/icons/" target="_blank" rel="noopener noreferrer">Icon</a>コンポーネントで利用するようにしてみました。タグ自体は<a href="https://material-ui.com/components/chips/" target="_blank" rel="noopener noreferrer">Chip</a>を用いてます。</p>
+
+```tsx
+<Chip
+  icon={tag.icon ? <Icon className={tag.icon}></Icon> : undefined}
+  label={tag.name}
+/>
+```
+
+<p><br>
 </p><h3 id="h4e5b7095e8">Next.jsでRSSやsitemap.xmlなど設定</h3><p>こちらの記事が参考になりました。</p><ul><li><a href="https://zenn.dev/catnose99/articles/c7754ba6e4adac" target="_blank" rel="noopener noreferrer">Next.jsで動的にRSSフィードを生成する</a></li><li><a href="https://zenn.dev/catnose99/articles/c441954a987c24" target="_blank" rel="noopener noreferrer">Next.jsで動的にXMLサイトマップを生成する</a></li></ul><p>JSX&#x2F;TSXで他のページと同様に作ってしまえるので管理が非常に楽です。<br>
 </p><h3 id="h735bd6ae03">OGP画像を動的に生成</h3><p>OGPとは<a href="https://ogp.me/" target="_blank" rel="noopener noreferrer">Open Graph protocol</a>のことで、TwitterやFacebook、Slackにリンクを貼り付けたときに見える画像やテキスト情報についての規格です。<br>
 次の記事を参考に、canvasを使って動的に生成するようにしてみました。</p><ul><li><a href="https://ji23-dev.com/blogs/nextjs-ogp" target="_blank" rel="noopener noreferrer">【Next.js × Vercel】OGP画像を動的生成してみた | JI23-DEV</a></li></ul><p><br>
