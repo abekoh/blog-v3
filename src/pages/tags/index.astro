@@ -1,0 +1,20 @@
+---
+import { getTagMap } from "@/content/utils";
+import Tag from "@/components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { BLOG_TITLE } from "../../constraint";
+
+const tagMap = await getTagMap();
+---
+
+<BaseLayout title={`Tags - ${BLOG_TITLE}`}>
+  <nav>
+    <div class="py-6">
+      {
+        Array.from(tagMap).map(([_, { id, name }]) => (
+          <Tag name={name} href={`/tags/${id}`} />
+        ))
+      }
+    </div>
+  </nav>
+</BaseLayout>
