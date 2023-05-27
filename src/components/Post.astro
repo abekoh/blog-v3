@@ -1,6 +1,9 @@
 ---
 import { AstroComponentFactory } from "astro";
 import DateInfo from "@/components/DateInfo.astro";
+import { getTagMap } from "@/content/utils";
+import Tag from "@/components/Tag.astro";
+
 interface Props {
   title: string;
   publishedAt: Date;
@@ -9,14 +12,23 @@ interface Props {
   Content: AstroComponentFactory;
 }
 
-const { title, publishedAt, modifiedAt, Content } = Astro.props;
+const tagMap = await getTagMap();
+
+const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
 ---
 
 <article>
   <div class="space-y-1 py-6">
     <DateInfo publishedAt={publishedAt} modifiedAt={modifiedAt} />
     <h1 class="text-lg font-bold text-gray-900 leading-relaxed">{title}</h1>
-    <div class="post-content">
+    <div class="flex flex-wrap">
+      {
+        tags.map((tagId) => (
+          <Tag name={tagMap.get(tagId).name ?? ""} href={`/tags/${tagId}`} />
+        ))
+      }
+    </div>
+    <div class="post-content py-2">
       <Content />
     </div>
   </div>
