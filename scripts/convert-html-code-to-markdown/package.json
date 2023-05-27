@@ -1,0 +1,16 @@
+{
+  "name": "convert-html-code-to-markdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "convert": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "glob": "^10.2.6"
+  }
+}
