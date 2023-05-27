@@ -61,7 +61,13 @@ const { title, publishedAt, modifiedAt, Content } = Astro.props;
     }
 
     .post-content pre {
-      @apply p-2 rounded
+      @apply p-2 rounded;
     }
+
+    /* use github-light https://github.com/shikijs/shiki/blob/1706cb82deac8d88a2dc60c099b6cf92e42b76f4/packages/shiki/themes/github-light.json  */
+    .post-content code {
+      @apply p-0.5 text-[#e1e4e8] bg-[#24292e] rounded;
+    }
+
   </style>
 </article>
