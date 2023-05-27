@@ -33,10 +33,6 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
     </div>
   </div>
   <style is:global>
-    .post-content {
-      @apply leading-relaxed;
-    }
-
     .post-content h1 {
       @apply text-xl font-bold text-gray-900 leading-relaxed py-3;
     }
@@ -86,11 +82,11 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
     }
 
     .post-content th {
-      @apply p-2 border border-gray-200 text-gray-900 bg-gray-100;
+      @apply p-2 border border-gray-200 text-gray-900 bg-gray-100 leading-relaxed;
     }
 
     .post-content td {
-        @apply p-2 border border-gray-200 text-gray-700;
+        @apply p-2 border border-gray-200 text-gray-700 leading-relaxed;
     }
 
     /* use github-light https://github.com/shikijs/shiki/blob/1706cb82deac8d88a2dc60c099b6cf92e42b76f4/packages/shiki/themes/github-light.json  */
