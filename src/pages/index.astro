@@ -3,11 +3,26 @@ import { getCollection, CollectionEntry } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PostList from "@/components/PostList.astro";
 import { postsDefaultSortFunc } from "@/content/utils";
+import Pagination from "@/components/Pagination.astro";
+import { PAGE_SIZE } from "../constraint";
 
 const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
-// .slice(0, 10);
+
+const posts = allPosts.slice(0, PAGE_SIZE);
 ---
 
 <BaseLayout title="abekoh's tech blog">
-  <PostList posts={allPosts} />
+  <PostList posts={posts} />
+  <Pagination
+    page={{
+      currentPage: 1,
+      size: PAGE_SIZE,
+      lastPage: Math.ceil(allPosts.length / PAGE_SIZE),
+      url: {
+        current: "/posts/page/1",
+        prev: undefined,
+        next: "/posts/page/2",
+      },
+    }}
+  />
 </BaseLayout>
