@@ -14,7 +14,7 @@ microCMSRevisedAt: 2021-10-13T11:25:00.038Z
 ---
 <p>表題の通り、リニューアルしました。こっそり2週間くらい前から反映させてます。<br>
 </p><h2 id="hc69c85bcf9">背景</h2><p>もともとこのブログはHugo + GitHub Pagesで構築しておりました。<br>
-<img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/8768ddd0b6314a4d97da239d3c95c765/blog-with-hugo.png" alt><br>
+<img src="/assets/blog-with-hugo.png" alt><br>
 <a href="https://blog.abekoh.dev/posts/how-to-build-this-blog" target="_blank" rel="noopener noreferrer">Hugo, Github Pages, CircleCIつかってブログ構築 - abekoh&#x27;s tech note</a><br>
 <br>
 これでも機能は十分でしたが、</p><ul><li>すべてGitHub Pages上にリソースを置いていた(画像も含めて)ので、リポジトリ自体のサイズ肥大化が気になる(個人ブログレベルなので大したものではないが)</li><li>Hugoのテンプレそのまま使っており、フロント知識あまり身に付けず運用できている</li><li>カスタマイズはGo Templateを用いたものを触る必要あり。<span style="font-size: 0.75em">個人的に気分が乗らない…</span></li></ul><p>といったことが不満でした。<br>

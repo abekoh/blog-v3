@@ -1,9 +1,8 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-const { id } = Astro.params;
-import { getCollection, getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import { BLOG_TITLE } from "../../../constraint";
+import { BASE_URL, BLOG_TITLE } from "../../../constraint";
 import Post from "@/components/Post.astro";
 
 export async function getStaticPaths() {
@@ -21,9 +20,19 @@ interface Props {
 }
 const { post } = Astro.props;
 const { Content } = await post.render();
+
+const title = `${post.data.title} - ${BLOG_TITLE}`;
 ---
 
-<BaseLayout title={`${post.data.title} - ${BLOG_TITLE}`}>
+<BaseLayout
+  title={title}
+  metadata={{
+    type: "article",
+    description: post.data.summary,
+    url: `${BASE_URL}${Astro.url.pathname}`,
+    draft: post.data.draft,
+  }}
+>
   <Post
     title={post.data.title}
     publishedAt={post.data.publishedAt}

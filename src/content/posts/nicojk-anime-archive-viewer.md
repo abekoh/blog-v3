@@ -17,7 +17,7 @@ microCMSRevisedAt: 2022-07-24T06:28:07.681Z
 - [NicoJK Anime Archive Viewer](https://nicojk.abekoh.dev/)
 
 たとえば、[けものフレンズ1期12話](https://nicojk.abekoh.dev/4441/396632) の様子はこんな感じで表示されます。
-![kemo-12](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/dd489dafa0c04e10bd47e5ba0f4ad15a/nicojk-kemo-12.gif)
+![kemo-12](/assets/nicojk-kemo-12.gif)
 
 初回放送で実況で盛り上がったところなど見てみると結構おもしろいです。  
 (実況独特の文化があって、5chのような治安の悪さもあるので苦手な方はご注意ください。)
@@ -58,7 +58,7 @@ microCMSRevisedAt: 2022-07-24T06:28:07.681Z
 
 アーキテクチャはだいたいこんな感じです。
 
-![oveerview](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/ea7068f35e61411ab64f2a1159dc0b64/nicojk-anime-archive-viewer.png)
+![oveerview](/assets/nicojk-anime-archive-viewer.png)
 
 **2022/07/24追記: ホスティングにAmplifyを使ってましたが、Next.jsとの相性問題に悩んだ末Vercelに移行させました。Amplifyブラックボックス多くてわからない。。**
 

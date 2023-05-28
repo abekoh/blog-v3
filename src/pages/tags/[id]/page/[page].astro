@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
-import type { CollectionEntry } from "astro:content";
 import { postsDefaultSortFunc } from "@/content/utils";
 import { Page } from "astro";
 import { getCollection, CollectionEntry } from "astro:content";
@@ -17,8 +16,7 @@ export async function getStaticPaths({ paginate }) {
       .filter((p) => p.data.tags.includes(tag.id) && !p.data.draft);
     return paginate(filteredPosts, {
       params: { id: tag.id },
-      // TODO: use PAGE_SIZE
-      pageSize: 5,
+      pageSize: PAGE_SIZE,
       props: { tag: tag.data },
     });
   });

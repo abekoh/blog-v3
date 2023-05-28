@@ -21,13 +21,13 @@ microCMSRevisedAt: 2022-10-01T12:07:30.200Z
 
 2016年ごろに構築したMini-ITXサイズのPC。CPUオンボードなマザボつかった省電力なやつ。
 
-![rock01](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/225b1bad371642cda08756dedc01c13d/rock01.jpg?w=300)
+![rock01](/assets/rock01.jpg?w=300)
 
-![rock03](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/5649930296e14d02969f71cf5c1342b5/rock03.jpg?w=300)
+![rock03](/assets/rock03.jpg?w=300)
 
 PT3組み込み済み。PT3は購入してもう8年くらい？だが何の問題なく使えている。我が家にはBSがないので地上波のみつなげる。
 
-![rock02](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/f60bc404201044bf832db8990875d02e/rock02.jpg?w=300)
+![rock02](/assets/rock02.jpg?w=300)
 
 
 わかる範囲でのパーツ↓
@@ -54,31 +54,31 @@ Bootable USBメモリを作成する。いろいろツールはあるが、今�
 起動。
 このとき、インストール先でないHDDや不要なUSBデバイス、LANケーブルなど抜いておくといろいろ事故らなくて済む。
 
-[![ubuntu22_01](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/c2040ed97ea143a3ae82c31384c740a2/ubuntu22_01.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/c2040ed97ea143a3ae82c31384c740a2/ubuntu22_01.png)
+[![ubuntu22_01](/assets/ubuntu22_01.png)
 
 この画面がでたら設定開始。
 
-[![ubuntu22_02](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/7396e9277f88453fa19d070698c8ffe3/ubuntu22_02.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/7396e9277f88453fa19d070698c8ffe3/ubuntu22_02.png)
+[![ubuntu22_02](/assets/ubuntu22_02.png)
 
 ディスクまるごと潰すので、ほぼデフォルトのままインストール。
 
-[![ubuntu22_03](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/aca7f7a5133f482282d4ed21e0f453aa/ubuntu22_03.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/aca7f7a5133f482282d4ed21e0f453aa/ubuntu22_03.png)
+[![ubuntu22_03](/assets/ubuntu22_03.png)
 
 Ubuntu20.04のころからあったけど、GitHubの公開鍵そのまま同期できるのが超便利。
 
-[![ubuntu22_04](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/acc74b4cebcd410bb049094b9f49501f/ubuntu22_04.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/acc74b4cebcd410bb049094b9f49501f/ubuntu22_04.png)
+[![ubuntu22_04](/assets/ubuntu22_04.png)
 
 デフォルトで必要なやつ入れられる。使いそうなものにチェック。
 
-[![ubuntu22_05](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/542875a472ee4112ba42f50832b24d24/ubuntu22_05.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/542875a472ee4112ba42f50832b24d24/ubuntu22_05.png)
+[![ubuntu22_05](/assets/ubuntu22_05.png)
 
 LANケーブル繋いでおけば、そのままセキュリティアップデートも実施できる。
 
-[![ubuntu22_06](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/c3843330b3e34f8e9304dba38ec4375a/ubuntu22_06.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/c3843330b3e34f8e9304dba38ec4375a/ubuntu22_06.png)
+[![ubuntu22_06](/assets/ubuntu22_06.png)
 
 DONE
 
-[![ubuntu22_07](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/7cd871f8c3294018bc7bc4c92e52f6e5/ubuntu22_07.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/7cd871f8c3294018bc7bc4c92e52f6e5/ubuntu22_07.png)
+[![ubuntu22_07](/assets/ubuntu22_07.png)
 
 移行はsshで作業する。
 
@@ -116,9 +116,9 @@ Docker普及してなかったころはここからいろいろ躓いてた記�
 
 EPGStationのポートがデフォルトで `8888` だったが、Mirakurunのポート(`40772`)の近くにしたかったので、`40773`に設定変えた。
 
-[![mirakurun](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/6db8b638cdfa4a8d9ded8768aa9d8020/mirakurun.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/6db8b638cdfa4a8d9ded8768aa9d8020/mirakurun.png)
+[![mirakurun](/assets/mirakurun.png)
 
-[![epgstation](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/32500cc74e4140359b42fcf844ff2510/epgstation.png?w=300)](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/32500cc74e4140359b42fcf844ff2510/epgstation.png)
+[![epgstation](/assets/epgstation.png)
 
 ## Samba
 
@@ -138,7 +138,7 @@ EPGStationのポートがデフォルトで `8888` だったが、Mirakurunの�
 
 BonDriver_Mirakurun.iniの`SERVER_HOST`をサーバーのIPの設定だけ変更でOK。
 
-![tvtest](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/946d29cab721462f903ab50abd08c78e/tvtest.png)
+![tvtest](/assets/tvtest.png)
 
 ## まとめ
 

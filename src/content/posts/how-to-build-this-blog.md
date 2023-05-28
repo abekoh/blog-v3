@@ -25,7 +25,7 @@ microCMSRevisedAt: 2021-04-24T08:36:22.647Z
 <p><del>https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme</del></p>
 <p>→ これに変更しました <a href="https://github.com/achary/engimo">https://github.com/achary/engimo</a></p>
 <h2 id="構成">構成</h2>
-<p><img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/32dd7d4016974ffd8eda9e13cb58babe/circleci-github-hugo.png" alt="全体構成"></p>
+<p><img src="/assets/circleci-github-hugo.png" alt="全体構成"></p>
 <p>Github Pagesの機能をつかって公開するんですが、Hugoのソース自体はPrivateで管理。
 abekoh.github.ioにはCircleCIがmaster pushするだけ。</p>
 <p>CircleCI選んだ理由は、とりあえず有名でモダンなやつ試したかったから。
@@ -107,9 +107,9 @@ workflows:
 <p>ついでにドメインも取得してみたので設定。</p>
 <p>Google Domainsで、devドメインつくりました。
 年間1200円、安いですね。</p>
-<p><img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/6d91827834544e0c827dfa96dc200674/google-domains-cname-config.png" alt="Google Domains設定">
+<p><img src="/assets/google-domains-cname-config.png" alt="Google Domains設定">
 このようにCNAME設定して、</p>
-<p><img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/908fc4ae8e714c82b8ed451968e4d063/github-pages-domain-config.png" alt="Github Pages">
+<p><img src="/assets/github-pages-domain-config.png" alt="Github Pages">
 abekoh/abekoh.github.ioのSettingsでドメイン設定するだけ。</p>
 <p>なお、CNAMEファイルがpush時に毎回消えてしまうような設定になっているので、.cricleci/config.ymlのpipelineのとおりCNAMEを毎回作成するようにしています。</p>
 <h2 id="感想">感想</h2>
@@ -119,5 +119,5 @@ abekoh/abekoh.github.ioのSettingsでドメイン設定するだけ。</p>
 <p><a href="https://blog.abekoh.dev/posts/build-blog-with-nextjs">こちらの記事</a>のとおり、リニューアルしたのでこの内容のとおりではなくなっております。<br>
 記録のために、スクリーンショットをこちらに置いておきます。
 </p>
-<p><img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/8768ddd0b6314a4d97da239d3c95c765/blog-with-hugo.png"/></p>
+<p><img src="/assets/blog-with-hugo.png"/></p>
     

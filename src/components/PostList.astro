@@ -12,7 +12,6 @@ interface Props {
 }
 
 const { posts, focusedTagId } = Astro.props;
-console.log(focusedTagId);
 ---
 
 <section>
@@ -32,11 +31,13 @@ console.log(focusedTagId);
                 </h2>
               </div>
               {post.data.summary && (
-                <div class="text-base text-gray-700 leading-relaxed">
-                  <a href={`/posts/${post.slug}`}>
-                    <p>{post.data.summary}</p>
-                  </a>
-                </div>
+                <summary>
+                  <div class="text-base text-gray-700 leading-relaxed">
+                    <a href={`/posts/${post.slug}`}>
+                      <p>{post.data.summary}</p>
+                    </a>
+                  </div>
+                </summary>
               )}
               <div class="flex flex-wrap">
                 {post.data.tags.map((tagId) => (

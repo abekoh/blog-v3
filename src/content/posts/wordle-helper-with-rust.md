@@ -29,7 +29,7 @@ CLIでWordleの候補となる単語を洗い出してくれるものです。
 
 [abekoh/wordle_helper: Help solving Wordle question with CLI.](https://github.com/abekoh/wordle_helper)
 
-![Demo](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/951b2903fb064bfdb6f65618fd9fe399/wordle_helper.gif)
+![Demo](/assets/wordle_helper.gif)
 
 特徴は以下の通り。
 
@@ -54,7 +54,7 @@ curl https://raw.githubusercontent.com/sindresorhus/pokemon/main/data/ja.json | 
 wordle-helper -d /tmp/poke_jp.txt -m 10
 ```
 
-![Demo Poke](https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/7fd8af30f0634c0a8297b3192be19136/worlde_helper_poke.gif)
+![Demo Poke](/assets/worlde_helper_poke.gif)
 
 ## 感想
 
