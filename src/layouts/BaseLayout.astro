@@ -1,7 +1,7 @@
 ---
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import { BLOG_TITLE } from "../constraint";
+import { AUTHOR_TWITTER, BLOG_TITLE } from "../constraint";
 
 interface Metadata {
   type: "article" | undefined;
@@ -28,6 +28,9 @@ const { title, metadata } = Astro.props;
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta property="og:site_name" content={BLOG_TITLE} />
     <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content={AUTHOR_TWITTER} />
+    <meta name="twitter:creator" content={AUTHOR_TWITTER} />
     {
       metadata && (
         <>
@@ -39,7 +42,10 @@ const { title, metadata } = Astro.props;
             </>
           )}
           {metadata.description && (
-            <meta property="og:description" content={metadata.description} />
+            <>
+              <meta name="description" content={metadata.description} />
+              <meta property="og:description" content={metadata.description} />
+            </>
           )}
           {metadata.url && <meta property="og:url" content={metadata.url} />}
           {metadata.image && (
