@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-const { id } = Astro.params;
-import { getCollection, getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { BLOG_TITLE } from "../../../constraint";
 import Post from "@/components/Post.astro";
