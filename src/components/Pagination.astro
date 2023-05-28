@@ -1,5 +1,6 @@
 ---
 import { Page } from "astro";
+import * as url from "url";
 
 // copy and edit https://github.com/withastro/astro/blob/f2f18b44055c6334a39d6379de88fe41e518aa1e/packages/astro/src/%40types/astro.ts#L1534
 export interface Page {
@@ -15,9 +16,10 @@ export interface Page {
 
 interface Props {
   page: Page;
+  urlPrefix: string;
 }
 
-const { page } = Astro.props;
+const { page, urlPrefix } = Astro.props;
 
 const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
 ---
@@ -36,7 +38,7 @@ const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
             </li>
           ) : (
             <li>
-              <a href={`/posts/page/${i}`} class="px-3 py-2 leading-tight">
+              <a href={`${urlPrefix}${i}`} class="px-3 py-2 leading-tight">
                 {i}
               </a>
             </li>
