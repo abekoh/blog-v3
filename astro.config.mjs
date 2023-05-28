@@ -13,6 +13,9 @@ export default defineConfig({
     },
   },
   site: "https://blog.abekoh.dev",
+  build: {
+    format: "file"
+  },
   integrations: [
     tailwind(),
     image({
