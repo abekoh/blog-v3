@@ -22,7 +22,7 @@ const { publishedAt, modifiedAt } = Astro.props;
         class="text-sm text-base text-gray-500"
         datetime={modifiedAt}
       >
-        (updated: {formatDate(modifiedAt)})
+        ({formatDate(modifiedAt)})
       </time>
     )
   }
