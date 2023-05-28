@@ -5,8 +5,8 @@ import { postsDefaultSortFunc } from "@/content/utils";
 import { Page } from "astro";
 import { getCollection, CollectionEntry } from "astro:content";
 import PostList from "@/components/PostList.astro";
-import { BLOG_TITLE, PAGE_SIZE } from "../../../../constraint";
 import Pagination from "@/components/Pagination.astro";
+import { BLOG_TITLE, PAGE_SIZE } from "../../../../constraint";
 
 export async function getStaticPaths({ paginate }) {
   const allTags = await getCollection("tags");

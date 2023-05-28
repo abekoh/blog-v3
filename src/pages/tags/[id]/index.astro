@@ -1,0 +1,45 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection, getEntryBySlug } from "astro:content";
+import { BLOG_TITLE, PAGE_SIZE } from "../../../constraint";
+import { postsDefaultSortFunc } from "@/content/utils";
+import PostList from "@/components/PostList.astro";
+import Pagination from "@/components/Pagination.astro";
+
+export async function getStaticPaths() {
+  const allTags = await getCollection("tags");
+  return allTags.map((tag) => {
+    return {
+      params: { id: tag.id },
+      props: { tag },
+    };
+  });
+}
+
+const { id } = Astro.params;
+
+const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
+
+const filteredPosts = allPosts
+  .filter((post) => post.data.tags.includes(id) && !post.data.draft)
+  .slice(0, PAGE_SIZE);
+---
+
+<BaseLayout title={BLOG_TITLE}>
+  <PostList posts={filteredPosts} />
+  <Pagination
+    page={{
+      currentPage: 1,
+      size: PAGE_SIZE,
+      lastPage: Math.ceil(filteredPosts.length / PAGE_SIZE),
+      url: {
+        current: `/posts/tags/${id}/page/1`,
+        prev: undefined,
+        next:
+          filteredPosts.length > PAGE_SIZE
+            ? `/posts/tags/${id}/page/2`
+            : undefined,
+      },
+    }}
+  />
+</BaseLayout>
