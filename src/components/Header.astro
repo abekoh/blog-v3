@@ -1,5 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
+import { BLOG_TITLE } from "../constraint";
 
 const navItems = [
   {
@@ -20,7 +21,7 @@ const navItems = [
         <Image src="/logo.png" alt="logo" width="48" aspectRatio="1:1" />
       </div>
       <div class="mr-2">
-        <a href="/" class="text-gray-700 font-bold">abekoh's tech blog</a>
+        <a href="/" class="text-gray-700 font-bold">{BLOG_TITLE}</a>
       </div>
     </div>
     <nav>
