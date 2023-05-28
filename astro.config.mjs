@@ -13,6 +13,7 @@ export default defineConfig({
     },
   },
   site: "https://blog.abekoh.dev",
+  trailingSlash: "never",
   integrations: [
     tailwind(),
     image({
