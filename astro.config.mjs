@@ -12,6 +12,7 @@ export default defineConfig({
       wrap: false
     }
   },
+  site: 'https://blog.abekoh.dev',
   integrations: [tailwind(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), sitemap()]
