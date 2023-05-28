@@ -1,6 +1,7 @@
 ---
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import { BLOG_TITLE } from "../constraint";
 
 interface Metadata {
   type: "article" | undefined;
@@ -24,21 +25,23 @@ const { title, metadata } = Astro.props;
     <title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:site_name" content={BLOG_TITLE} />
     {
       metadata && (
         <>
           {metadata.type && <meta property="og:type" content={metadata.type} />}
           {metadata.title && (
-            <meta property="og:title" content={metadata.title} />
+            <>
+              <meta property="og:title" content={metadata.title} />
+              <meta property="og:image:alt" content={metadata.title} />
+            </>
           )}
           {metadata.description && (
-              <meta property="og:description" content={metadata.description} />
+            <meta property="og:description" content={metadata.description} />
           )}
-          {metadata.url && (
-              <meta property="og:url" content={metadata.url} />
-          )}
+          {metadata.url && <meta property="og:url" content={metadata.url} />}
           {metadata.image && (
-              <meta property="og:image" content={metadata.image} />
+            <meta property="og:image" content={metadata.image} />
           )}
         </>
       )
