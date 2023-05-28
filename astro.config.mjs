@@ -9,11 +9,15 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       theme: "github-dark",
-      wrap: false
-    }
+      wrap: false,
+    },
   },
-  site: 'https://blog.abekoh.dev',
-  integrations: [tailwind(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), sitemap()]
+  site: "https://blog.abekoh.dev",
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    sitemap(),
+  ],
 });
