@@ -8,9 +8,11 @@ const tagMap = await getTagMap();
 
 interface Props {
   posts: CollectionEntry<"posts">[];
+  focusedTagId: string | undefined;
 }
 
-const { posts } = Astro.props;
+const { posts, focusedTagId } = Astro.props;
+console.log(focusedTagId);
 ---
 
 <section>
@@ -41,6 +43,7 @@ const { posts } = Astro.props;
                   <Tag
                     name={tagMap.get(tagId).name ?? ""}
                     href={`/tags/${tagId}`}
+                    focused={focusedTagId === tagId}
                   />
                 ))}
               </div>

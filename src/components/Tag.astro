@@ -2,13 +2,25 @@
 interface Props {
   name: string;
   href: string;
+  focused: boolean | undefined;
 }
-const { name, href } = Astro.props;
+const { name, href, focused } = Astro.props;
 ---
 
-<a
-  href={href}
-  class="px-1 my-1 mr-1 last:mr-0 text-xs font-medium inline-block rounded text-gray-900 bg-gray-100 leading-relaxed"
->
-  {name}
-</a>
+{
+  focused ? (
+    <a
+      href={href}
+      class="px-1 my-1 mr-1 last:mr-0 text-xs font-medium inline-block rounded text-gray-100 bg-gray-500 leading-relaxed"
+    >
+      {name}
+    </a>
+  ) : (
+    <a
+      href={href}
+      class="px-1 my-1 mr-1 last:mr-0 text-xs font-medium inline-block rounded text-gray-900 bg-gray-100 leading-relaxed"
+    >
+      {name}
+    </a>
+  )
+}
