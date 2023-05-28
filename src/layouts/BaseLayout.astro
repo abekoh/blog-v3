@@ -1,7 +1,12 @@
 ---
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import { AUTHOR_TWITTER, BLOG_DESCRIPTION, BLOG_TITLE } from "../constraint";
+import {
+  AUTHOR_TWITTER,
+  BASE_URL,
+  BLOG_DESCRIPTION,
+  BLOG_TITLE,
+} from "../constraint";
 
 interface Metadata {
   type: "article" | undefined;
@@ -57,6 +62,11 @@ const { title, metadata } = Astro.props;
       )
     }
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="alternate"
+      href={`${BASE_URL}/feed`}
+      type="application/rss+xml"
+    />
   </head>
   <body class="bg-white text-black antialiased overflow-y-scroll">
     <div class="container mx-auto max-w-screen-md min-h-screen">
