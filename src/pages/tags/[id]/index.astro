@@ -5,18 +5,25 @@ import { BLOG_TITLE, PAGE_SIZE } from "../../../constraint";
 import { postsDefaultSortFunc } from "@/content/utils";
 import PostList from "@/components/PostList.astro";
 import Pagination from "@/components/Pagination.astro";
+import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const allTags = await getCollection("tags");
   return allTags.map((tag) => {
     return {
       params: { id: tag.id },
-      props: { tag },
+      props: { tag: tag.data },
     };
   });
 }
 
 const { id } = Astro.params;
+
+interface Props {
+  tag: CollectionEntry<"tag">;
+}
+
+const { tag } = Astro.props;
 
 const allPosts = (await getCollection("posts"))
   .sort(postsDefaultSortFunc)
@@ -29,7 +36,7 @@ const slicedPosts = filteredPosts.slice(0, PAGE_SIZE);
 const urlPrefix = `/tags/${id}/page`;
 ---
 
-<BaseLayout title={BLOG_TITLE}>
+<BaseLayout title={`${tag.name} - ${BLOG_TITLE}`}>
   <PostList posts={slicedPosts} focusedTagId={id} />
   <Pagination
     urlPrefix={urlPrefix}
