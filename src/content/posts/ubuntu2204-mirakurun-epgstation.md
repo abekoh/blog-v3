@@ -54,31 +54,31 @@ Bootable USBメモリを作成する。いろいろツールはあるが、今�
 起動。
 このとき、インストール先でないHDDや不要なUSBデバイス、LANケーブルなど抜いておくといろいろ事故らなくて済む。
 
-[![ubuntu22_01](/assets/ubuntu22_01.png)
+![ubuntu22_01](/assets/ubuntu22_01.png)
 
 この画面がでたら設定開始。
 
-[![ubuntu22_02](/assets/ubuntu22_02.png)
+![ubuntu22_02](/assets/ubuntu22_02.png)
 
 ディスクまるごと潰すので、ほぼデフォルトのままインストール。
 
-[![ubuntu22_03](/assets/ubuntu22_03.png)
+![ubuntu22_03](/assets/ubuntu22_03.png)
 
 Ubuntu20.04のころからあったけど、GitHubの公開鍵そのまま同期できるのが超便利。
 
-[![ubuntu22_04](/assets/ubuntu22_04.png)
+![ubuntu22_04](/assets/ubuntu22_04.png)
 
 デフォルトで必要なやつ入れられる。使いそうなものにチェック。
 
-[![ubuntu22_05](/assets/ubuntu22_05.png)
+![ubuntu22_05](/assets/ubuntu22_05.png)
 
 LANケーブル繋いでおけば、そのままセキュリティアップデートも実施できる。
 
-[![ubuntu22_06](/assets/ubuntu22_06.png)
+![ubuntu22_06](/assets/ubuntu22_06.png)
 
 DONE
 
-[![ubuntu22_07](/assets/ubuntu22_07.png)
+![ubuntu22_07](/assets/ubuntu22_07.png)
 
 移行はsshで作業する。
 
@@ -116,9 +116,9 @@ Docker普及してなかったころはここからいろいろ躓いてた記�
 
 EPGStationのポートがデフォルトで `8888` だったが、Mirakurunのポート(`40772`)の近くにしたかったので、`40773`に設定変えた。
 
-[![mirakurun](/assets/mirakurun.png)
+![mirakurun](/assets/mirakurun.png)
 
-[![epgstation](/assets/epgstation.png)
+![epgstation](/assets/epgstation.png)
 
 ## Samba
 
