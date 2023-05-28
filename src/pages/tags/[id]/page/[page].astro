@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+const { id } = Astro.params;
+import type { CollectionEntry } from "astro:content";
+import { postsDefaultSortFunc } from "@/content/utils";
+import { Page } from "astro";
+import { getCollection, CollectionEntry } from "astro:content";
+import PostList from "@/components/PostList.astro";
+import { BLOG_TITLE, PAGE_SIZE } from "../../../../constraint";
+import Pagination from "@/components/Pagination.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const allTags = await getCollection("tags");
+  const allPosts = await getCollection("posts");
+  return allTags.map((tag) => {
+    const posts = allPosts.filter((p) => p.data.tags.includes(tag.id));
+    return paginate(posts, {
+      params: { id: tag.id },
+      // TODO: use PAGE_SIZE
+      pageSize: 5,
+    });
+  });
+}
+
+interface Props {
+  page: Page<CollectionEntry<"posts">>;
+}
+
+const { page } = Astro.props;
+const posts = page.data;
+---
+
+<BaseLayout
+  title={`Posts(${page.currentPage}/${page.lastPage}) - ${BLOG_TITLE}`}
+>
+  <Pagination page={page} />
+  <PostList posts={posts} />
+  <Pagination page={page} />
+</BaseLayout>
