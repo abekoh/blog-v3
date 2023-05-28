@@ -5,7 +5,6 @@ import { AUTHOR_TWITTER, BLOG_TITLE } from "../constraint";
 
 interface Metadata {
   type: "article" | undefined;
-  title: string | undefined;
   description: string | undefined;
   url: string | undefined;
   image: string | undefined;
@@ -26,8 +25,10 @@ const { title, metadata } = Astro.props;
     <title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta property="og:title" content={title} />
     <meta property="og:site_name" content={BLOG_TITLE} />
     <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image:alt" content={title} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content={AUTHOR_TWITTER} />
     <meta name="twitter:creator" content={AUTHOR_TWITTER} />
@@ -35,12 +36,6 @@ const { title, metadata } = Astro.props;
       metadata && (
         <>
           {metadata.type && <meta property="og:type" content={metadata.type} />}
-          {metadata.title && (
-            <>
-              <meta property="og:title" content={metadata.title} />
-              <meta property="og:image:alt" content={metadata.title} />
-            </>
-          )}
           {metadata.description && (
             <>
               <meta name="description" content={metadata.description} />
