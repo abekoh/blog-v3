@@ -6,12 +6,20 @@ import { BLOG_TITLE } from "../../constraint";
 import { getCollection } from "astro:content";
 
 const tags = await getCollection("tags");
+const posts = await getCollection("posts");
+const filteredTags = tags.filter((tag) =>
+  posts.some((post) => post.data.tags.includes(tag.data.id))
+);
 ---
 
 <BaseLayout title={`Tags - ${BLOG_TITLE}`}>
   <nav>
     <div class="py-6">
-      {tags.map((tag) => <Tag name={tag.data.name} href={`/tags/${tag.data.id}`} />)}
+      {
+        filteredTags.map((tag) => (
+          <Tag name={tag.data.name} href={`/tags/${tag.data.id}`} />
+        ))
+      }
     </div>
   </nav>
 </BaseLayout>
