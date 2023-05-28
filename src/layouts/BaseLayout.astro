@@ -67,18 +67,6 @@ const { title, metadata } = Astro.props;
       href={`${BASE_URL}/rss.xml`}
       type="application/rss+xml"
     />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QCDTP8WZ3"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag("js", new Date());
-      gtag("config", "G-8QCDTP8WZ3");
-    </script>
   </head>
   <body class="bg-white text-black antialiased overflow-y-scroll">
     <div class="container mx-auto max-w-screen-md min-h-screen">
@@ -92,3 +80,18 @@ const { title, metadata } = Astro.props;
     </div>
   </body>
 </html>
+<script
+  is:inline
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-8QCDTP8WZ3"
+></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "G-8QCDTP8WZ3");
+</script>
