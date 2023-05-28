@@ -15,7 +15,7 @@ export default defineConfig({
   compressHTML: true,
   site: "https://blog.abekoh.dev",
   build: {
-    format: "file"
+    format: "file",
   },
   integrations: [
     tailwind(),
