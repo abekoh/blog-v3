@@ -31,5 +31,5 @@
     "prettier-plugin-astro": "^0.9.0",
     "typescript": "^5.0.4"
   },
-  "packageManager": "pnpm"
+  "packageManager": "pnpm@8"
 }
