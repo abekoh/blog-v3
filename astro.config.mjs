@@ -12,6 +12,7 @@ export default defineConfig({
       wrap: false,
     },
   },
+  compressHTML: true,
   site: "https://blog.abekoh.dev",
   build: {
     format: "file"
