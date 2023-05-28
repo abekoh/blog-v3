@@ -1,20 +1,49 @@
 ---
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-interface Props {
-  title: string;
+
+interface Metadata {
+  type: "article" | undefined;
+  title: string | undefined;
+  description: string | undefined;
+  url: string | undefined;
+  image: string | undefined;
 }
 
-const { title } = Astro.props;
+interface Props {
+  title: string;
+  metadata: Metadata | undefined;
+}
+
+const { title, metadata } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {
+      metadata && (
+        <>
+          {metadata.type && <meta property="og:type" content={metadata.type} />}
+          {metadata.title && (
+            <meta property="og:title" content={metadata.title} />
+          )}
+          {metadata.description && (
+              <meta property="og:description" content={metadata.description} />
+          )}
+          {metadata.url && (
+              <meta property="og:url" content={metadata.url} />
+          )}
+          {metadata.image && (
+              <meta property="og:image" content={metadata.image} />
+          )}
+        </>
+      )
+    }
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>{title}</title>
   </head>
   <body class="bg-white text-black antialiased overflow-y-scroll">
     <div class="container mx-auto max-w-screen-md min-h-screen">
