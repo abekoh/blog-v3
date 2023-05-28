@@ -19,11 +19,11 @@ microCMSRevisedAt: 2021-04-17T13:28:15.298Z
 <h2 id="どんなサービス？">どんなサービス？</h2>
 <p>あつ森に出てくる家具、服などのアイテムを簡単に検索でき、そのバリエーションや入手方法などをチェックすることができます。</p>
 <p>デモはこちら。
-<img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/aae7fbb9d5c0416c9e2fdbb99e261b00/atsumori-app-pc.gif" alt="atsumori-app-pc">
+<img src="/assets/atsumori-app-pc.gif" alt="atsumori-app-pc">
 左側のメニューから、キーワード検索でアイテムを探すことができます。しぼりこみ検索では「ジョニーからもらえる家具」といった条件で検索ができます。
 またマイリスト機能もつけていまして、ログインしていたら欲しい物を管理、公開することが可能になってます。</p>
 <p>レスポンシブなので、スマホにも対応しています。
-<img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/b887618500ad4bbfa17d6ad08784aea7/atsumori-app-sm.gif" alt="atsumori-app-sm"></p>
+<img src="/assets/atsumori-app-sm.gif" alt="atsumori-app-sm"></p>
 <h2 id="なぜ公開をやめたか">なぜ公開をやめたか</h2>
 <p>やっぱり著作権的にアウトだと判断し、お蔵入りにすることにしました。</p>
 <p>多くのあつ森攻略サイトで家具一覧ページが存在していたり、某ポケモン攻略サイトが公式からOKもらっていたりと前例があるので、
@@ -112,7 +112,7 @@ CSSを全く書くことなく、HTMLテンプレ書くだけでいい感じの�
 <p>実際使ってみましたが、クライアントも多言語対応で超簡単でした。
 (アイテムデータのみ検索対応だったので、Pythonで登録、JSで検索のみで使いました。)</p>
 <p>ひらがな・カタカナ両対応させるべく、こんな風にそれぞれでインデックス登録しました。
-<img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/64eb2280fc33450494355165cb073197/atsumori-app-algolia.png" alt="Algolia管理画面"></p>
+<img src="/assets/atsumori-app-algolia.png" alt="Algolia管理画面"></p>
 <h3 id="ホスティングもfirebaseで">ホスティングもFirebaseで</h3>
 <p>公開はSSRの場合はHosting + Functionsで。次の記事が参考になりました。</p>
 <p><a href="https://qiita.com/sterashima78/items/394161661c634f9eda2b">SSRモードのNuxt を Firebaseにホストするまでの手順 - Qiita</a></p>

@@ -20,7 +20,7 @@ GithubなどGitレポジトリに紐づけてトリガーさせて使うのが�
 <p>こちらに置いてます。</p>
 <p><a href="https://github.com/abekoh/gcp-deploy-from-storage">abekoh/gcp-deploy-from-storage</a></p>
 <h2 id="全体像">全体像</h2>
-<p><img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/fb07fc3a9b2b447fa5c4eadd77006341/gcp-deploy-functions-from-storage.svg" alt="全体像"></p>
+<p><img src="/assets/gcp-deploy-functions-from-storage.svg" alt="全体像"></p>
 <p>今回はhello-funcというファンクションを、tar.gzに圧縮したソースからCloud Functionsにデプロイするというシナリオとします。
 デプロイ対象はApp Engineとか、別のサービスでもいけるはず。</p>
 <h2 id="デプロイ対象">デプロイ対象</h2>
@@ -134,7 +134,7 @@ gcloud functions deploy build-func \
 <h2 id="cloud-buildの権限設定">Cloud Buildの権限設定</h2>
 <p>Cloud Buildを使って対象を初めてデプロイする場合、権限設定が必要です。
 今回はCloud Functionsをデプロイするのでその開発者と、サービスアカウントユーザーが必要なので付与します。</p>
-<p><img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/b6e476cf2b8f44a184c181b158484972/cloud-build-settings.png" alt="Cloud Buildの権限設定"></p>
+<p><img src="/assets/cloud-build-settings.png" alt="Cloud Buildの権限設定"></p>
 <h2 id="動作確認">動作確認</h2>
 <p>準備が整ったところで、Storageの対象バケットにアップロードしてみます。</p>
 
@@ -146,7 +146,7 @@ gsutil cp hello-func.tar.gz gs://src-func/hello-func.tar.gz
 
 
 <p>このように、正常hello-funcがデプロイされました。</p>
-<p><img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/ef53a10ecb2c47958467d60e7bfcd3ec/result-hello-func.png" alt="Functionsの結果"></p>
+<p><img src="/assets/result-hello-func.png" alt="Functionsの結果"></p>
 <h2 id="まとめ">まとめ</h2>
 <p>ちょっと面倒ではありますが、ちょっと工夫するだけで実現できたので良かったです。
 こんな感じで、トリガーに設定できなくてもAPIが存在すればFunctionsでなんとかなるってことは他にもあるかもですね。</p>

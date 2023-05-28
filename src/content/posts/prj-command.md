@@ -30,7 +30,7 @@ microCMSRevisedAt: 2021-03-25T12:49:30.792Z
 <p>Neovim,tmuxは必須ですが、fish,pecoはzsh,fzfに書き換えても良いと思います。
 インストール方法はそれぞれリンク先を参照してください。</p>
 <h2 id="デモ">デモ</h2>
-<p><img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/60bac41cda964d178dedfddcf23e7534/prj-command.gif" alt="prj command"></p>
+<p><img src="/assets/prj-command.gif" alt="prj command"></p>
 <p>わかりにくいかもですが、次のような特徴をみせてます。</p>
 <ol>
 <li><code>prj</code>で、ghqにより管理されたgitリポジトリをpecoをつかって選択</li>

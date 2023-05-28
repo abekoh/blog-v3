@@ -23,7 +23,7 @@ GCPサービスみたくサービスアカウント使う、ってことはで�
 <li><p>GCPサイドバー-&gt;APIとサービス-&gt;認証情報 より、認証情報を作成-&gt;OAuthクライアントID を選択</p>
 </li>
 <li><p>用途に応じた種類を選ぶ。任意の名前をつける。JS生成元・リダイレクトURIは <a href="http://localhost:8080">http://localhost:8080</a> を指定
-<img src="https://images.microcms-assets.io/assets/4f79e018736547879adf5670ebeaccc3/c5f0e86c25dc43bdb3ae11c83da64117/setup-google-oauth.png" alt="Google API OAuth 2.0設定"></p>
+<img src="/assets/setup-google-oauth.png" alt="Google API OAuth 2.0設定"></p>
 </li>
 <li><p>認証情報一覧から、ダウンロードボタンを押す。client_secret_XXX.apps.googleusercontent.com..jsonのようなjsonファイルが手に入る。</p>
 </li>
