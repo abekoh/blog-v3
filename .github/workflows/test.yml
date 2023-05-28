@@ -12,14 +12,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: '.tool-versions'
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-            ${{ runner.OS }}-
+      - uses: pnpm/action-setup@v2
       - name: Install dependencies
         run: pnpm i
       - name: Check lint
