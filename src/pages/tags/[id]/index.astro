@@ -18,16 +18,21 @@ export async function getStaticPaths() {
 
 const { id } = Astro.params;
 
-const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
+const allPosts = (await getCollection("posts"))
+  .sort(postsDefaultSortFunc)
+  .filter((post) => !post.data.draft);
 
-const filteredPosts = allPosts
-  .filter((post) => post.data.tags.includes(id) && !post.data.draft)
-  .slice(0, PAGE_SIZE);
+const filteredPosts = allPosts.filter((post) => post.data.tags.includes(id));
+
+const slicedPosts = filteredPosts.slice(0, PAGE_SIZE);
+
+const urlPrefix = `/tags/${id}/page`;
 ---
 
 <BaseLayout title={BLOG_TITLE}>
-  <PostList posts={filteredPosts} />
+  <PostList posts={slicedPosts} />
   <Pagination
+    urlPrefix={urlPrefix}
     page={{
       currentPage: 1,
       size: PAGE_SIZE,
