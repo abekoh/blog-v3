@@ -73,9 +73,11 @@ const { title, metadata } = Astro.props;
       src="https://www.googletagmanager.com/gtag/js?id=G-8QCDTP8WZ3"
     ></script>
     <script is:inline>
+      // eslint-disable-next-line
       window.dataLayer = window.dataLayer || [];
 
       function gtag() {
+        // eslint-disable-next-line
         dataLayer.push(arguments);
       }
 
