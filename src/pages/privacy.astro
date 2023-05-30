@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { BLOG_TITLE } from "../constraint";
+---
+
+<BaseLayout title={`Privacy Policy - ${BLOG_TITLE}`}>
+  <div class="py-6">
+    <p class="text-base text-gray-700 leading-relaxed">
+      当ブログでは、Googleによるアクセス解析ツール<a
+        href="https://marketingplatform.google.com/intl/ja/about/analytics/"
+        class="text-base text-blue-500 leading-relaxed">Googleアナリティクス</a
+      >を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。
+      この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は<a
+        href="https://marketingplatform.google.com/about/analytics/terms/jp/"
+        class="text-base text-blue-500 leading-relaxed"
+        >Googleアナリティクスサービス利用規約</a
+      >のページや<a
+        href="https://policies.google.com/technologies/ads"
+        class="text-base text-blue-500 leading-relaxed"
+        >Googleポリシーと規約ページ</a
+      >をご覧ください。
+    </p>
+  </div>
+</BaseLayout>
