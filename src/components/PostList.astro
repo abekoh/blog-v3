@@ -26,7 +26,7 @@ const { posts, focusedTagId } = Astro.props;
                 modifiedAt={post.data.modifiedAt}
               />
               <div>
-                <h2 class="text-lg text-gray-900 font-bold leading-relaxed">
+                <h2 class="text-lg text-gray-900 font-bold leading-relaxed hover:underline">
                   <a href={`/posts/${post.slug}`}>{post.data.title}</a>
                 </h2>
               </div>
