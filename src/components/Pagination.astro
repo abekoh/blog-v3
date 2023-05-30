@@ -25,7 +25,20 @@ const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
   <div class="flex justify-center py-2">
     <ul class="inline-flex items-center text-base text-gray-900">
       <li>
-        <a href={page.url.prev} class="px-3 py-2 leading-tight">&lt;</a>
+        {
+          page.url.prev ? (
+            <a
+              href={page.url.prev}
+              class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
+            >
+              &lt;
+            </a>
+          ) : (
+            <span href={page.url.prev} class="px-3 py-2 leading-tight">
+              &lt;
+            </span>
+          )
+        }
       </li>
       {
         paginations.map((i) =>
@@ -35,7 +48,10 @@ const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
             </li>
           ) : (
             <li>
-              <a href={`${urlPrefix}/${i}`} class="px-3 py-2 leading-tight">
+              <a
+                href={`${urlPrefix}/${i}`}
+                class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
+              >
                 {i}
               </a>
             </li>
@@ -43,7 +59,20 @@ const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
         )
       }
       <li>
-        <a href={page.url.next} class="px-3 py-2 leading-tight">&gt;</a>
+        {
+          page.url.next ? (
+            <a
+              href={page.url.next}
+              class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
+            >
+              &gt;
+            </a>
+          ) : (
+            <span href={page.url.next} class="px-3 py-2 leading-tight">
+              &gt;
+            </span>
+          )
+        }
       </li>
     </ul>
   </div>
