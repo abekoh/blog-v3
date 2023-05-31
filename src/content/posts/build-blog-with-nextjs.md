@@ -4,7 +4,7 @@ summary: '流行りの構成でブログリニューアルしてみました。'
 categories: ['tech']
 tags: ['nextjs','reactjs','vercel','javascript','microcms','typescript']
 publishedAt: 2021-04-24T08:10:00.000Z
-modifiedAt: 
+modifiedAt: 2023-05-31T23:00:00.000+09:00
 draft: false
 isHtml: true
 microCMSId: 'build-blog-with-nextjs'
@@ -12,6 +12,23 @@ microCMSCreatedAt: 2021-04-23T16:03:49.640Z
 microCMSUpdatedAt: 2021-10-13T11:25:00.038Z
 microCMSRevisedAt: 2021-10-13T11:25:00.038Z
 ---
+
+## 2023/05/31追記
+
+再度リニューアルしました。記事はこちら。
+
+[Astro, Tailwind CSS, Cloudflare Pagesでブログリニューアル](/posts/blog-v3)
+
+記念にスクリーンショットも。
+
+<Image src="/assets/blog-with-nextjs.png" alt="blog-with-nextjs" width="480" aspectRatio="1:1" />
+
+ついでにソースコードも公開しておきます。
+
+[abekoh/blog-next](https://github.com/abekoh/blog-next)
+
+---
+
 <p>表題の通り、リニューアルしました。こっそり2週間くらい前から反映させてます。<br>
 </p><h2 id="hc69c85bcf9">背景</h2><p>もともとこのブログはHugo + GitHub Pagesで構築しておりました。<br>
 <img src="/assets/blog-with-hugo.png" alt><br>
