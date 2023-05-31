@@ -3,7 +3,7 @@ title: 'Astro, Tailwind CSS, Cloudflare Pagesでブログリニューアル'
 summary: 'ブログを作り直しました。これで何だかんだ3代目。'
 categories: [ 'tech' ]
 tags: [ 'astro', 'tailwindcss', 'cloudflare' ]
-publishedAt: 2023-05-31T22:30:00.000+09:00
+publishedAt: 2023-05-31T23:00:00.000+09:00
 modifiedAt:
 draft: false
 isHtml: false
