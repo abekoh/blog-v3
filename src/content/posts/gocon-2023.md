@@ -8,7 +8,7 @@ modifiedAt:
 draft: false
 ---
 
-2023/06/01、Go Conference 2023に参加してきました。オンライン開催なのでオンライン参加です。
+2023/06/01、Go Conference 2023に参加してきました。初参加です。オンライン開催なのでオンライン参加です。
 
 https://gocon.jp/2023/
 
