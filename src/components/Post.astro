@@ -93,9 +93,13 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
       @apply py-2;
     }
 
-    /* use github-light https://github.com/shikijs/shiki/blob/1706cb82deac8d88a2dc60c099b6cf92e42b76f4/packages/shiki/themes/github-light.json  */
     .post-content code {
-      @apply px-1 py-0.5 text-[#e1e4e8] bg-[#24292e] rounded;
+      @apply px-1 py-0.5 text-gray-700 bg-[#eef1f2] rounded;
+    }
+
+    /* use github-dark https://github.com/shikijs/shiki/blob/1706cb82deac8d88a2dc60c099b6cf92e42b76f4/packages/shiki/themes/github-dark.json */
+    .post-content pre code {
+      @apply px-0 py-0 text-[#e1e4e8] bg-[#24292e] rounded;
     }
   </style>
 </article>
