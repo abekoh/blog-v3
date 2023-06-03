@@ -40,7 +40,7 @@ https://gocon.jp/2023/
 
 ## セッション聞いたメモ
 
-以下、セッションを聞いた自分用メモです。あまり整理されてないので元のスライドなどきちんと読むのがよしです。
+以下、セッションを聞いた自分用メモです。**あまり整理されてないので元のスライドなどきちんと読むのがよしです。**
 
 ### タクシーアプリ『GO』高速マッチングシステムで実践したGoチューニングテクニック
 
@@ -56,6 +56,7 @@ https://gocon.jp/2023/sessions/A1-SP/
 ### 無理なく始めるGoでのユニットテストの並行化戦略
 
 https://gocon.jp/2023/sessions/A2-SP/
+
 スライド: https://speakerdeck.com/shohata/go-conference-2023
 
 - 並行と並列の言葉の定義、大事
@@ -79,6 +80,7 @@ https://gocon.jp/2023/sessions/A2-SP/
 ### Fun with Slices
 
 https://gocon.jp/2023/sessions/B3-L/
+
 スライド: https://docs.google.com/presentation/d/e/2PACX-1vQDvy-3KT6-cqbxzJ2UY8sFe86mOknAGJiP5aDD_FwWusezgVzdItYIiVDxNMX9O30k10IX27PNI9Hx/pub?start=false&loop=false&delayms=3000&slide=id.g56441dcac2_0_14
 
 - Sliceの内部構造の話
@@ -95,6 +97,7 @@ Go Proverbs、又聞きばかりなのできちんと読まないと。
 ### 「Go Style Guide」から学んだ可読性の高いコードの書き方
 
 https://gocon.jp/2023/sessions/A4-S/
+
 スライド: https://speakerdeck.com/andpad/go-style-guide-karaxue-ndake-du-xing-nogao-ikodonoshu-kifang
 
 - https://google.github.io/styleguide/go/
@@ -111,6 +114,7 @@ https://gocon.jp/2023/sessions/A4-S/
 ### 次なるrouterパッケージ選定のしざまと決め手について
 
 https://gocon.jp/2023/sessions/A6-SP/
+
 スライド: https://speakerdeck.com/yuzuy/ci-narurutapatukezixuan-ding-nosizamatojue-meshou-nituite
 
 - https://github.com/gorilla/mux がarchiveされたので移行どうする問題
@@ -125,6 +129,7 @@ https://gocon.jp/2023/sessions/A6-SP/
 ### どうしてもcgoから逃げられなくなったあなたに知ってほしいcgoの使い方入門
 
 https://gocon.jp/2023/sessions/B7-L/
+
 スライド: https://speakerdeck.com/sakiengineer/dousitemocgokaratao-gerarenakunatutaanatanizhi-tutehosiicgonoshi-ifang-ru-men
 
 - スライド見やすい、cgo導入による負担の大きさのとこなど
@@ -139,6 +144,7 @@ SWIG知らなかった、頭の片隅に置いておく。
 ### EchoやGinはなぜ速いのか？Goで高速なHTTP routerを作るコツ
 
 https://gocon.jp/2023/sessions/B8-S/
+
 スライド: https://docs.google.com/file/d/1Jh0j2UD4VZjck_34XEA3OgzruLoiZeci/edit?filetype=mspresentation
 
 - `debug.Stack()`でgoroutineIDとれる、その`[]byte`をパース
@@ -156,6 +162,7 @@ echoの中身片足突っ込もうとしてやめた自分にとってはかな�
 ### Go1.19から始めるGCのチューニング方法
 
 https://gocon.jp/2023/sessions/B9-S/
+
 スライド: https://speakerdeck.com/hagatake/go1-dot-19karashi-merugcnotiyuningufang-fa
 
 - GoのGCの中身詳しく解説
@@ -167,6 +174,7 @@ https://gocon.jp/2023/sessions/B9-S/
 ### Go1.20からサポートされるtree構造のerrの紹介と、treeを考慮した複数マッチができるライブラリを作った話
 
 https://gocon.jp/2023/sessions/A10-S/
+
 スライド: https://speakerdeck.com/convto/introduction-of-tree-structure-err-added-since-go-1-20
 
 - Go 1.20のエラー連結はtree構造
@@ -178,6 +186,7 @@ https://gocon.jp/2023/sessions/A10-S/
 ### Goのメモリ管理
 
 https://gocon.jp/2023/sessions/B11-S/
+
 スライド: https://speakerdeck.com/ymotongpoo/memory-management-in-go
 
 - goroutineのスタックは2KB
@@ -203,11 +212,12 @@ https://gocon.jp/2023/sessions/B12-S/
   - WASMの今後の仕様次第で改善できそう
 - 標準regexpと完全互換
 
-なかなかコアな内容。Javaの正規表現も遅くてC++実装の呼ぶ、とか以前やったの思い出した…。Go標準の正規表現遅いってことは覚えておくとよいのかも。
+コアな内容。Javaの正規表現も遅くてC++実装の呼ぶ、とか以前やったの思い出した…。Go標準の正規表現遅いってことは覚えておくとよいのかも。
 
 ### net/http/httptest.Server のアプローチをテスト戦略に活用する
 
 https://gocon.jp/2023/sessions/A13-S/
+
 スライド: https://speakerdeck.com/k1low/go-conference-2023
 
 - テストの実行速度と決定性でSmall,Medium,Largeテストに分ける
@@ -220,6 +230,7 @@ https://gocon.jp/2023/sessions/A13-S/
 ### sync.Mutexの仕組みを理解する
 
 https://gocon.jp/2023/sessions/A14-S/
+
 スライド: https://speakerdeck.com/ffjlabo/sync-dot-mutexnoshi-zu-miwoli-jie-suru
 
 - sync.Mutex,stateとsema2つの状態変数
