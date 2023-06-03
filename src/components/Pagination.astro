@@ -29,7 +29,6 @@ const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
           page.url.prev ? (
             <a
               href={page.url.prev}
-              rel="prefetch"
               class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
             >
               &lt;
@@ -51,7 +50,6 @@ const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
             <li>
               <a
                 href={`${urlPrefix}/${i}`}
-                rel="prefetch"
                 class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
               >
                 {i}
@@ -65,7 +63,6 @@ const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
           page.url.next ? (
             <a
               href={page.url.next}
-              rel="prefetch"
               class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
             >
               &gt;
