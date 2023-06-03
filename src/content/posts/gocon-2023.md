@@ -12,13 +12,15 @@ draft: false
 
 https://gocon.jp/2023/
 
+しっかり集中してカンファレンス参加したのは [JJUG CCC 2021 Spring](/posts/jjug-ccc-2021-spring)以来？
+
 ## まとめ
 
 一番残しておきたいまとめを最初に書いておきます。
 
-セッションのレベルは実務レベルのものから実装中身深掘りなど、様々でした。
-個人的には深掘りシリーズが目から鱗で、自分ひとりでコード読んでてあまり理解進まずだったこともある箇所についてよくまとめてくださったところがあり、
-もう一度チャレンジしようという気持ちになりました。そしてまとめ方皆さんとても上手い。。
+セッションの内容は実務レベルのものから実装中身深掘りなど、様々でした。
+個人的には実装中身深掘りシリーズが目から鱗で、自分ひとりでコード読んでても理解できなさそうなところが丁寧に解説されていて、
+それを参考にチャレンジしようという気持ちになりました。そしてまとめ方皆さんとても上手い。。
 
 特に、
 
@@ -87,7 +89,6 @@ https://gocon.jp/2023/sessions/B3-L/
 - `reflect.SliceHeader`でスライスのヘッダ要素みれる
 - Sliceから`[:1]`などで取り出したものに`append`したりすると、元の要素にも影響する
   - メモリ空間を考えてみれば当たり前な話
-- Sliceをレシーバとした
 - 並行処理でSliceに追加するときはsyncでなくchannel使おう！
   - Don't communicate by sharing memory, share memory by communicating.
   - Read the proverbs! ([Go Proverbs](https://go-proverbs.github.io/) を読もう！)
@@ -147,8 +148,7 @@ https://gocon.jp/2023/sessions/B8-S/
 
 スライド: https://docs.google.com/file/d/1Jh0j2UD4VZjck_34XEA3OgzruLoiZeci/edit?filetype=mspresentation
 
-- `debug.Stack()`でgoroutineIDとれる、その`[]byte`をパース
-- `sync.Pool`がhttp.Handlerと相性よい
+- `sync.Pool`がHTTP Routerのユースケースと相性よい
 - echo,ginはRadix tree
 - 静的ルーティングならTrie treeがはやい、それつかえば？
   - `/health`がマッチするが`/healthy`でくる場合、backtrackが発生、これに弱い
