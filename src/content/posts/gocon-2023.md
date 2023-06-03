@@ -89,3 +89,86 @@ https://gocon.jp/2023/sessions/B7-L/
 - https://www.swig.org/
 - SWIGの使い方など
 - 文字列の扱いの難しさ
+
+## EchoやGinはなぜ速いのか？Goで高速なHTTP routerを作るコツ
+
+https://gocon.jp/2023/sessions/B8-S/
+
+- `debug.Stack()`でgoroutineIDとれる、その`[]byte`をパース
+- `sync.Pool`がhttp.Handlerと相性よい
+- echo,ginはRadix tree
+- 静的ルーティングならTrie treeがはやい、それつかえば？
+  - `/health`がマッチするが`/healthy`でくる場合、backtrackが発生、これに弱い
+- Radix treeは実装が複雑
+- パスパラメータ、独自Contextに持たせたほうが速い
+  - chiみたいに`context.Context`だと遅い
+- 関数呼び出しを減らす、echoは`goto`利用
+
+echoの中身片足突っ込もうとしてやめた自分にとってはかなり面白い内容だった
+
+## Go1.19から始めるGCのチューニング方法
+
+https://gocon.jp/2023/sessions/B9-S/
+
+- GoのGCの中身詳しく解説
+- `GOGC`,`GOMEMLIMIT`をセットして実際のプロダクトでパフォーマンス確認
+- Goが完全制御化、Goだけが動いているコンピューティングリソースであれば`GOMEMLIMIT`導入の余地あり
+
+## Go1.20からサポートされるtree構造のerrの紹介と、treeを考慮した複数マッチができるライブラリを作った話
+
+https://gocon.jp/2023/sessions/A10-S/
+
+- Go 1.20のエラー連結はtree構造
+- proposal golang/go 53435
+- splitとかwalkとか、需要あるかもだがデザインについて議論の余地→まずはコア仕様のみ
+- (個人的に公式の実装自体が直感的だったので、その他のユースケースあまり有用性きにならなかった)
+  - 全部一致していないと`Is`にならない、みたいなのは最近話題の配列の要素全部true、空配列なら？の話に近いとこ？
+
+## Goのメモリ管理
+
+https://gocon.jp/2023/sessions/B11-S/
+
+- goroutineのスタックは2KB
+- ヒープに注目
+- オブジェクトを初期化→サイズにあったmcentral内のmspanが割り当てられる
+- 基本的なことからざっくりheapメモリまわりの紹介
+- size/runtime/sizeclasses.go で様々なサイズのmspanがみれる
+- TCMalloc : Goのspanアロケートはこれベース
+
+メモリ管理の基礎からGoでの活用まで、Overview分かる感じでよかった
+
+## High performance regular expressions using RE2 and WebAssembly, no cgo required
+
+https://gocon.jp/2023/sessions/B12-S/
+
+- Goの正規表現は遅い
+  - golang/go issue 26623, 11646
+- https://github.com/google/re2 がはやい
+- https://github.com/wasilibs/go-re2 WASM化してwazeroで動かしてGoで呼ぶ
+- C++を直接cgoなどから呼び出せない、CのAPIを呼ぶので
+- メモリは結構食う、並行数が少なくなる？
+  - WASMの今後の仕様次第で改善できそう
+- 標準regexpと完全互換
+
+## net/http/httptest.Server のアプローチをテスト戦略に活用する
+
+https://gocon.jp/2023/sessions/A13-S/
+
+- テストの実行速度と決定性でSmall,Medium,Largeテストに分ける
+- アーキテクチャ未完状態ではMediumテストで、アーキテクチャの変更にもつよく
+- シナリオごとにYAMLファイル作成、それをもとにhttp clientなど実行
+- https://github.com/k1LoW/runn
+- 分散サービスなら有用そう、モノリスならここまではいらないかなという感想
+
+## sync.Mutexの仕組みを理解する
+
+- sync.Mutex,stateとsema2つの状態変数
+- stateをロック状態にしたとしても、1goroutineがアクセスしていることを保証できない→semaを用いてロック確保
+- semaでのロック取得も無理なら次にスケジューリングされるまでgoroutineは一時停止
+  - スケジューリングのruntimeまわりはあまり理解できていないかも
+- semaだけでよいのでは？
+  - 基本はgoroutine空間、競合が起きたときはruntime空間
+  - goroutine,runtimeの間のコンテキストスイッチを減らす
+
+しっかり深掘りされててすごい
+
