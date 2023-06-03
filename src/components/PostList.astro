@@ -27,13 +27,15 @@ const { posts, focusedTagId } = Astro.props;
               />
               <div>
                 <h2 class="text-lg text-gray-900 font-bold leading-relaxed hover:underline">
-                  <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                  <a href={`/posts/${post.slug}`} rel="prefetch">
+                    {post.data.title}
+                  </a>
                 </h2>
               </div>
               {post.data.summary && (
                 <summary>
                   <div class="text-base text-gray-700 leading-relaxed">
-                    <a href={`/posts/${post.slug}`}>
+                    <a href={`/posts/${post.slug}`} rel="prefetch">
                       <p>{post.data.summary}</p>
                     </a>
                   </div>
