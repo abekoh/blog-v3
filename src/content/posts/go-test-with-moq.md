@@ -2,7 +2,7 @@
 title: '[Zenn] moqを使ったGoのテスト'
 summary: 'matryer/moq というモックライブラリを利用したGoのテストのプラクティスについてまとめました。'
 categories: [ 'tech' ]
-tags: ['golang', 'zenn']
+tags: ['golang', 'zenn', 'test']
 publishedAt: 2023-07-08T12:00:00.000+09:00
 modifiedAt:
 draft: false
