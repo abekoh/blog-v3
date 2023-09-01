@@ -17,9 +17,5 @@ export default defineConfig({
   build: {
     format: "file",
   },
-  integrations: [
-    tailwind(),
-    sitemap(),
-    prefetch(),
-  ],
+  integrations: [tailwind(), sitemap(), prefetch()],
 });
