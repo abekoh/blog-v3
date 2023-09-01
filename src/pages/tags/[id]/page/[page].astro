@@ -10,7 +10,7 @@ import { BLOG_TITLE, PAGE_SIZE } from "../../../../constraint";
 export async function getStaticPaths({ paginate }) {
   const allTags = await getCollection("tags");
   const allPosts = await getCollection("posts");
-  return allTags.map((tag) => {
+  return allTags.flatMap((tag) => {
     const filteredPosts = allPosts
       .sort(postsDefaultSortFunc)
       .filter((p) => p.data.tags.includes(tag.id) && !p.data.draft);
