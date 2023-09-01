@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 export const postsDefaultSortFunc = (
   a: CollectionEntry<"posts">,
-  b: CollectionEntry<"posts">
+  b: CollectionEntry<"posts">,
 ) => {
   const aDate = a.data.publishedAt;
   const bDate = b.data.publishedAt;
