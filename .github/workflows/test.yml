@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Use bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version-file: '.tool-versions'
+          bun-version: latest
       - uses: pnpm/action-setup@v2
       - name: Install dependencies
-        run: pnpm i
+        run: bun install
       - name: Check lint
-        run: pnpm lint
+        run: bun lint
       - name: Run build
-        run: pnpm build
+        run: bun build
