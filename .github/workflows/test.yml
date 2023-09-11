@@ -21,4 +21,4 @@ jobs:
       - name: Check lint
         run: bun run lint
       - name: Run build
-        run: bun build
+        run: bun run build
