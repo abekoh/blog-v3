@@ -31,7 +31,7 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
   use: {
-    baseURL: proccess.env.CI
+    baseURL: process.env.CI 
       ? "http://127.0.0.1:4321/"
       : "http://localhost:4321/",
   },
