@@ -18,13 +18,13 @@ export default defineConfig({
   ],
   webServer: {
     command: "pnpm preview",
-    port: 4321,
+    url: process.env.CI ? "http://127.0.0.1:4321/" : "http://localhost:4321/",
     timeout: 10 * 1000,
     reuseExistingServer: !process.env.CI,
   },
   use: {
     baseURL: process.env.CI
-      ? "http://test-e2e:4321/"
+      ? "http://127.0.0.1:4321/"
       : "http://localhost:4321/",
   },
 });
