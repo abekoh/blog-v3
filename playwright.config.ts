@@ -19,7 +19,7 @@ export default defineConfig({
   ],
   webServer: {
     command: "pnpm preview",
-    url: 'http://localhost:4321/',
+    url: "http://localhost:4321/",
     timeout: 10 * 1000,
     reuseExistingServer: !process.env.CI,
   },
