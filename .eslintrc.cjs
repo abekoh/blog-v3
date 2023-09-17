@@ -7,7 +7,7 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-  ignorePatterns: ["scripts/**/*"],
+  ignorePatterns: ["scripts/**/*", "dist/**/*", "node_modules/**/*"],
   root: true,
   overrides: [
     {
