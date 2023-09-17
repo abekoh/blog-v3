@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "eslint . && prettier --check '**/*.{ts,tsx,astro,cjs,mjs}'",
     "lint:fix": "eslint --fix . && prettier --write '**/*.{ts,tsx,astro,cjs,mjs}'",
-    "install:browsers": "playwright install --with-deps",
+    "install:browsers": "playwright install chromium --with-deps",
     "test:e2e": "playwright test"
   },
   "dependencies": {
