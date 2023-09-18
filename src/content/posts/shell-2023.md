@@ -1,6 +1,6 @@
 ---
 title: 'シェル環境2023'
-summary: 'シェルまわりをリニューアルした。その備忘録'
+summary: 'シェルまわりをリニューアルした。その備忘録をのこす。'
 categories: [ 'tech' ]
 tags: ['vim','neovim','zsh','shell']
 publishedAt: 2023-09-19T00:25:00.000+09:00
