@@ -9,6 +9,8 @@ draft: false
 isHtml: false
 ---
 
+![Overview](/assets/shell-2023-overview.png)
+
 シェルまわりの環境をリニューアルしてみて、その備忘録を残す。
 ISUCONに出場予定なので、さくっともろもろ編集するにはシェル環境だけで完結できるとよいかな、という考えから再構築をはじめた。
 
@@ -16,9 +18,11 @@ ISUCONに出場予定なので、さくっともろもろ編集するにはシ�
 
 [fish,tmux,neovim,ghq,pecoで開発スペース構築を快適にする - abekoh's tech note](https://blog.abekoh.dev/posts/prj-command)
 
-もろもろ設定したものがこちら。リニューアル前のものはtagをつけてスナップショットとして追いやすくしている。
+もろもろ設定したものがこちら。
 
 [abekoh/dotfiles: my dotfiles](https://github.com/abekoh/dotfiles)
+
+リニューアル前のものはtagをつけてスナップショットとして追いやすくしている。
 
 以下、分類ごとに採用したツールを紹介
 
@@ -139,7 +143,11 @@ AstroNvimのデフォルトで好みじゃないところはいろいろ変更�
 
 ### prjコマンド
 
-[以前の記事](https://blog.abekoh.dev/posts/prj-command) で実行していた`prj`コマンドをやや変更して移植。行っていることは、
+[以前の記事](https://blog.abekoh.dev/posts/prj-command) で実行していた`prj`コマンドをやや変更して移植。
+
+!
+
+実行内容は、
 
 1. `prj`で、ghqにより管理されたgitリポジトリを[skim](https://github.com/lotabout/skim)をつかって選択
 2. リポジトリを選択するとそのプロジェクト用のZellijタブが開かれ、カレントディレクトリがそのリポジトリのルートになる
