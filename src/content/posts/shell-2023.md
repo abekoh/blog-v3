@@ -135,11 +135,87 @@ AstroNvimのデフォルトで好みじゃないところはいろいろ変更�
 
 ## 独自設定
 
+その他、オリジナルな設定についていくつか紹介。
+
 ### prjコマンド
 
-### パネル上下入れ替え
+[以前の記事](https://blog.abekoh.dev/posts/prj-command) で実行していた`prj`コマンドをやや変更して移植。行っていることは、
+
+1. `prj`で、ghqにより管理されたgitリポジトリを[skim](https://github.com/lotabout/skim)をつかって選択
+2. リポジトリを選択するとそのプロジェクト用のZellijタブが開かれ、カレントディレクトリがそのリポジトリのルートになる
+
+といった感じ。もう一度同じリポジトリを開こうとした場合はすでに開かれたタブがアクティブになるだけ。
+
+次のような関数を定義している。
+```bash
+# ~/.zshrc
+prj () {
+  local prj_path=$(ghq list -p | sk --layout reverse --query "$LBUFFER")
+  if [ -z "$prj_path" ]; then
+    return
+  fi
+  local prj_name=$(echo "$(basename $(dirname $prj_path))/$(basename $prj_path)" | sed -e 's/\./_/g')
+  if zellij action query-tab-names | grep -Fxq $prj_name; then
+    zellij action go-to-tab-name $prj_name
+  else
+    zellij action new-tab --layout project --name $prj_name --cwd $prj_path
+  fi
+}
+```
+
+また、リポジトリに紐づくタブのZellijレイアウトは別途指定、上下に2つパネルがあるものにした。
+
+```kdl
+// ~/.config/zellij/layouts/project.kdl
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    pane {
+      pane size="80%" {
+        focus true
+      }
+      pane size="20%"
+    }
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}
+```
+
+上下のパネルはCtrl+y(ZellijのMoveモード) → y、で入れ替えるようにした。大きいパネルでNeoVimで編集しつつ、コマンド実行したくなったら入れ替えて大きい画面で実行できる。言葉だと伝わりにくいが、視点移動が少なく自分好み。
+
+```kdl
+// ~/.config/zellij/config.kdl
+keybinds {
+  normal {
+    unbind "Ctrl h"
+    bind "Ctrl y" { SwitchToMode "Move"; }
+  }
+  move {
+    bind "y" { MovePane "Down"; MoveFocus "Up"; SwitchToMode "Normal"; }
+  }
+}
+```
 
 ### cdコマンドでgitルートジャンプ
+
+こちらも以前のものの移植。あるリポジトリのコンテキスト内で閉じてさくっとルートに戻れるといろいろ嬉しい。
+
+```bash
+# ~/.zshrc
+cd() {
+    if [ "$#" -eq 0 ]; then
+        if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+            builtin cd "$(git rev-parse --show-toplevel)" || return 1
+        else
+            builtin cd ~ || return 1
+        fi
+    else
+        builtin cd "$@" || return 1
+    fi
+}
+```
 
 ### セットアップ
 
