@@ -8,10 +8,8 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: "html",
   use: {
-    baseURL: process.env.CI
-      ? "http://test-e2e:4321/"
-      : "http://localhost:4321/",
-    trace: "on-first-retry",
+    baseURL: "http://localhost:4321",
+    trace: "on",
   },
   projects: [
     {
@@ -20,7 +18,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "pnpm preview",
+    command: "pnpm run preview",
     port: 4321,
     timeout: 10 * 1000,
     reuseExistingServer: !process.env.CI,

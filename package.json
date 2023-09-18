@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview --host",
+    "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . && prettier --check '**/*.{ts,tsx,astro,cjs,mjs}'",
     "lint:fix": "eslint --fix . && prettier --write '**/*.{ts,tsx,astro,cjs,mjs}'",
