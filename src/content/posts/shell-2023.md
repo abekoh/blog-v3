@@ -61,7 +61,7 @@ zinitはプラグイン管理、ここはあまり比較検討できてない。
 
 ## マルチプレクサ: Zellij
 
-tmuxの大体としてZellijを導入。
+tmuxの代替としてZellijを導入。
 
 [Zellij](https://zellij.dev/)
 
