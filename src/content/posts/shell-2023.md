@@ -145,7 +145,9 @@ AstroNvimのデフォルトで好みじゃないところはいろいろ変更�
 
 [以前の記事](https://blog.abekoh.dev/posts/prj-command) で実行していた`prj`コマンドをやや変更して移植。
 
-!
+実行する様子はこちら。NeoVim開いたりパネル上下入れ替えもやってみてる。
+
+![Run prj command](/assets/shell-2023-prj.gif)
 
 実行内容は、
 
