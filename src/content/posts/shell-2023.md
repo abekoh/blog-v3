@@ -227,5 +227,13 @@ cd() {
 
 ### セットアップ
 
+設定ファイルは`~/dotfiles`からシンボリックリンクを張るようにしているが、そのセットアップスクリプトを以前はPythonで書いていた。
+
+[dotfiles/make\_links.py at 2023-08-19 · abekoh/dotfiles](https://github.com/abekoh/dotfiles/blob/2023-08-19/make_links.py)
+
+最近なってRubyだとバッククォート囲むだけでシェル実行ができる、と知ってもっと見た目スマートになりそうだと思いRubyに書き換えた。書き換えはChatGPTにお願いしたらいい感じになった、超便利。
+
+[dotfiles/setup.rb at main · abekoh/dotfiles](https://github.com/abekoh/dotfiles/blob/main/setup.rb)
+
 ## まとめ
 
