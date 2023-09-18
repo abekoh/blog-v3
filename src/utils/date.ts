@@ -1,4 +1,11 @@
 import dayjs from "dayjs";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(timezone);
+dayjs.extend(utc);
+
+dayjs.tz.setDefault("Asia/Tokyo");
 
 export const formatDate = (date: Date): string => {
   return dayjs(date).format("YYYY-MM-DD");
