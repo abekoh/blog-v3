@@ -10,11 +10,12 @@ interface Props {
   modifiedAt: Date | undefined;
   tags: string[];
   Content: AstroComponentFactory;
+  tocHTML: string;
 }
 
 const tagMap = await getTagMap();
 
-const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
+const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
 ---
 
 <article>
@@ -29,6 +30,7 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
       }
     </div>
     <div class="post-content py-2">
+      <div set:html={tocHTML} />
       <Content />
     </div>
   </div>
