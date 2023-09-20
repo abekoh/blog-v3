@@ -28,7 +28,7 @@ const createTocFromHTML = (inputHTML: string): string => {
   const headings = extractHeadings();
 
   let resHTML = "<ul>";
-  let currentLevel = 0;
+  let currentLevel = 1;
 
   for (const heading of headings) {
     if (heading.level > currentLevel) {
