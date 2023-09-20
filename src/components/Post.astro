@@ -10,11 +10,12 @@ interface Props {
   modifiedAt: Date | undefined;
   tags: string[];
   Content: AstroComponentFactory;
+  tocHTML: string;
 }
 
 const tagMap = await getTagMap();
 
-const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
+const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
 ---
 
 <article>
@@ -28,11 +29,29 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
         ))
       }
     </div>
+    <div class="toc-content py-2">
+      <button
+        id="toc-button"
+        class="text-sm font-semibold text-gray-900 leading-relaxed"
+        onclick="
+        toggleToc()
+        ">目次 ∨</button
+      >
+      <div id="toc" class="border hidden" set:html={tocHTML} />
+    </div>
     <div class="post-content py-2">
       <Content />
     </div>
   </div>
   <style is:global>
+    .toc-content ul {
+      @apply pl-6 list-disc list-outside leading-relaxed text-gray-700 py-1;
+    }
+
+    .toc-content a {
+      @apply text-sm text-blue-500 leading-normal hover:underline;
+    }
+
     .post-content h1 {
       @apply text-xl font-bold text-gray-900 leading-relaxed py-3;
     }
@@ -103,3 +122,17 @@ const { title, publishedAt, modifiedAt, Content, tags } = Astro.props;
     }
   </style>
 </article>
+<script is:inline>
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  function toggleToc() {
+    const button = document.getElementById("toc-button");
+    const content = document.getElementById("toc");
+    if (content.classList.contains("hidden")) {
+      content.classList.remove("hidden");
+      button.innerText = "目次 ∧";
+    } else {
+      content.classList.add("hidden");
+      button.innerText = "目次 ∨";
+    }
+  }
+</script>

@@ -23,6 +23,12 @@ dependencies:
   dayjs:
     specifier: ^1.11.9
     version: 1.11.9
+  github-slugger:
+    specifier: ^2.0.0
+    version: 2.0.0
+  marked:
+    specifier: ^9.0.3
+    version: 9.0.3
   sharp:
     specifier: ^0.32.5
     version: 0.32.5
@@ -2756,6 +2762,12 @@ packages:
 
   /markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
+    dev: false
+
+  /marked@9.0.3:
+    resolution: {integrity: sha512-pI/k4nzBG1PEq1J3XFEHxVvjicfjl8rgaMaqclouGSMPhk7Q3Ejb2ZRxx/ZQOcQ1909HzVoWCFYq6oLgtL4BpQ==}
+    engines: {node: '>= 16'}
+    hasBin: true
     dev: false
 
   /mdast-util-definitions@5.1.2:

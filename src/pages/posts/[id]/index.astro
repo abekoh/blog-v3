@@ -4,6 +4,55 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { BASE_URL, BLOG_TITLE } from "../../../constraint";
 import Post from "@/components/Post.astro";
+import { marked } from "marked";
+import GithubSlugger from "github-slugger";
+
+type Heading = {
+  level: number;
+  text: string;
+  slug: string;
+};
+
+const createTocFromHTML = (inputHTML: string): string => {
+  const extractHeadings = (): Heading[] => {
+    const slugger = new GithubSlugger();
+    const headingRegex = /<(h[2-6])>(.*?)<\/\1>/g;
+    const headings = [...inputHTML.matchAll(headingRegex)].map((match) => ({
+      level: parseInt(match[1][1]),
+      text: match[2],
+      slug: slugger.slug(match[2]),
+    }));
+    return headings;
+  };
+
+  const headings = extractHeadings();
+
+  let resHTML = "<ul>";
+  let currentLevel = 1;
+
+  for (const heading of headings) {
+    if (heading.level > currentLevel) {
+      for (let i = currentLevel; i < heading.level; i++) {
+        resHTML += "<ul>";
+      }
+    } else if (heading.level < currentLevel) {
+      for (let i = heading.level; i < currentLevel; i++) {
+        resHTML += "</ul></li>";
+      }
+    } else {
+      resHTML += "</li>";
+    }
+    resHTML += `<li><a href="#${heading.slug}">${heading.text}</a>`;
+    currentLevel = heading.level;
+  }
+
+  while (currentLevel > 0) {
+    resHTML += "</li></ul>";
+    currentLevel--;
+  }
+
+  return resHTML;
+};
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("posts");
@@ -22,6 +71,8 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 
 const title = `${post.data.title} - ${BLOG_TITLE}`;
+
+const tocHTML = createTocFromHTML(marked.parse(post.body));
 ---
 
 <BaseLayout
@@ -39,5 +90,6 @@ const title = `${post.data.title} - ${BLOG_TITLE}`;
     modifiedAt={post.data.modifiedAt}
     tags={post.data.tags}
     Content={Content}
+    tocHTML={tocHTML}
   />
 </BaseLayout>
