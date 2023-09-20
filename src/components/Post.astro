@@ -123,15 +123,16 @@ const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
   </style>
 </article>
 <script is:inline>
-function toggleToc() {
-  const button = document.getElementById("toc-button");
-  const content = document.getElementById("toc");
-  if (content.classList.contains("hidden")) {
-    content.classList.remove("hidden");
-    button.innerText = "目次 ∧";
-  } else {
-    content.classList.add("hidden");
-    button.innerText = "目次 ∨";
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  function toggleToc() {
+    const button = document.getElementById("toc-button");
+    const content = document.getElementById("toc");
+    if (content.classList.contains("hidden")) {
+      content.classList.remove("hidden");
+      button.innerText = "目次 ∧";
+    } else {
+      content.classList.add("hidden");
+      button.innerText = "目次 ∨";
+    }
   }
-}
 </script>
