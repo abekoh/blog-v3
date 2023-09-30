@@ -10,7 +10,7 @@ interface Props {
   modifiedAt: Date | undefined;
   tags: string[];
   Content: AstroComponentFactory;
-  tocHTML: string;
+  tocHTML?: string;
 }
 
 const tagMap = await getTagMap();
@@ -29,16 +29,22 @@ const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
         ))
       }
     </div>
-    <div class="toc-content py-2">
-      <button
-        id="toc-button"
-        class="text-sm font-semibold text-gray-900 leading-relaxed"
-        onclick="
-        toggleToc()
-        ">目次 ∨</button
-      >
-      <div id="toc" class="border hidden" set:html={tocHTML} />
-    </div>
+    {
+      !!tocHTML && (
+        <div class="toc-content py-2">
+          <button
+            id="toc-button"
+            class="text-sm font-semibold text-gray-900 leading-relaxed"
+            onclick="
+            toggleToc()
+            "
+          >
+            目次 ∨
+          </button>
+          <div id="toc" class="border hidden" set:html={tocHTML} />
+        </div>
+      )
+    }
     <div class="post-content py-2">
       <Content />
     </div>
