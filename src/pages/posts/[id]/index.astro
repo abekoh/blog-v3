@@ -89,7 +89,7 @@ const tocHTML = createTocFromHTML(marked.parse(post.body));
   <Post
     title={post.data.title}
     publishedAt={post.data.publishedAt}
-    modifiedAt={post.data.modifiedAt}
+    modifiedAt={post.data.modifiedAt ?? undefined}
     tags={post.data.tags}
     Content={Content}
     tocHTML={tocHTML}

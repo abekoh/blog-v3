@@ -9,16 +9,16 @@ import {
 } from "../constraint";
 
 interface Metadata {
-  type: "article" | undefined;
-  description: string | undefined;
-  url: string | undefined;
-  image: string | undefined;
-  draft: boolean | undefined;
+  type?: "article";
+  description?: string;
+  url?: string;
+  image?: string;
+  draft?: boolean;
 }
 
 interface Props {
   title: string;
-  metadata: Metadata | undefined;
+  metadata?: Metadata;
 }
 
 const { title, metadata } = Astro.props;
