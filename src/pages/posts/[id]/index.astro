@@ -13,7 +13,7 @@ type Heading = {
   slug: string;
 };
 
-const createTocFromHTML = (inputHTML: string): string => {
+const createTocFromHTML = (inputHTML: string): string | undefined => {
   const extractHeadings = (): Heading[] => {
     const slugger = new GithubSlugger();
     const headingRegex = /<(h[2-6])>(.*?)<\/\1>/g;
@@ -26,6 +26,8 @@ const createTocFromHTML = (inputHTML: string): string => {
   };
 
   const headings = extractHeadings();
+
+  if (headings.length === 0) return undefined;
 
   let resHTML = "<ul>";
   let currentLevel = 1;

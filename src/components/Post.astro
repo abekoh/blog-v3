@@ -10,7 +10,7 @@ interface Props {
   modifiedAt: Date | undefined;
   tags: string[];
   Content: AstroComponentFactory;
-  tocHTML: string;
+  tocHTML?: string;
 }
 
 const tagMap = await getTagMap();
@@ -29,16 +29,22 @@ const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
         ))
       }
     </div>
-    <div class="toc-content py-2">
-      <button
-        id="toc-button"
-        class="text-sm font-semibold text-gray-900 leading-relaxed"
-        onclick="
-        toggleToc()
-        ">目次 ∨</button
-      >
-      <div id="toc" class="border hidden" set:html={tocHTML} />
-    </div>
+    {
+      !!tocHTML && (
+        <div class="toc-content py-2">
+          <button
+            id="toc-button"
+            class="text-sm font-semibold text-gray-900 leading-relaxed"
+            onclick="
+            toggleToc()
+            "
+          >
+            目次 ∨
+          </button>
+          <div id="toc" class="border hidden" set:html={tocHTML} />
+        </div>
+      )
+    }
     <div class="post-content py-2">
       <Content />
     </div>
@@ -123,16 +129,16 @@ const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
   </style>
 </article>
 <script is:inline>
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function toggleToc() {
-    const button = document.getElementById("toc-button");
-    const content = document.getElementById("toc");
-    if (content.classList.contains("hidden")) {
-      content.classList.remove("hidden");
-      button.innerText = "目次 ∧";
-    } else {
-      content.classList.add("hidden");
-      button.innerText = "目次 ∨";
-    }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function toggleToc() {
+  const button = document.getElementById("toc-button");
+  const content = document.getElementById("toc");
+  if (content.classList.contains("hidden")) {
+    content.classList.remove("hidden");
+    button.innerText = "目次 ∧";
+  } else {
+    content.classList.add("hidden");
+    button.innerText = "目次 ∨";
   }
+}
 </script>
