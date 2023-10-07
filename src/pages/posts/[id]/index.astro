@@ -16,7 +16,7 @@ type Heading = {
 const createTocFromHTML = (inputHTML: string): string | undefined => {
   const extractHeadings = (): Heading[] => {
     const slugger = new GithubSlugger();
-    const headingRegex = /<(h[2-6])>(.*?)<\/\1>/g;
+    const headingRegex = /<(h[2-6])\b[^>]*>(.*?)<\/\1>/g;
     const headings = [...inputHTML.matchAll(headingRegex)].map((match) => ({
       level: parseInt(match[1][1]),
       text: match[2],
