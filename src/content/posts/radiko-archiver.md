@@ -2,7 +2,7 @@
 title: 'Goでradikoの番組をアーカイブするツールをつくってみる'
 summary: 'radikoのタイムフリー番組を自動でダウンロード、それをいい感じに聴けるような仕組みを模索した備忘録。'
 categories: [ 'tech' ]
-tags: ['golang']
+tags: ['golang','radiko']
 publishedAt: 2023-10-08T11:15:00.000+09:00
 modifiedAt:
 draft: false
