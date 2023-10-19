@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["M PLUS 1p", "sans-serif"],
-    }
+    },
   },
   plugins: [],
 };
