@@ -59,15 +59,15 @@ const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
     }
 
     .post-content h1 {
-      @apply text-xl font-bold text-gray-900 leading-relaxed py-3;
+      @apply text-lg font-bold text-gray-900 leading-relaxed py-3;
     }
 
     .post-content h2 {
-      @apply text-lg font-semibold text-gray-900 leading-relaxed py-2;
+      @apply text-lg font-bold text-gray-900 leading-relaxed py-2;
     }
 
     .post-content h3 {
-      @apply text-lg font-medium text-gray-900 leading-relaxed py-1;
+      @apply text-base font-semibold text-gray-900 leading-relaxed py-1;
     }
 
     .post-content h4 {
@@ -129,16 +129,16 @@ const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
   </style>
 </article>
 <script is:inline>
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function toggleToc() {
-    const button = document.getElementById("toc-button");
-    const content = document.getElementById("toc");
-    if (content.classList.contains("hidden")) {
-      content.classList.remove("hidden");
-      button.innerText = "目次 ∧";
-    } else {
-      content.classList.add("hidden");
-      button.innerText = "目次 ∨";
-    }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function toggleToc() {
+  const button = document.getElementById("toc-button");
+  const content = document.getElementById("toc");
+  if (content.classList.contains("hidden")) {
+    content.classList.remove("hidden");
+    button.innerText = "目次 ∧";
+  } else {
+    content.classList.add("hidden");
+    button.innerText = "目次 ∨";
   }
+}
 </script>
