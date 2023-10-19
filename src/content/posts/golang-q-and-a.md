@@ -3,7 +3,7 @@ title: 'Go入門とQ&A ver.2023.10'
 summary: '他言語経験者向けに、Goの入門方法と、よく悩むところのQ&Aをまとめてみた記事です。'
 categories: [ 'tech' ]
 tags: [ 'golang' ]
-publishedAt: 2023-10-19T21:00:00.000+09:00
+publishedAt: 2023-10-19T23:05:00.000+09:00
 modifiedAt:
 draft: false
 isHtml: false
