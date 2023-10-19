@@ -279,9 +279,7 @@ Standard Go Layoutというのが別途存在しますが、
 もう少し機能が多いものだと、
 
 *   [High performance, extensible, minimalist Go web framework | Echo](https://echo.labstack.com/)
-    
 *   [Gin Web Framework](https://gin-gonic.com/)
-    
 *   [chi](https://go-chi.io/#/)
     
 
