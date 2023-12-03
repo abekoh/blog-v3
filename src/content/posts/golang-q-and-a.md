@@ -345,11 +345,11 @@ GoはTable-Driven Testingがスタンダードなテストの書き方だ、と�
 
 確かに「同じ関数にいろんな入力値パターンを試したい」という、他言語などだとParameterized Testと呼ばれるようなものには良いのですが、「テストごとに入力値以外の前提条件が大きく異なる」場合はTable-Drivenだとかなり辛い印象です。
 
-次のように、 `before()` で事前セットアップ・デフォルト値用意、 `t.Run` でサブテスト実行するような形が主でもよいかなと思ってます。
+次のように、 `preset()` で事前セットアップ・デフォルト値用意、 `t.Run` でサブテスト実行するような形が主でもよいかなと思ってます。
 
 ```go
  func TestExec(t *testing.T) {
-   before := func(t *testing.T) Args {
+   preset := func(t *testing.T) Args {
      t.Helper()
      // 共通処理
      // 必要に応じてデフォルト値を渡す
@@ -359,14 +359,14 @@ GoはTable-Driven Testingがスタンダードなテストの書き方だ、と�
    }
    
    t.Run("テスト1", func(t *testing.T) {
-     args := before(t)
+     args := preset(t)
      got, err := Exec(args)
      require.NoError(t, err)
      assert.Equal(t, "hoge", got)
    })
    
    t.Run("テスト2", func(t *testing.T) {
-     args := before(t)
+     args := preset(t)
      // 必要に応じてデフォルト値から変更
      args.A = 2
      _, err := Exec(args)
