@@ -93,5 +93,6 @@ const tocHTML = createTocFromHTML(marked.parse(post.body));
     tags={post.data.tags}
     Content={Content}
     tocHTML={tocHTML}
+    draft={post.data.draft}
   />
 </BaseLayout>
