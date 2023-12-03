@@ -3,14 +3,14 @@ title: 'ISUCON13に参加した'
 summary: '初参加でした。反省点だらけ'
 categories: [ 'tech' ]
 tags: [ 'isucon', 'performance-tuning', 'golang' ]
-publishedAt: 2023-12-03T12:00:00.000+09:00
+publishedAt: 2023-12-03T20:00:00.000+09:00
 modifiedAt:
 draft: false
 isHtml: false
 ---
 
 11/25(土)、ISUCON13に参加してきました。ISUCON初参加でした。
-チーム名はtokiwaで3人体制、最終スコアは32,269でした。
+チーム名はtokiwaで3人体制、言語はGo、最終スコアは32,269でした。
 その記録など書きます。
 
 ## きっかけ
