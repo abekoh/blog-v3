@@ -113,4 +113,4 @@ N+1対応で詰まった問題は、ひとつは大きすぎる変更をしよ�
 
 あとN+1潰しを何パターンも練習しておくのも大事だけど、楽に対応できる手順・ツールがあると良いかも。[dataloader](https://github.com/graph-gophers/dataloader)のようにLazyLoading・キャッシュの仕組みを手順化できるアイディアが浮かんでいるので試したし。
 
-スコアUPへの貢献はnekootoko3, daisaru11がほとんどで、自分
+<!-- スコアUPへの貢献はnekootoko3, daisaru11がほとんどで、自分 -->
