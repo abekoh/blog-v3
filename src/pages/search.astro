@@ -8,4 +8,9 @@ import { BLOG_TITLE } from "../constraint";
     <h1 class="text-lg font-bold text-gray-900 leading-loose">Search</h1>
     <div id="search"></div>
   </div>
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      new PagefindUI({ element: "#search", showSubResults: true });
+    });
+  </script>
 </BaseLayout>
