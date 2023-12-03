@@ -24,7 +24,7 @@ isHtml: false
 
 メンバーの1人(nekootoko3)が社内Slackで参加しようかと呟いていたので、こちらから声かけて参加することに。もう1人(daisaru11)もその場で勧誘→即OKでメンバーが決まりました。
 
-チームとしてもちろん参加、メンバーはnekootoko3が1度経験あり、daisaru11・abekohは初参加になります。
+チームとしてもちろん初参加、メンバーはnekootoko3が1度経験あり、daisaru11・abekohは初参加になります。
 
 ## 準備
 
