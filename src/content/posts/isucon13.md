@@ -41,13 +41,26 @@ isHtml: false
 
 などなど。
 
-練習環境はハンズオンでもおすすめされていた
+練習環境はハンズオンでもおすすめされていた、
 
 - private_isu
 - ISUCON13予選
 - ISUCON9本線
 
 を利用しました。
+
+## チーム紹介スライド
+
+10分くらいで準備
+
+<img style="border: 1px solid #aaaaaa;" alt="tokiwa" src="/assets/isucon13_tokiwa.png"/>
+
+
+意気込みはChatGPTで作成→それをすべて絵文字化して作ってもらいました。
+
+https://chat.openai.com/share/5c198b4d-7413-4b66-8504-2f1ffcfdcc53
+
+![enthusiasm](/assets/tokiwa_enthusiasm_chatgpt.png)
 
 ## ツール
 
