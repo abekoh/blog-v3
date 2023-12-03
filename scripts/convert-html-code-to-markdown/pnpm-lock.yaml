@@ -1,11 +1,15 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   glob:
-    specifier: ^10.2.6
+    specifier: 10.2.6
     version: 10.2.6
   he:
-    specifier: ^1.2.0
+    specifier: 1.2.0
     version: 1.2.0
 
 packages:
