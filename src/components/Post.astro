@@ -18,7 +18,7 @@ const tagMap = await getTagMap();
 const { title, publishedAt, modifiedAt, Content, tags, tocHTML } = Astro.props;
 ---
 
-<article>
+<article data-pagefind-body>
   <div class="space-y-1 py-6">
     <DateInfo publishedAt={publishedAt} modifiedAt={modifiedAt} />
     <h1 class="text-lg font-bold text-gray-900 leading-relaxed">{title}</h1>
