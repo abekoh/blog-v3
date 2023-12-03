@@ -29,7 +29,7 @@
   "devDependencies": {
     "@playwright/test": "1.40.1",
     "@types/marked": "6.0.0",
-    "@types/node": "20.10.2",
+    "@types/node": "20.10.3",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
     "eslint": "8.55.0",
