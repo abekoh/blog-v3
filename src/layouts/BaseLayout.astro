@@ -81,11 +81,13 @@ gtag("config", "G-8QCDTP8WZ3");
       type="application/rss+xml"
     />
     <link rel="author" href="http://www.hatena.ne.jp/abekoh/" />
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
     <script
       is:inline
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-8QCDTP8WZ3"></script>
     <script is:inline set:html={gaScript} />
+    <script is:inline src="/pagefind/pagefind-ui.js"></script>
   </head>
   <body class="bg-white text-black antialiased overflow-y-scroll">
     <div class="container mx-auto max-w-screen-md min-h-screen">
@@ -97,5 +99,10 @@ gtag("config", "G-8QCDTP8WZ3");
         <Footer />
       </div>
     </div>
+    <script is:inline>
+      window.addEventListener("DOMContentLoaded", () => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+      });
+    </script>
   </body>
 </html>
