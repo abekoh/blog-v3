@@ -11,7 +11,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "microcms-js-sdk": "^2.4.0"
+    "dotenv": "16.0.3",
+    "microcms-js-sdk": "2.4.0"
   }
 }
