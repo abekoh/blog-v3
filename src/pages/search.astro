@@ -10,11 +10,7 @@ import { BLOG_TITLE } from "../constraint";
   </div>
   <script is:inline>
     window.addEventListener("DOMContentLoaded", () => {
-      new PagefindUI({
-        element: "#search",
-        showSubResults: true,
-        showImages: false,
-      });
+      new PagefindUI({ element: "#search", showSubResults: true });
     });
   </script>
 </BaseLayout>
