@@ -1,0 +1,21 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { BLOG_TITLE } from "../constraint";
+---
+
+<BaseLayout title={`Search - ${BLOG_TITLE}`}>
+  <div class="py-6">
+    <h1 class="text-lg font-bold text-gray-900 leading-loose">Search</h1>
+    <div id="search"></div>
+  </div>
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      // eslint-disable-next-line no-undef
+      new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+        showImages: false,
+      });
+    });
+  </script>
+</BaseLayout>
