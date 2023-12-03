@@ -1,3 +1,7 @@
 p {
     @apply font-bold text-lg pb-2 pt-4;
 }
+
+body {
+    --pagefind-ui-font: 'M PLUS 1p', sans-serif;
+}
