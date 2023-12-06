@@ -102,3 +102,18 @@ test.describe("rss", () => {
     expect(content).toContain("<channel>");
   });
 });
+
+test.describe("search", () => {
+  test("to search link", async ({ page }) => {
+    await page.goto("/");
+    await page.getByRole("link", { name: "Search" }).click();
+    await expect(page).toHaveURL("/search");
+  });
+  test("search and load more", async ({ page }) => {
+    await page.goto("/search");
+    await page.getByPlaceholder("検索").click();
+    await page.getByPlaceholder("検索").fill("go");
+    await page.getByRole("button", { name: "もっと読み込む" }).click();
+    await page.getByRole("button", { name: "もっと読み込む" }).click();
+  });
+});
