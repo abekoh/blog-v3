@@ -38,6 +38,10 @@ test.describe("post", () => {
     await page.goto("/posts/start-blog");
     await expect(page).toHaveScreenshot();
   });
+  test("visual with image", async ({ page }) => {
+    await page.goto("/posts/shell-2023");
+    await expect(page).toHaveScreenshot();
+  });
 });
 
 test.describe("profile", () => {
