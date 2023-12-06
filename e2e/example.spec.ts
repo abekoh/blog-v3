@@ -92,4 +92,13 @@ test.describe("rss", () => {
     await page.getByRole("link", { name: "RSS" }).click();
     await expect(page).toHaveURL("/rss.xml");
   });
+  test("has xml", async ({ page }) => {
+    const resp = await page.goto("/rss.xml");
+    const contentType = resp?.headers()["content-type"];
+    expect(contentType).toContain("application/xml");
+
+    const content = await resp?.text();
+    expect(content).toContain('<rss version="2.0">');
+    expect(content).toContain("<channel>");
+  });
 });
