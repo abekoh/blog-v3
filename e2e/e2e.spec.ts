@@ -34,6 +34,14 @@ test.describe("post", () => {
     await page.getByRole("link", { name: /^diary$/ }).click();
     await expect(page).toHaveURL("/tags/diary");
   });
+  test("visual", async ({ page }) => {
+    await page.goto("/posts/start-blog");
+    await expect(page).toHaveScreenshot({ fullPage: true });
+  });
+  test("visual with image", async ({ page }) => {
+    await page.goto("/posts/how-to-build-this-blog");
+    await expect(page).toHaveScreenshot({ fullPage: true });
+  });
 });
 
 test.describe("profile", () => {
@@ -50,6 +58,10 @@ test.describe("profile", () => {
     await page.goto("/profile");
     await page.getByRole("link", { name: "abekoh.dev" }).click();
     await expect(page).toHaveURL("https://abekoh.dev/");
+  });
+  test("visual", async ({ page }) => {
+    await page.goto("/profile");
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
 
@@ -84,6 +96,10 @@ test.describe("privacy policy", () => {
     await page.goto("/privacy");
     await expect(page).toHaveTitle(/^Privacy Policy - abekoh's tech note$/);
   });
+  test("visual", async ({ page }) => {
+    await page.goto("/privacy");
+    await expect(page).toHaveScreenshot({ fullPage: true });
+  });
 });
 
 test.describe("rss", () => {
@@ -115,5 +131,9 @@ test.describe("search", () => {
     await page.getByPlaceholder("検索").fill("go");
     await page.getByRole("button", { name: "もっと読み込む" }).click();
     await page.getByRole("button", { name: "もっと読み込む" }).click();
+  });
+  test("visual", async ({ page }) => {
+    await page.goto("/search");
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
