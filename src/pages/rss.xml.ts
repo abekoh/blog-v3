@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { BASE_URL, BLOG_DESCRIPTION, BLOG_TITLE } from "../constraint";
 import type { APIRoute } from "astro";
 
-export const get: APIRoute = async () => {
+export const GET: APIRoute = async () => {
   const posts = await getCollection("posts");
   return rss({
     title: BLOG_TITLE,
