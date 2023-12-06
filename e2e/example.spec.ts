@@ -98,7 +98,7 @@ test.describe("rss", () => {
     expect(contentType).toContain("application/xml");
 
     const content = await resp?.text();
-    expect(content).toContain("<rss version=\"2.0\">");
+    expect(content).toContain('<rss version="2.0">');
     expect(content).toContain("<channel>");
   });
 });
