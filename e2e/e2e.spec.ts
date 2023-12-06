@@ -92,6 +92,10 @@ test.describe("privacy policy", () => {
     await page.goto("/privacy");
     await expect(page).toHaveTitle(/^Privacy Policy - abekoh's tech note$/);
   });
+  test("visual", async ({ page }) => {
+    await page.goto("/privacy");
+    await expect(page).toHaveScreenshot();
+  });
 });
 
 test.describe("rss", () => {
@@ -123,5 +127,9 @@ test.describe("search", () => {
     await page.getByPlaceholder("検索").fill("go");
     await page.getByRole("button", { name: "もっと読み込む" }).click();
     await page.getByRole("button", { name: "もっと読み込む" }).click();
+  });
+  test("visual", async ({ page }) => {
+    await page.goto("/search");
+    await expect(page).toHaveScreenshot();
   });
 });
