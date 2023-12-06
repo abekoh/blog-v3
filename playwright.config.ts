@@ -24,6 +24,8 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
   expect: {
-    toMatchSnapshot: { fullPage: true },
+    toHaveScreenshot: {
+      fullPage: true,
+    },
   },
 });
