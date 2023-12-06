@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@playwright/test": "1.40.1",
-    "@rollup/rollup-linux-arm64-gnu": "^4.6.1",
     "@types/marked": "6.0.0",
     "@types/node": "20.10.3",
     "@typescript-eslint/eslint-plugin": "6.13.2",
