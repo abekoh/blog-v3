@@ -39,7 +39,7 @@ test.describe("post", () => {
     await expect(page).toHaveScreenshot();
   });
   test("visual with image", async ({ page }) => {
-    await page.goto("/posts/shell-2023");
+    await page.goto("/posts/how-to-build-this-blog");
     await expect(page).toHaveScreenshot();
   });
 });
