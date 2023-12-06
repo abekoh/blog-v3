@@ -34,6 +34,10 @@ test.describe("post", () => {
     await page.getByRole("link", { name: /^diary$/ }).click();
     await expect(page).toHaveURL("/tags/diary");
   });
+  test("visual", async ({ page }) => {
+    await page.goto("/posts/start-blog");
+    await expect(page).toHaveScreenshot();
+  });
 });
 
 test.describe("profile", () => {
@@ -50,6 +54,10 @@ test.describe("profile", () => {
     await page.goto("/profile");
     await page.getByRole("link", { name: "abekoh.dev" }).click();
     await expect(page).toHaveURL("https://abekoh.dev/");
+  });
+  test("visual", async ({ page }) => {
+    await page.goto("/profile");
+    await expect(page).toHaveScreenshot();
   });
 });
 
