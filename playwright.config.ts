@@ -23,4 +23,7 @@ export default defineConfig({
     timeout: 10 * 1000,
     reuseExistingServer: !process.env.CI,
   },
+  expect: {
+    toMatchSnapshot: { fullPage: true },
+  },
 });

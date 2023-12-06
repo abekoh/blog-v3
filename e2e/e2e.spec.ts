@@ -40,7 +40,7 @@ test.describe("post", () => {
   });
   test("visual with image", async ({ page }) => {
     await page.goto("/posts/shell-2023");
-    await expect(page).toHaveScreenshot({ fullPage: true });
+    await expect(page).toHaveScreenshot();
   });
 });
 
