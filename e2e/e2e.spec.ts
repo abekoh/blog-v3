@@ -36,11 +36,11 @@ test.describe("post", () => {
   });
   test("visual", async ({ page }) => {
     await page.goto("/posts/start-blog");
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
   test("visual with image", async ({ page }) => {
     await page.goto("/posts/how-to-build-this-blog");
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
 
@@ -61,7 +61,7 @@ test.describe("profile", () => {
   });
   test("visual", async ({ page }) => {
     await page.goto("/profile");
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
 
@@ -98,7 +98,7 @@ test.describe("privacy policy", () => {
   });
   test("visual", async ({ page }) => {
     await page.goto("/privacy");
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
 
@@ -134,6 +134,6 @@ test.describe("search", () => {
   });
   test("visual", async ({ page }) => {
     await page.goto("/search");
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
