@@ -14,14 +14,22 @@ isHtml: false
 
 前回まで
 
-- [今年読んだ本まとめ2022 - abekoh's tech note](https://blog.abekoh.dev/posts/books-2022)
-- [今年読んだ本まとめ2021 - abekoh's tech note](https://blog.abekoh.dev/posts/books-2021)
+- [今年読んだ本まとめ2022 - abekoh's tech note](/posts/books-2022)
+- [今年読んだ本まとめ2021 - abekoh's tech note](/posts/books-2021)
 
 ## 設計・コーディング手法
 
 ### 単体テストの考え方/使い方
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLTG8Z9K&linkId=aebe6ee2d34b5273da80f7edaf6c6790"></iframe>
+
+いきなりですが今年読んだ中で一番学びがありました。
+テストの書き方はもちろん、設計の考え方も大変参考になります。
+
+以下の記事でも多く引用しています。
+
+- [moqを使ったGoのテスト](https://zenn.dev/abekoh/articles/21acde07e1f555)
+- [開発効率を追い求めた実装プラクティス集](https://zenn.dev/micin/articles/effective-development-practices)
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">半分ちょい読んだが、ぐう名著では<br>DDDトリレンマを提唱した方による著書でもあり、その詳細や実践パターンなんかも取り上げられてて面白い<br><br>単体テストの考え方/使い方 <a href="https://t.co/EnrYaNnOX3">https://t.co/EnrYaNnOX3</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1619356822707781632?ref_src=twsrc%5Etfw">January 28, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -34,6 +42,8 @@ isHtml: false
 ### データ指向プログラミング
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BWR57K64&linkId=27a4db88b8f9ef3e23fe87f548c3aecc"></iframe>
+
+オブジェクト指向プログラミングに反した思想、データ指向プログラミング、DOPについて述べられた本。
 
 ### システム設計の面接試験
 
