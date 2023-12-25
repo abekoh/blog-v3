@@ -23,6 +23,10 @@ isHtml: false
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLTG8Z9K&linkId=aebe6ee2d34b5273da80f7edaf6c6790"></iframe>
 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">半分ちょい読んだが、ぐう名著では<br>DDDトリレンマを提唱した方による著書でもあり、その詳細や実践パターンなんかも取り上げられてて面白い<br><br>単体テストの考え方/使い方 <a href="https://t.co/EnrYaNnOX3">https://t.co/EnrYaNnOX3</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1619356822707781632?ref_src=twsrc%5Etfw">January 28, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「読み込みに関してドメイン・モデルは必要ない」って言い切っててわろた。全体的に清々しさがあって良いんだよなこの本</p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1620067179256504327?ref_src=twsrc%5Etfw">January 30, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ### モノリスからマイクロサービスへ
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873119316&linkId=6e3b0fea68e3083768852d3e7b380cf8"></iframe>
@@ -43,15 +47,25 @@ https://www.oreilly.co.jp/books/9784814400607/
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07B44BPFB&linkId=9f174fb21d7fcc0a3318e345de4888c5"></iframe>
 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">必要に迫られてきたので読みはじめた<br><br>ドメインエキスパートとのやり取りが冒頭に出てくるのはEvansリスペクトかな。ちょくちょくDDD特有の用語が出てくるから少し予習しておいたほうが読みやすいのかもしれない<a href="https://t.co/3VPYa2MUlF">https://t.co/3VPYa2MUlF</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1621833442798505990?ref_src=twsrc%5Etfw">February 4, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">カリー化がDependency Injectionに活用されるのなるほどなー点と点がつながった感覚</p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1622230677587632128?ref_src=twsrc%5Etfw">February 5, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ChoiceTypesのRDB保存で複雑じゃなけりゃとりあえずSTIで1テーブルにしとけってのがあまり腑に落ちないかな、本当に変わることなけりゃよいけど基本はテーブル分けておきたい<br>ORMなんか使わんぞってスタイルなのは好き</p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1629780804955156480?ref_src=twsrc%5Etfw">February 26, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## プログラミング言語
 
 ### プロを目指す人のためのTypeScript入門
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4297127474&linkId=3f348f2b5cf1a9b3bddd74773e128766"></iframe>
 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">読んだ。知らないこともあってよい穴埋めになった気がする。これは式、これは型など曖昧にせず丁寧に解説されてるのが好印象でした<a href="https://t.co/T3dsKKWWJI">https://t.co/T3dsKKWWJI</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1640725254917214208?ref_src=twsrc%5Etfw">March 28, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ### Production Ready GraphQL
 
 https://book.productionreadygraphql.com/
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">英語本疲れたから逃げてたけど読んでこう、GraphQLスキーマ設計の迷いを払拭していきたい<a href="https://t.co/abnZpjgcv6">https://t.co/abnZpjgcv6</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1644008285484503040?ref_src=twsrc%5Etfw">April 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## 低レイヤー
 
@@ -59,9 +73,13 @@ https://book.productionreadygraphql.com/
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4908686122&linkId=669738778e35e0a02618ba45d7a31fc9"></iframe>
 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Goならわかるシステムプログラミング、どの解説も丁寧で読み応えあった。特定OSに絞らず、Linux/Mac/Windowsそれぞれ内部でどう扱っているか比較しながらなところも他にはない面白さ。<a href="https://t.co/FKv8JhkwEh">https://t.co/FKv8JhkwEh</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1647614212729081856?ref_src=twsrc%5Etfw">April 16, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ### エンジニアのためのCPU入門
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4908686165&linkId=e478e9cd0c114cdfe57cf44b539e1363"></iframe>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「プログラマーのためのCPU入門」読み終わった、現代CPUでやってる最適化のあれやこれや、知らないこと多くて面白かった<a href="https://t.co/3JscBHUwKy">https://t.co/3JscBHUwKy</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1667792996090392578?ref_src=twsrc%5Etfw">June 11, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Linuxのしくみ
 
@@ -74,6 +92,8 @@ https://book.productionreadygraphql.com/
 ### 並行プログラミング入門
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873119596&linkId=57a94a461d0345c2699b411593b370c1"></iframe>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">並行プログラミング入門、システムプログラミングの本など読んだうえで改めてトライすると解像度上がった気がする<br>だが、まだ後半あたりは読んでて難しいなーって感じだった……逆にこの一冊きちんと理解できれば並行まわりかなり自信つきそうだ<a href="https://t.co/c8bYtOSV0Q">https://t.co/c8bYtOSV0Q</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1654486802571436038?ref_src=twsrc%5Etfw">May 5, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## パフォーマンス
 
@@ -95,6 +115,8 @@ https://book.productionreadygraphql.com/
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07P8PMHLL&linkId=f514c3d5f2f298dc8587b8d85cb4851c"></iframe>
 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">読んだ、意識できていないところ結構多くあって学びが多かった<br><br>失敗から学ぶRDBの正しい歩き方 (Software Design plus) <a href="https://t.co/pQTKCcZAKE">https://t.co/pQTKCcZAKE</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1626869718685745152?ref_src=twsrc%5Etfw">February 18, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## DevOps
 
 ### システム運用アンチパターン
@@ -103,12 +125,22 @@ https://book.productionreadygraphql.com/
 
 ## その他
 
+### プログラマー脳
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BVDQM5H1&linkId=9024f98a2ac6c2117bcbc31fc92c5164"></iframe>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「プログラマー脳」読んだ。似た感じの良いコードとは？系の本の中でもより本質的な要素が多く、そこから自分なりに再構成できそうな気がして面白かった。裏付けとなる研究結果も満載でよかった<a href="https://t.co/gC324ofi2v">https://t.co/gC324ofi2v</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1670770059936161792?ref_src=twsrc%5Etfw">June 19, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ### 情熱プログラマー
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01IGW5MQ0&linkId=4c66788d7724e771b56fa3a77c2c90a2"></iframe>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「情熱プログラマー」読んだ。<br>ターゲットは研究や趣味でやるプログラマーではなく、明確に職業プログラマーに向けたもの。それもただプログラミング上達に対してでなく、どういう考え方でキャリア積めば幸せになるかってメッセージ性が強い。勇気をもらえる良い本だった<a href="https://t.co/JZYPdzvdb2">https://t.co/JZYPdzvdb2</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1673696129350012928?ref_src=twsrc%5Etfw">June 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### 「技術書」の読書術
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BF469YLK&linkId=38552171bc1d888f5d17fecef5610a2e"></iframe>
 
 ## まとめ
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">本棚組み立てたー正確にはラックだけど<br>分野ごとにソートできて大変満足 <a href="https://t.co/stNj6nYpru">pic.twitter.com/stNj6nYpru</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1628607795552747521?ref_src=twsrc%5Etfw">February 23, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
