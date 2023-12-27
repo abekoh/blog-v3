@@ -19,14 +19,17 @@ isHtml: false
 
 ## 設計・コーディング手法
 
-### 単体テストの考え方/使い方
+### 単体テストの考え方/使い方★
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLTG8Z9K&linkId=aebe6ee2d34b5273da80f7edaf6c6790"></iframe>
 
-いきなりですが今年読んだ中で一番学びがありました。
-テストの書き方はもちろん、設計の考え方も大変参考になります。
+今年読んだ中で一番学びがあった。テストの書き方はもちろん、設計の考え方も大変参考になる。
 
-以下の記事でも多く引用しています。
+テストはもともとSpringでDIしやすいことをいいことにモックを作りまくる(いわゆるロンドン学派)のが好きだったけれど、この本を読んで考え方をシフトし、モックは必要最小限でリファクタリング耐性を重視した実装にするようになった。
+
+関数型アーキテクチャの話など、テストしやすい設計・実装についても多く学びがあった。
+
+今年書いた以下の記事でも、学んだことを生かしつつ引用した内容となっている。
 
 - [moqを使ったGoのテスト](https://zenn.dev/abekoh/articles/21acde07e1f555)
 - [開発効率を追い求めた実装プラクティス集](https://zenn.dev/micin/articles/effective-development-practices)
@@ -37,25 +40,47 @@ isHtml: false
 
 ### モノリスからマイクロサービスへ
 
+段階的にアーキテクチャを変更していく話はマイクロサービス関係なく活用できそう。実際モノリス内部での大幅改修でこの本の考え方応用してみている。
+
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873119316&linkId=6e3b0fea68e3083768852d3e7b380cf8"></iframe>
 
 ### データ指向プログラミング
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BWR57K64&linkId=27a4db88b8f9ef3e23fe87f548c3aecc"></iframe>
 
-オブジェクト指向プログラミングに反した思想、データ指向プログラミング、DOPについて述べられた本。
+オブジェクト指向プログラミングに反して、データとコードを分離・汎用データ型だけを使う・データはイミュータブルといった思想をもつデータ指向プログラミング(DOP)についての解説本。
+
+データとコードを分離、すなわちオブジェクトに振る舞わせないといった考え方が良いという点は自分も薄々感じてたところなので面白かった。その点を[開発効率を追い求めた実装プラクティス集](https://zenn.dev/micin/articles/effective-development-practices)で引用して紹介してみた。
+
+一方で、汎用データ型を使っていく・データの型検証はJSON Schemaでやっていくみたいな考えは実際開発者体験は良いものにはならなさそう。JSなら普通にTypeScriptで型定義・互換性のある型ならそのまま変換なく使えるじゃん、くらいの考えで導入したい。
+
+物語形式で話が進むが、なんというか素直に受け入れすぎてたり、そうはならんやろと思ったりとリアリティは薄く感じた。
 
 ### システム設計の面接試験
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0C61BNTW9&linkId=3cc736845331095ff4b8bc9d2071cfc4"></iframe>
 
-### ソフトウェアアーキテクチャメトリクス
+面接試験というテーマのもと、ニュースフィードシステム、チャット、動画サイトなどのサービスのアーキテクチャ設計についてどんなアーキテクチャが模範解答か？どういった点が深掘りされる点になるか？を解説していく内容。
 
-https://www.oreilly.co.jp/books/9784814400607/
+特定のベンダー依存なく、どういうサーバ構成でどこでキューを使ってロードバランサ使って…とざっくりのアーキテクチャの見本市にもなる点が良い気がする。そういう書籍は意外とないような？知らないだけかもだけど。
+
+一方で、翻訳が全体的にいまひとつ。エンジニアが監修していないような訳になっていた。誤字脱字も目立つので改訂してほしさ。
+
+### 進化的アーキテクチャ
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873118565&linkId=d1a545c985cda484bd4d7f893056cc32"></iframe>
+
+全体的にふわっとした内容でいきなり読むとよくわからないが、『ソフトウェアアーキテクチャの基礎』を通過しているともう少し理解が進むような気がする内容。
+
+適応度関数というのがキーワード。すべてのソフトウェアアーキテクチャにおいてそれに必要な要件(機能要件・非機能要件問わず)があり、それにいかに適応できるかの指標を適応度関数として定義、観測して適応させていくことが重要といったことは掴めた。
 
 ### Domain Modeling Made Functional
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07B44BPFB&linkId=9f174fb21d7fcc0a3318e345de4888c5"></iframe>
+
+会社の輪読会で読んだ。関数型でどうDDDやってくか？という内容。
+
+言語はF#だが、考え方自体は他の言語でも適用できる面も多い印象だった。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">必要に迫られてきたので読みはじめた<br><br>ドメインエキスパートとのやり取りが冒頭に出てくるのはEvansリスペクトかな。ちょくちょくDDD特有の用語が出てくるから少し予習しておいたほうが読みやすいのかもしれない<a href="https://t.co/3VPYa2MUlF">https://t.co/3VPYa2MUlF</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1621833442798505990?ref_src=twsrc%5Etfw">February 4, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
