@@ -94,11 +94,16 @@ isHtml: false
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4297127474&linkId=3f348f2b5cf1a9b3bddd74773e128766"></iframe>
 
+TypeScript業務で使ってきたものの知らないことがたくさんあって気づきが得られてよかった。
+
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">読んだ。知らないこともあってよい穴埋めになった気がする。これは式、これは型など曖昧にせず丁寧に解説されてるのが好印象でした<a href="https://t.co/T3dsKKWWJI">https://t.co/T3dsKKWWJI</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1640725254917214208?ref_src=twsrc%5Etfw">March 28, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Production Ready GraphQL
 
 https://book.productionreadygraphql.com/
+
+業務でGraphQL使うなら読めと言われたので。ただざっくりとしか読めてない…
+ページネーションの話とかMutationの返り値にはPayloadを設定するとか、業務に活用できてよかった。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">英語本疲れたから逃げてたけど読んでこう、GraphQLスキーマ設計の迷いを払拭していきたい<a href="https://t.co/abnZpjgcv6">https://t.co/abnZpjgcv6</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1644008285484503040?ref_src=twsrc%5Etfw">April 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
