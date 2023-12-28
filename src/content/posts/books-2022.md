@@ -2,7 +2,7 @@
 title: '今年読んだ本まとめ2022'
 summary: '今年読んだ本のひとことまとめ、備忘録的なもの。2022年版。'
 categories: ['tech']
-tags: ['computer-science','product-management','rust','golang','haskell','rails','agile']
+tags: ['computer-science','product-management','rust','golang','haskell','rails','agile','reading-book']
 publishedAt: 2022-12-30T08:30:00.015Z
 modifiedAt: 
 draft: false
@@ -23,38 +23,6 @@ microCMSRevisedAt: 2022-12-30T08:29:39.648Z
 全部読んでない本も多い。また必要なときに読み返せるくらいのインデックスができる程度の心構えで多読した感じ。
 
 特に他の人にも薦めたいなーって本には★をつけてみた。
-
-## 目次
-- [設計・コーディング技法](#設計コーディング技法)
-  - [良いコード／悪いコードで学ぶ設計入門](#良いコード悪いコードで学ぶ設計入門)
-  - [ソフトウェアアーキテクチャの基礎](#ソフトウェアアーキテクチャの基礎)
-  - [Design It!★](#design-it)
-  - [モノリスからマイクロサービスへ](#モノリスからマイクロサービスへ)
-  - [実践テスト駆動開発](#実践テスト駆動開発)
-  - [Patterns of Enterprise Application Architecture](#patterns-of-enterprise-application-architecture)
-  - [A Philosophy of Software Design★](#a-philosophy-of-software-design)
-- [プログラミング言語・フレームワーク](#プログラミング言語フレームワーク)
-  - [プログラミングRust 第2版](#プログラミングrust-第2版)
-  - [実用Go言語★](#実用go言語)
-  - [すごいHaskellたのしく学ぼう★](#すごいhaskellたのしく学ぼう)
-  - [初めてのGraphQL](#初めてのgraphql)
-  - [パーフェクト Ruby on Rails](#パーフェクト-ruby-on-rails)
-  - [Understanding and Using C Pointers](#understanding-and-using-c-pointers)
-- [コンピュータサイエンス](#コンピュータサイエンス)
-  - [コンピュータシステムの理論と実装★](#コンピュータシステムの理論と実装)
-  - [問題解決力を鍛える！アルゴリズムとデータ構造](#問題解決力を鍛えるアルゴリズムとデータ構造)
-  - [並行プログラミング入門](#並行プログラミング入門)
-- [チーム開発・組織論](#チーム開発組織論)
-  - [SCRUM BOOT CAMP THE BOOK](#scrum-boot-camp-the-book)
-  - [エッセンシャルスクラム](#エッセンシャルスクラム)
-  - [チームトポロジー](#チームトポロジー)
-  - [エンジニアのためのマネジメントキャリアパス](#エンジニアのためのマネジメントキャリアパス)
-- [プロダクトマネジメント](#プロダクトマネジメント)
-  - [INSPIRED 熱狂させる製品を生み出すプロダクトマネジメント★](#inspired-熱狂させる製品を生み出すプロダクトマネジメント)
-  - [プロダクトマネジメント ビルドトラップを避け顧客に価値を届ける](#プロダクトマネジメント-ビルドトラップを避け顧客に価値を届ける)
-- [その他](#その他)
-  - [岩田さん: 岩田聡はこんなことを話していた。★](#岩田さん-岩田聡はこんなことを話していた)
-  - [ヘルシープログラマ](#ヘルシープログラマ)
 
 ## 設計・コーディング技法
 
