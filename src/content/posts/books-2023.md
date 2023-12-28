@@ -3,7 +3,7 @@ title: '今年読んだ本まとめ2023'
 summary: '今年読んだ本のひとことまとめ、備忘録的なもの。2023年版。'
 categories: ['tech']
 tags: ['computer-science','golang','ddd','database','devops','clang','typescript','reading-book']
-publishedAt: 2023-12-28T23:30:00.000Z
+publishedAt: 2023-12-28T23:30:00.000+09:00
 modifiedAt: 
 draft: false
 isHtml: false
