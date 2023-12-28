@@ -17,9 +17,9 @@
   "dependencies": {
     "@astrojs/prefetch": "0.4.1",
     "@astrojs/rss": "4.0.0",
-    "@astrojs/sitemap": "3.0.3",
-    "@astrojs/tailwind": "5.0.4",
-    "astro": "4.0.7",
+    "@astrojs/sitemap": "3.0.4",
+    "@astrojs/tailwind": "5.1.0",
+    "astro": "4.0.8",
     "dayjs": "1.11.10",
     "github-slugger": "2.0.0",
     "marked": "11.1.0",
@@ -31,16 +31,16 @@
     "@playwright/test": "1.40.1",
     "@types/marked": "6.0.0",
     "@types/node": "20.10.5",
-    "@typescript-eslint/eslint-plugin": "6.15.0",
-    "@typescript-eslint/parser": "6.15.0",
+    "@typescript-eslint/eslint-plugin": "6.16.0",
+    "@typescript-eslint/parser": "6.16.0",
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-astro": "0.31.0",
     "prettier": "3.1.1",
-    "prettier-plugin-astro": "0.12.2",
+    "prettier-plugin-astro": "0.12.3",
     "typescript": "5.3.3"
   },
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.13.1",
   "engines": {
     "node": "20.10.0"
   },
