@@ -45,9 +45,9 @@ isHtml: false
 
 ### モノリスからマイクロサービスへ
 
-段階的にアーキテクチャを変更していく話はマイクロサービス関係なく活用できそう。実際モノリス内部での大幅改修でこの本の考え方応用してみている。
-
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873119316&linkId=6e3b0fea68e3083768852d3e7b380cf8"></iframe>
+
+段階的にアーキテクチャを変更していく話はマイクロサービス関係なく活用できそう。実際モノリス内部での大幅改修でこの本の考え方応用してみている。
 
 ### データ指向プログラミング
 
@@ -59,7 +59,7 @@ isHtml: false
 
 一方で、汎用データ型を使っていく・データの型検証はJSON Schemaでやっていくみたいな考えは実際開発者体験は良いものにはならなさそう。JSなら普通にTypeScriptで型定義・互換性のある型ならそのまま変換なく使えるじゃん、くらいの考えで導入したい。
 
-物語形式で話が進むが、なんというか素直に受け入れすぎてたり、そうはならんやろと思ったりとリアリティは薄く感じた。
+物語形式で話が進むが、なんというか、登場人物が素直に受け入れすぎてたり、そうはならんやろと思ったりとリアリティは薄く感じた。
 
 ### システム設計の面接試験
 
@@ -69,15 +69,15 @@ isHtml: false
 
 特定のベンダー依存なく、どういうサーバ構成でどこでキューを使ってロードバランサ使って…とざっくりのアーキテクチャの見本市にもなる点が良い気がする。そういう書籍は意外とないような？知らないだけかもだけど。
 
-一方で、翻訳が全体的にいまひとつ。エンジニアが監修していないような訳になっていた。誤字脱字も目立つので改訂してほしさ。
+一方で、翻訳が全体的にいまひとつ。エンジニアが監修していないような訳になっていたのがやや残念。
 
 ### 進化的アーキテクチャ
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873118565&linkId=d1a545c985cda484bd4d7f893056cc32"></iframe>
 
-全体的にふわっとした内容でいきなり読むとよくわからないが、『ソフトウェアアーキテクチャの基礎』を通過しているともう少し理解が進むような気がする内容。
+全体的にふわっとした内容でいきなり読むとよくわからないが、『ソフトウェアアーキテクチャの基礎』を通過しているともう少し理解が進むような気がする内容。(同じ著者でこの本のほうが古いはずだけれど)
 
-適応度関数というのがキーワード。すべてのソフトウェアアーキテクチャにおいてそれに必要な要件(機能要件・非機能要件問わず)があり、それにいかに適応できるかの指標を適応度関数として定義、観測して適応させていくことが重要といったことは掴めた。
+特に目立つキーワードが「適応度関数」。すべてのソフトウェアアーキテクチャにおいてそれに必要な要件(機能要件・非機能要件問わず)があり、それにいかに適応できるかの指標を適応度関数として定義、観測して適応させていくことが重要といったことは掴めた。
 
 ### Domain Modeling Made Functional
 
@@ -95,7 +95,7 @@ isHtml: false
 
 ## プログラミング言語
 
-### プロを目指す人のためのTypeScript入門★
+### プロを目指す人のためのTypeScript入門
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4297127474&linkId=3f348f2b5cf1a9b3bddd74773e128766"></iframe>
 
@@ -105,7 +105,7 @@ TypeScript業務で使ってきたものの知らないことがたくさんあ�
 
 ### Production Ready GraphQL
 
-https://book.productionreadygraphql.com/
+[Production Ready GraphQL | The Book](https://book.productionreadygraphql.com/)
 
 業務でGraphQL使うなら読めと言われたので。ただざっくりとしか読めてない…
 ページネーションの話とかMutationの返り値にはPayloadを設定するとか、業務に活用できてよかった。
@@ -128,7 +128,7 @@ Goを通じて低レイヤーまわり全般に触れていく本。とても読
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4908686165&linkId=e478e9cd0c114cdfe57cf44b539e1363"></iframe>
 
 現代のCPUの最適化手法についてとことん解説していく本。
-大学の講義で学んだ内容からさらに深掘りされてて面白かった。
+大学の講義で学んだことあったのは基礎的なところだったので、そこから先の応用が目からウロコだった。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「プログラマーのためのCPU入門」読み終わった、現代CPUでやってる最適化のあれやこれや、知らないこと多くて面白かった<a href="https://t.co/3JscBHUwKy">https://t.co/3JscBHUwKy</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1667792996090392578?ref_src=twsrc%5Etfw">June 11, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -163,7 +163,7 @@ C言語も久々に書いて、シンプルだがシンプル故に大変だな�
 
 ISUCON参加するために読んだ。Webアプリケーションのチューニングの基本的なところが抑えられていてよかった。
 
-浅く広く、著者が書きたいことを書くという内容だったので、深掘りたいならそのトピックにあった別の本を読むのがよさそう。
+全体的に浅く広く、著者が書きたいことを書くって感じの内容だったので、深掘りたいならそのトピックにあった別の本を読むのがよさそう。
 
 ### 詳解システムパフォーマンス
 
@@ -177,7 +177,7 @@ OSレベルのパフォーマンスの話。分厚くて全部読んでないけ
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873115892&linkId=a50aaae91c904aebbae3ecb0bd2d00fd"></iframe>
 
-だいぶ前に買って詰んでいたやつ。EAVとか以前疑問を持たずに触ってたが、読むと確かにな〜と思ったり、木構造についてのあれこれやとりあえずIDの話など業務にそのまま役に立つ内容が多かった。
+だいぶ前に買って積んでいたやつ。EAVとか以前疑問を持たずに触ってたが、読むと確かにな〜と思ったり、木構造についてのあれこれやとりあえずIDの話など業務にそのまま役に立つ内容が多かった。
 
 原著で改版されたものが出てるっぽいので読み返すときはそちらを選ぼう。
 
@@ -230,7 +230,7 @@ SQLアンチパターンとは被らない内容だったのでこちらも読�
 改めて感想書こうとして、内容忘れているのが多かった。量ではなく質を大切にしたい。
 来年はあまり詰め込みすぎず、読み返したり難しい本をゆっくり読むことに重きをおきたいかも。『並行プログラミング入門』みたいに2年連続登場とかまた発生させても良しとする感じで。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">本棚組み立てたー正確にはラックだけど<br>分野ごとにソートできて大変満足 <a href="https://t.co/stNj6nYpru">pic.twitter.com/stNj6nYpru</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1628607795552747521?ref_src=twsrc%5Etfw">February 23, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 基本は物理本派で、2月にラックを買ったがもう入りきれなくなってきている…読み返すことなさそうな本は処分するかなー。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">本棚組み立てたー正確にはラックだけど<br>分野ごとにソートできて大変満足 <a href="https://t.co/stNj6nYpru">pic.twitter.com/stNj6nYpru</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1628607795552747521?ref_src=twsrc%5Etfw">February 23, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
