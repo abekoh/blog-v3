@@ -123,7 +123,7 @@ Goを通じて低レイヤーまわり全般に触れていく本。とても読
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Goならわかるシステムプログラミング、どの解説も丁寧で読み応えあった。特定OSに絞らず、Linux/Mac/Windowsそれぞれ内部でどう扱っているか比較しながらなところも他にはない面白さ。<a href="https://t.co/FKv8JhkwEh">https://t.co/FKv8JhkwEh</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1647614212729081856?ref_src=twsrc%5Etfw">April 16, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-### エンジニアのためのCPU入門
+### エンジニアのためのCPU入門★
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4908686165&linkId=e478e9cd0c114cdfe57cf44b539e1363"></iframe>
 
