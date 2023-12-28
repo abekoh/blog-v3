@@ -2,7 +2,7 @@
 title: '今年読んだ本まとめ2022'
 summary: '今年読んだ本のひとことまとめ、備忘録的なもの。2022年版。'
 categories: ['tech']
-tags: ['computer-science','product-management','rust','golang','haskell','rails','agile']
+tags: ['computer-science','product-management','rust','golang','haskell','rails','agile','reading-book']
 publishedAt: 2022-12-30T08:30:00.015Z
 modifiedAt: 
 draft: false
