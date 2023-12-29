@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/prefetch": "0.4.1",
-    "@astrojs/rss": "4.0.0",
+    "@astrojs/rss": "4.0.1",
     "@astrojs/sitemap": "3.0.4",
     "@astrojs/tailwind": "5.1.0",
     "astro": "4.0.8",
