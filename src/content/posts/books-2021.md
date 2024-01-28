@@ -4,7 +4,7 @@ summary: '今年読んだ本のひとことまとめ、備忘録的なもの。'
 categories: ['tech']
 tags: ['reading-book','agile','oop','ddd','golang','html','css']
 publishedAt: 2021-12-26T13:57:00.000Z
-modifiedAt: 2023-01-28T18:00:00.000+09:00
+modifiedAt: 2024-01-28T18:00:00.000+09:00
 draft: false
 isHtml: false
 microCMSId: 'books-2021'

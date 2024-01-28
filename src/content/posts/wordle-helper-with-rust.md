@@ -8,7 +8,7 @@ summary: 'Wordle、流行ってますね。
 categories: ['tech']
 tags: ['rust']
 publishedAt: 2022-02-04T16:06:00.000Z
-modifiedAt: 2023-01-28T18:00:00.000+09:00
+modifiedAt: 2024-01-28T18:00:00.000+09:00
 draft: false
 isHtml: false
 microCMSId: 'wordle-helper-with-rust'
