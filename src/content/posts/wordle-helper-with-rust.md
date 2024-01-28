@@ -8,13 +8,17 @@ summary: 'Wordle、流行ってますね。
 categories: ['tech']
 tags: ['rust']
 publishedAt: 2022-02-04T16:06:00.000Z
-modifiedAt: 
+modifiedAt: 2023-01-28T18:00:00.000+09:00
 draft: false
 isHtml: false
 microCMSId: 'wordle-helper-with-rust'
 microCMSCreatedAt: 2022-02-04T16:16:38.414Z
 microCMSUpdatedAt: 2022-02-05T16:06:54.349Z
 microCMSRevisedAt: 2022-02-05T16:06:54.349Z
+---
+
+2024/01/28追記: Amazonへのリンクを修正しました。
+
 ---
 
 Wordle、流行ってますね。

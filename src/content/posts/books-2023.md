@@ -4,10 +4,13 @@ summary: '今年読んだ本のひとことまとめ、備忘録的なもの。2
 categories: ['tech']
 tags: ['computer-science','golang','ddd','database','devops','clang','typescript','reading-book']
 publishedAt: 2023-12-28T23:30:00.000+09:00
-modifiedAt: 
+modifiedAt: 2023-01-28T18:00:00.000+09:00
 draft: false
 isHtml: false
 ---
+
+2024/01/28追記: Amazonへのリンクを修正しました。
+
 ## はじめに
 
 今年読んだ本のひとことまとめ、備忘録的なもの。2023年版。

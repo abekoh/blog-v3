@@ -4,7 +4,7 @@ summary: '今年読んだ本のひとことまとめ、備忘録的なもの。2
 categories: ['tech']
 tags: ['computer-science','product-management','rust','golang','haskell','rails','agile','reading-book']
 publishedAt: 2022-12-30T08:30:00.015Z
-modifiedAt: 
+modifiedAt: 2023-01-28T18:00:00.000+09:00
 draft: false
 isHtml: false
 microCMSId: 'books-2022'
@@ -12,6 +12,9 @@ microCMSCreatedAt: 2022-12-30T08:17:21.700Z
 microCMSUpdatedAt: 2022-12-30T08:29:39.648Z
 microCMSRevisedAt: 2022-12-30T08:29:39.648Z
 ---
+
+2024/01/28追記: Amazonへのリンクを修正しました。
+
 ## はじめに
 
 今年読んだ本のひとことまとめ、備忘録的なもの。2022年版。
