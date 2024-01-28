@@ -4,7 +4,7 @@ summary: '今年読んだ本のひとことまとめ、備忘録的なもの。'
 categories: ['tech']
 tags: ['reading-book','agile','oop','ddd','golang','html','css']
 publishedAt: 2021-12-26T13:57:00.000Z
-modifiedAt: 
+modifiedAt: 2024-01-28T18:00:00.000+09:00
 draft: false
 isHtml: false
 microCMSId: 'books-2021'
@@ -12,6 +12,9 @@ microCMSCreatedAt: 2021-12-26T08:18:04.176Z
 microCMSUpdatedAt: 2021-12-26T13:01:34.555Z
 microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 ---
+
+2024/01/28追記: Amazonへのリンクを修正しました。
+
 ## はじめに
 
 今年読んだ本のひとことまとめ、備忘録的なもの。
@@ -27,8 +30,7 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### テスト駆動開発
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B077D2L69C&linkId=683e344cca8de201f510b555d18c5fa1&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B077D2L69C">https://www.amazon.co.jp/dp/B077D2L69C</a>
 
 - 言わずとしれたTDDの原点。実はリニューアル版で、絶版になった旧版は訳者が異なる
 - 前半のコーディング過程は [訳者t-wadaさんのライブコーディング](https://www.youtube.com/watch?v=Q-FJ3XmFlT8) 見てからだとすんなり入った
@@ -38,16 +40,14 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### リファクタリング 第2版
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B0827R4BDW&linkId=f45b90696a8d1e77a4db39ffa7862659&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B0827R4BDW">https://www.amazon.co.jp/dp/B0827R4BDW</a>
 
 - 可逆的なパターンが多く面白い。どれも使い所次第で毒にも薬にもなる
 - 一歩ずつ慎重にやるステップ、複数のリファクタリングパターンを組み合わせて完成されるなど、今までやってたリファクタリングと違い学びがあった
 
 ### 達人プログラマー 第2版
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B08T9BXSVD&linkId=1bf2fec35396cd1c08ab6397c1443d49&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B08T9BXSVD">https://www.amazon.co.jp/dp/B08T9BXSVD</a>
 
 - 「契約による設計(DbC)」「テスト書いてません告白」など、なるほど〜となること多かった
 - 抽象的な内容も多く、正直少し読みにくい
@@ -55,8 +55,7 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### Software Design 2021年3月号
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B08W4X2L1P&linkId=104c928336500751b99d3392883cb91d&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B08W4X2L1P">https://www.amazon.co.jp/dp/B08W4X2L1P</a>
 
 - オブジェクト指向の特集あり
 - 「動物・犬・猫で例える問題」「getter/setter問題」「継承問題」など、誤解招きやすいところの解説がよかった
@@ -82,8 +81,7 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### マイクロサービスアーキテクチャ
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4873117607&linkId=ce9e691c2c25c789d58f94bcc0600c31&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/4873117607">https://www.amazon.co.jp/dp/4873117607</a>
 
 - マイクロサービスに関する本、少し古め
   - [原著の第2版](https://www.amazon.com/Building-Microservices-Designing-Fine-Grained-Systems/dp/1492034029/ref=sr_1_1?crid=2BPLADIOF64I&keywords=Building+Microservices%3A+Designing+Fine-Grained+Systems&qid=1640512351&s=books&sprefix=building+microservices+designing+fine-grained+systems%2Cstripbooks-intl-ship%2C209&sr=1-1)が出てるらしい
@@ -93,7 +91,7 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### エンジニアリング組織論への招待
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B079TLW41L&linkId=5e13c26e492ac7a20cd37ea127174eb9&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr"></iframe>
+<a href="https://www.amazon.co.jp/dp/B079TLW41L">https://www.amazon.co.jp/dp/B079TLW41L</a>
 
 - エンジニアリングでの問題解決にはコードだけではなく、人々の思考・組織・ビジネスの構造をリファクタリングしなければ、という点から語られた内容
 - 第3章のアジャイル開発について話がおもしろい。アジャイル開発が必要とされるまでの流れや、それが目指すチームの状態、誤ったアジャイル、不確実性をへらすためのアジャイルな方法論など
@@ -102,24 +100,21 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### エクストリーム・プログラミング
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B012UWOLOQ&linkId=9e29a216c7214e14ec6c7ac099ed93a8&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B012UWOLOQ">https://www.amazon.co.jp/dp/B012UWOLOQ</a>
 
 - 割とサクッと読める本
 - アジャイル宣言から派生した具体的なプラクティスがまとまっててよい
 
 ### チーム・ジャーニー
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B0836CF21D&linkId=83a7f3b7b0a6add51b625b4b5c9c6ea0&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B0836CF21D">https://www.amazon.co.jp/dp/B0836CF21D</a>
 
 - [カイゼン・ジャーニー](https://www.amazon.co.jp/%E3%82%AB%E3%82%A4%E3%82%BC%E3%83%B3%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8B%E3%83%BC-%E3%81%9F%E3%81%A3%E3%81%9F1%E4%BA%BA%E3%81%8B%E3%82%89%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%80%81%E3%80%8C%E8%B6%8A%E5%A2%83%E3%80%8D%E3%81%99%E3%82%8B%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8B%E3%81%BE%E3%81%A7-%E5%B8%82%E8%B0%B7-%E8%81%A1%E5%95%93-ebook/dp/B078HZKLMB)の続編らしく、より大きなチームを編成するためのプラクティスとか
 - 一部、やや著者のオリジナリティが強いプラクティスが入ってて飲み込みにくかった
 
 ### ユニコーン企業のひみつ
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4873119464&linkId=394d035c50150bc8b844b010aaf4f257&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/4873119464">https://www.amazon.co.jp/dp/4873119464</a>
 
 - Twitterで一時期流行りを観測したので読んでみた
 - Spotifyで働いた著者の経験からの話
@@ -132,8 +127,7 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### ハイパフォーマンス ブラウザネットワーキング
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4873116767&linkId=1d92197515ed9cf93d66b35ca2e270b7&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/4873116767">https://www.amazon.co.jp/dp/4873116767</a>
 
 - WebRTCについて学びたく読んだ
 - TCP/UDPの基本的な話から入る。タイトルどおりひたすらネットワークのパフォーマンスを追求していく
@@ -145,8 +139,7 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### データ指向アプリケーションデザイン
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4873118700&linkId=d79fa06a8b3c954b82c395afde7c2121&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/4873118700">https://www.amazon.co.jp/dp/4873118700</a>
 
 - 多くの人におすすめされたので読んだ
 - データベースがどういう考えのもとで実装されているか学べた
@@ -164,15 +157,13 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 - カタログとして見やすい内容
 - 知らないCSSプロパティ・特定デバイス向け設定などたくさんあって読んで良かった
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B08LKH2K7S&linkId=b308aed728a392516389769476c1687f&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B08LKH2K7S">https://www.amazon.co.jp/dp/B08LKH2K7S</a>
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これ買って眺めてる。<br>HTMLについては太古の昔に覚えて、その場しのぎのアップデートしかなく穴だらけだったんで、体系的に学ぶのいいなってなる<a href="https://t.co/40WRudzETE">https://t.co/40WRudzETE</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1375478017456177156?ref_src=twsrc%5Etfw">March 26, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Go言語による並行処理
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4873118468&linkId=5521e5f7573b2d936d670d17f918e7d5&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/4873118468">https://www.amazon.co.jp/dp/4873118468</a>
 
 - Goでのパイプラインパターンみたいな書き方できるってのがしれた
 - Go固有の話が大きいかも？とはいえ使いこなせば強力だと感じた
@@ -181,8 +172,7 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### ソフトウェアテストの教科書 増補改訂 第２版
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B093Q13V96&linkId=7de5521dc6c02e3ecb3c1d70941f4a37&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B093Q13V96">https://www.amazon.co.jp/dp/B093Q13V96</a>
 
 - QAさんがどういうふうにテスト設計し、実施しているか知れた
 - ウォーターフォール前提感もあり少し古い感じはあった
@@ -191,16 +181,14 @@ microCMSRevisedAt: 2021-12-26T13:01:34.555Z
 
 ### ソフトウェア・ファースト
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B07YNJSCG8&linkId=6b31606be9193599b840a8eee203593e&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B07YNJSCG8">https://www.amazon.co.jp/dp/B07YNJSCG8</a>
 
 - Webサービスの社会人経験しかないからDXよくわからんかったが、その定義などが知れた
 - 内製化しましょう、ということが繰り返し言われていた
 
 ### NO RULES
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=B08LDBNG74&linkId=12bd0e308dea8992c568896806d7472f&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/B08LDBNG74">https://www.amazon.co.jp/dp/B08LDBNG74</a>
 
 - NetFlixのお話
 - まず能力のない社員をレイオフしようという、日本企業としては悩ましいことから始まる

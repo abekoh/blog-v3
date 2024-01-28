@@ -8,13 +8,17 @@ summary: 'Wordle、流行ってますね。
 categories: ['tech']
 tags: ['rust']
 publishedAt: 2022-02-04T16:06:00.000Z
-modifiedAt: 
+modifiedAt: 2024-01-28T18:00:00.000+09:00
 draft: false
 isHtml: false
 microCMSId: 'wordle-helper-with-rust'
 microCMSCreatedAt: 2022-02-04T16:16:38.414Z
 microCMSUpdatedAt: 2022-02-05T16:06:54.349Z
 microCMSRevisedAt: 2022-02-05T16:06:54.349Z
+---
+
+2024/01/28追記: Amazonへのリンクを修正しました。
+
 ---
 
 Wordle、流行ってますね。
@@ -67,8 +71,7 @@ Rust特有の所有権・ライフタイムについても最初は「ん？？�
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">積み本また増やしてしまった<br>5章まで読んで、公式チュートリアルとはまた違う視点での復習になって良かった<a href="https://t.co/vRAhNtXC3J">https://t.co/vRAhNtXC3J</a></p>&mdash; abekoh (@abekoh_bcky) <a href="https://twitter.com/abekoh_bcky/status/1485272205785468929?ref_src=twsrc%5Etfw">January 23, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=abekohtechblo-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4873119782&linkId=771ad181e554ff5f7cf1bbdac29d1a1b&bc1=ffffff&amp;lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+<a href="https://www.amazon.co.jp/dp/4873119782">https://www.amazon.co.jp/dp/4873119782</a>
 
 その気になったらまたRustの言語としてどう感じたかの記事とか書いてみたいと思います。
 
