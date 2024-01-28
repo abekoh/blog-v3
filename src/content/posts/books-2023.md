@@ -4,10 +4,13 @@ summary: '今年読んだ本のひとことまとめ、備忘録的なもの。2
 categories: ['tech']
 tags: ['computer-science','golang','ddd','database','devops','clang','typescript','reading-book']
 publishedAt: 2023-12-28T23:30:00.000+09:00
-modifiedAt: 
+modifiedAt: 2024-01-28T18:00:00.000+09:00
 draft: false
 isHtml: false
 ---
+
+2024/01/28追記: Amazonへのリンクを修正しました。
+
 ## はじめに
 
 今年読んだ本のひとことまとめ、備忘録的なもの。2023年版。
@@ -25,7 +28,7 @@ isHtml: false
 
 ### 単体テストの考え方/使い方★
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BLTG8Z9K&linkId=aebe6ee2d34b5273da80f7edaf6c6790"></iframe>
+<a href="https://www.amazon.co.jp/dp/B0BLTG8Z9K">https://www.amazon.co.jp/dp/B0BLTG8Z9K</a>
 
 今年読んだ中で一番学びがあった。テストの書き方はもちろん、設計の考え方も大変参考になる。
 
@@ -44,13 +47,13 @@ isHtml: false
 
 ### モノリスからマイクロサービスへ
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873119316&linkId=6e3b0fea68e3083768852d3e7b380cf8"></iframe>
+<a href="https://www.amazon.co.jp/dp/4873119316">https://www.amazon.co.jp/dp/4873119316</a>
 
 段階的にアーキテクチャを変更していく話はマイクロサービス関係なく活用できそう。実際モノリス内部での大幅改修でこの本の考え方応用してみている。
 
 ### データ指向プログラミング
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BWR57K64&linkId=27a4db88b8f9ef3e23fe87f548c3aecc"></iframe>
+<a href="https://www.amazon.co.jp/dp/B0BWR57K64">https://www.amazon.co.jp/dp/B0BWR57K64</a>
 
 オブジェクト指向プログラミングに反して、データとコードを分離・汎用データ型だけを使う・データはイミュータブルといった思想をもつデータ指向プログラミング(DOP)についての解説本。
 
@@ -62,7 +65,7 @@ isHtml: false
 
 ### システム設計の面接試験
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0C61BNTW9&linkId=3cc736845331095ff4b8bc9d2071cfc4"></iframe>
+<a href="https://www.amazon.co.jp/dp/B0C61BNTW9">https://www.amazon.co.jp/dp/B0C61BNTW9</a>
 
 面接試験というテーマのもと、ニュースフィードシステム、チャット、動画サイトなどのサービスのアーキテクチャ設計についてどんなアーキテクチャが模範解答か？どういった点が深掘りされる点になるか？を解説していく内容。
 
@@ -72,7 +75,7 @@ isHtml: false
 
 ### 進化的アーキテクチャ
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873118565&linkId=d1a545c985cda484bd4d7f893056cc32"></iframe>
+<a href="https://www.amazon.co.jp/dp/4873118565">https://www.amazon.co.jp/dp/4873118565</a>
 
 全体的にふわっとした内容でいきなり読むとよくわからないが、『ソフトウェアアーキテクチャの基礎』を通過しているともう少し理解が進むような気がする内容。(同じ著者でこの本のほうが古いはずだけれど)
 
@@ -80,7 +83,7 @@ isHtml: false
 
 ### Domain Modeling Made Functional
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07B44BPFB&linkId=9f174fb21d7fcc0a3318e345de4888c5"></iframe>
+<a href="https://www.amazon.co.jp/dp/B07B44BPFB">https://www.amazon.co.jp/dp/B07B44BPFB</a>
 
 会社の輪読会で読んだ。関数型でどうDDDやってくか？という内容。
 
@@ -96,7 +99,7 @@ isHtml: false
 
 ### プロを目指す人のためのTypeScript入門
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4297127474&linkId=3f348f2b5cf1a9b3bddd74773e128766"></iframe>
+<a href="https://www.amazon.co.jp/dp/4297127474">https://www.amazon.co.jp/dp/4297127474</a>
 
 TypeScript業務で使ってきたものの知らないことがたくさんあって気づきが得られてよかった。
 
@@ -115,7 +118,7 @@ TypeScript業務で使ってきたものの知らないことがたくさんあ�
 
 ### Goならわかるシステムプログラミング★
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4908686122&linkId=669738778e35e0a02618ba45d7a31fc9"></iframe>
+<a href="https://www.amazon.co.jp/dp/4908686122">https://www.amazon.co.jp/dp/4908686122</a>
 
 Goを通じて低レイヤーまわり全般に触れていく本。とても読み応えあった。
 システムプログラミング学びたいって人いたらまずこれを薦めていきたい。
@@ -124,7 +127,7 @@ Goを通じて低レイヤーまわり全般に触れていく本。とても読
 
 ### エンジニアのためのCPU入門★
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4908686165&linkId=e478e9cd0c114cdfe57cf44b539e1363"></iframe>
+<a href="https://www.amazon.co.jp/dp/4908686165">https://www.amazon.co.jp/dp/4908686165</a>
 
 現代のCPUの最適化手法についてとことん解説していく本。
 大学の講義で学んだことあったのは基礎的なところだったので、そこから先の応用が目からウロコだった。
@@ -133,13 +136,13 @@ Goを通じて低レイヤーまわり全般に触れていく本。とても読
 
 ### Linuxのしくみ
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BG8J5QJ1&linkId=7c844ab31fcb529885f78532fd2e896e"></iframe>
+<a href="https://www.amazon.co.jp/dp/B0BG8J5QJ1">https://www.amazon.co.jp/dp/B0BG8J5QJ1</a>
 
 図が多くわかりやすかった。とりあえずLinuxざっくり理解するのに良さそう。
 
 ### ふつうのLinuxプログラミング
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B075ST51Y5&linkId=8ca52fedd2345a5d0883119fa2b0551e"></iframe>
+<a href="https://www.amazon.co.jp/dp/B075ST51Y5">https://www.amazon.co.jp/dp/B075ST51Y5</a>
 
 C言語を使ってシステムプログラミングのチュートリアル的なことができる内容。
 HTTPサーバー実際に手を動かしてみて、普段業務で動かしてるサーバも内部的にはこんなことしてるんだなーと学びがあった。
@@ -148,7 +151,7 @@ C言語も久々に書いて、シンプルだがシンプル故に大変だな�
 
 ### 並行プログラミング入門
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873119596&linkId=57a94a461d0345c2699b411593b370c1"></iframe>
+<a href="https://www.amazon.co.jp/dp/4873119596">https://www.amazon.co.jp/dp/4873119596</a>
 
 以前に一度読んだけど挫折→もう一度チャレンジ。ただ後半はやはり難しい。
 
@@ -158,7 +161,7 @@ C言語も久々に書いて、シンプルだがシンプル故に大変だな�
 
 ### 達人が教えるWebパフォーマンスチューニング
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0B1Z9ZMY6&linkId=6927fc9cb2180041fa5cdcbd665c85b8"></iframe>
+<a href="https://www.amazon.co.jp/dp/B0B1Z9ZMY6">https://www.amazon.co.jp/dp/B0B1Z9ZMY6</a>
 
 ISUCON参加するために読んだ。Webアプリケーションのチューニングの基本的なところが抑えられていてよかった。
 
@@ -166,7 +169,7 @@ ISUCON参加するために読んだ。Webアプリケーションのチュー�
 
 ### 詳解システムパフォーマンス
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4814400071&linkId=c7081647fb5727e31bf5d5749c54ea27"></iframe>
+<a href="https://www.amazon.co.jp/dp/4814400071">https://www.amazon.co.jp/dp/4814400071</a>
 
 OSレベルのパフォーマンスの話。分厚くて全部読んでないけれど、最初の4章あたりまでは「パフォーマンスチューニングやってくのにこれだけは知っとけ」みたいな内容で勉強なった。
 
@@ -174,7 +177,7 @@ OSレベルのパフォーマンスの話。分厚くて全部読んでないけ
 
 ### SQLアンチパターン★
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873115892&linkId=a50aaae91c904aebbae3ecb0bd2d00fd"></iframe>
+<a href="https://www.amazon.co.jp/dp/4873115892">https://www.amazon.co.jp/dp/4873115892</a>
 
 だいぶ前に買って積んでいたやつ。EAVとか以前疑問を持たずに触ってたが、読むと確かにな〜と思ったり、木構造についてのあれこれやとりあえずIDの話など業務にそのまま役に立つ内容が多かった。
 
@@ -184,7 +187,7 @@ OSレベルのパフォーマンスの話。分厚くて全部読んでないけ
 
 ### 失敗から学ぶRDBの正しい歩き方★
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07P8PMHLL&linkId=f514c3d5f2f298dc8587b8d85cb4851c"></iframe>
+<a href="https://www.amazon.co.jp/dp/B07P8PMHLL">https://www.amazon.co.jp/dp/B07P8PMHLL</a>
 
 SQLアンチパターンとは被らない内容だったのでこちらも読むべき。どこまで制約を入れるべきか、JSONを使うべきかの話など学びがあった。
 
@@ -194,7 +197,7 @@ SQLアンチパターンとは被らない内容だったのでこちらも読�
 
 ### システム運用アンチパターン
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873119847&linkId=ea1099bdb1a8c07582bd536071b66c2e"></iframe>
+<a href="https://www.amazon.co.jp/dp/4873119847">https://www.amazon.co.jp/dp/4873119847</a>
 
 会社の輪読会で読んだ。単純なシステム運用のテクニックの話だけでなく、文化づくりなりコミュニケーションのやり方なり会社でDevOpsやってく上でのなんでもが詰まってる本だった。
 
@@ -204,7 +207,7 @@ SQLアンチパターンとは被らない内容だったのでこちらも読�
 
 ### プログラマー脳
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BVDQM5H1&linkId=9024f98a2ac6c2117bcbc31fc92c5164"></iframe>
+<a href="https://www.amazon.co.jp/dp/B0BVDQM5H1">https://www.amazon.co.jp/dp/B0BVDQM5H1</a>
 
 プログラミングにおける認知負荷に関して深掘りした話。認知科学の方面から攻めるという、珍しいアプローチからのプログラミングスキルアップの本だった。
 
@@ -212,7 +215,7 @@ SQLアンチパターンとは被らない内容だったのでこちらも読�
 
 ### 情熱プログラマー★
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B01IGW5MQ0&linkId=4c66788d7724e771b56fa3a77c2c90a2"></iframe>
+<a href="https://www.amazon.co.jp/dp/B01IGW5MQ0">https://www.amazon.co.jp/dp/B01IGW5MQ0</a>
 
 読んで元気の出る本。キャリアについて不安になったらまた読み返す。
 
@@ -220,7 +223,7 @@ SQLアンチパターンとは被らない内容だったのでこちらも読�
 
 ### 「技術書」の読書術
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=abekohtech-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BF469YLK&linkId=38552171bc1d888f5d17fecef5610a2e"></iframe>
+<a href="https://www.amazon.co.jp/dp/B0BF469YLK">https://www.amazon.co.jp/dp/B0BF469YLK</a>
 
 技術書の読み方についていろいろ紹介。面白い読み方いろいろあるなーと気づきはあったものの、いや好き勝手に読ませてくれってなったのであまり参考にはなってないかも。
 
