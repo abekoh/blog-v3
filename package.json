@@ -42,7 +42,7 @@
   },
   "packageManager": "pnpm@8.15.2",
   "engines": {
-    "node": "20.11.0"
+    "node": "20.11.1"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-arm64-gnu": "4.10.0"
