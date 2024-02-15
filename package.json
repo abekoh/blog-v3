@@ -45,6 +45,6 @@
     "node": "20.11.1"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-arm64-gnu": "4.10.0"
+    "@rollup/rollup-linux-arm64-gnu": "4.11.0"
   }
 }
