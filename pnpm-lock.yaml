@@ -41,8 +41,8 @@ dependencies:
 
 optionalDependencies:
   '@rollup/rollup-linux-arm64-gnu':
-    specifier: 4.11.0
-    version: 4.11.0
+    specifier: 4.12.0
+    version: 4.12.0
 
 devDependencies:
   '@playwright/test':
@@ -1014,8 +1014,8 @@ packages:
     dev: false
     optional: true
 
-  /@rollup/rollup-linux-arm64-gnu@4.11.0:
-    resolution: {integrity: sha512-673Lu9EJwxVB9NfYeA4AdNu0FOHz7g9t6N1DmT7bZPn1u6bTF+oZjj+fuxUcrfxWXE0r2jxl5QYMa9cUOj9NFg==}
+  /@rollup/rollup-linux-arm64-gnu@4.12.0:
+    resolution: {integrity: sha512-0fZBq27b+D7Ar5CQMofVN8sggOVhEtzFUwOwPppQt0k+VR+7UHMZZY4y+64WJ06XOhBTKXtQB/Sv0NwQMXyNAA==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
