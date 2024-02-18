@@ -45,29 +45,38 @@ gtag("config", "G-8QCDTP8WZ3");
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content={AUTHOR_TWITTER} />
     <meta name="twitter:creator" content={AUTHOR_TWITTER} />
-    {
-      metadata && (
-        <>
-          {metadata.type && <meta property="og:type" content={metadata.type} />}
-          {metadata.description ? (
-            <>
-              <meta name="description" content={metadata.description} />
-              <meta property="og:description" content={metadata.description} />
-            </>
-          ) : (
-            <>
-              <meta name="description" content={BLOG_DESCRIPTION} />
-              <meta property="og:description" content={BLOG_DESCRIPTION} />
-            </>
-          )}
-          {metadata.url && <meta property="og:url" content={metadata.url} />}
-          {metadata.image && (
-            <meta property="og:image" content={metadata.image} />
-          )}
-          {metadata.draft && <meta name="robots" content="noindex,nofollow" />}
-        </>
-      )
-    }
+    <>
+      {
+        metadata && (
+          <>
+            {metadata.type && (
+              <meta property="og:type" content={metadata.type} />
+            )}
+            {metadata.description ? (
+              <>
+                <meta name="description" content={metadata.description} />
+                <meta
+                  property="og:description"
+                  content={metadata.description}
+                />
+              </>
+            ) : (
+              <>
+                <meta name="description" content={BLOG_DESCRIPTION} />
+                <meta property="og:description" content={BLOG_DESCRIPTION} />
+              </>
+            )}
+            {metadata.url && <meta property="og:url" content={metadata.url} />}
+            {metadata.image && (
+              <meta property="og:image" content={metadata.image} />
+            )}
+            {metadata.draft && (
+              <meta name="robots" content="noindex,nofollow" />
+            )}
+          </>
+        )
+      }
+    </>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
