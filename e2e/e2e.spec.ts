@@ -111,7 +111,7 @@ test.describe("rss", () => {
   test("has xml", async ({ page }) => {
     const resp = await page.goto("/rss.xml");
     const contentType = resp?.headers()["content-type"];
-    expect(contentType).toContain("application/xml");
+    expect(contentType).toContain("text/xml");
 
     const content = await resp?.text();
     expect(content).toContain('<rss version="2.0">');
