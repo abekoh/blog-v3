@@ -3,7 +3,7 @@ slug: 'postgresql-listen-notify'
 title: '[Zenn] PostgreSQL LISTEN/NOTIFY, Goを利用したリアルタイム配信'
 summary: '業務で対応したややニッチなネタです。'
 categories: [ 'tech' ]
-tags: [ 'postgresql', 'golang' ]
+tags: [ 'postgres', 'golang' ]
 publishedAt: 2024-03-26T10:00:00.000+09:00
 modifiedAt:
 draft: false
