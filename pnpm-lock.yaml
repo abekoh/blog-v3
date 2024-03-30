@@ -22,7 +22,7 @@ dependencies:
     version: 5.1.0(astro@4.5.12)(tailwindcss@3.4.3)
   astro:
     specifier: 4.5.12
-    version: 4.5.12(@types/node@20.11.30)(typescript@5.4.3)
+    version: 4.5.12(@types/node@20.12.1)(typescript@5.4.3)
   dayjs:
     specifier: 1.11.10
     version: 1.11.10
@@ -50,8 +50,8 @@ devDependencies:
     specifier: 6.0.0
     version: 6.0.0
   '@types/node':
-    specifier: 20.11.30
-    version: 20.11.30
+    specifier: 20.12.1
+    version: 20.12.1
   '@typescript-eslint/eslint-plugin':
     specifier: 7.4.0
     version: 7.4.0(@typescript-eslint/parser@7.4.0)(eslint@8.57.0)(typescript@5.4.3)
@@ -167,7 +167,7 @@ packages:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.5.12(@types/node@20.11.30)(typescript@5.4.3)
+      astro: 4.5.12(@types/node@20.12.1)(typescript@5.4.3)
       autoprefixer: 10.4.15(postcss@8.4.32)
       postcss: 8.4.32
       postcss-load-config: 4.0.2(postcss@8.4.32)
@@ -1067,15 +1067,15 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node@20.11.30:
-    resolution: {integrity: sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==}
+  /@types/node@20.12.1:
+    resolution: {integrity: sha512-5lcxgB72hlSF7ZS9ZzX1RCLc9+BovxjL17T00xSmj3c0ygZFjPdNnN0RchfGpot/yniVMkWnyO6aR9Dr1q9qrg==}
     dependencies:
       undici-types: 5.26.5
 
   /@types/sax@1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 20.11.30
+      '@types/node': 20.12.1
     dev: false
 
   /@types/semver@7.5.1:
@@ -1359,7 +1359,7 @@ packages:
       - supports-color
     dev: true
 
-  /astro@4.5.12(@types/node@20.11.30)(typescript@5.4.3):
+  /astro@4.5.12(@types/node@20.12.1)(typescript@5.4.3):
     resolution: {integrity: sha512-xIJcFI2hbyV8+h5pWjL7SKD1jIP0K01fYVAH+gdAt0mJaXy+u8Mj+goD0cPlK6sEaykR+7zxQLYGKJ44U4qarg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1420,7 +1420,7 @@ packages:
       tsconfck: 3.0.0(typescript@5.4.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.1.4(@types/node@20.11.30)
+      vite: 5.1.4(@types/node@20.12.1)
       vitefu: 0.2.5(vite@5.1.4)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -4735,7 +4735,7 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@5.1.4(@types/node@20.11.30):
+  /vite@5.1.4(@types/node@20.12.1):
     resolution: {integrity: sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4763,7 +4763,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.11.30
+      '@types/node': 20.12.1
       esbuild: 0.19.8
       postcss: 8.4.35
       rollup: /@rollup/wasm-node@4.13.2
@@ -4779,7 +4779,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.1.4(@types/node@20.11.30)
+      vite: 5.1.4(@types/node@20.12.1)
     dev: false
 
   /web-namespaces@2.0.1:
