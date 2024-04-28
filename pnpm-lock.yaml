@@ -27,8 +27,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(@types/node@20.12.7)(typescript@5.4.5)
       dayjs:
-        specifier: 1.11.10
-        version: 1.11.10
+        specifier: 1.11.11
+        version: 1.11.11
       github-slugger:
         specifier: 2.0.0
         version: 2.0.0
@@ -587,8 +587,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  '@rollup/wasm-node@4.16.4':
-    resolution: {integrity: sha512-/1na873kzeWKlNU0lbXgmhJCTll0gmniDQol2//y2JCE60WGyoSThjiAB8RsZ0yfjLiFfo2uFS6DvWfwzmYbrA==}
+  '@rollup/wasm-node@4.17.0':
+    resolution: {integrity: sha512-EOKrg8I26cw7+M8mn5PDWfq4TIyJ7OGeZuaK7Pm3wn5nLJYfRH7CQV/IT+j9MpaVW84JPRp2FGqePdyF8FkTEQ==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -995,8 +995,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  dayjs@1.11.10:
-    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+  dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
 
   debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -2970,7 +2970,7 @@ snapshots:
     dependencies:
       playwright: 1.43.1
 
-  '@rollup/wasm-node@4.16.4':
+  '@rollup/wasm-node@4.17.0':
     dependencies:
       '@types/estree': 1.0.5
     optionalDependencies:
@@ -3493,7 +3493,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  dayjs@1.11.10: {}
+  dayjs@1.11.11: {}
 
   debug@4.3.4:
     dependencies:
@@ -5223,7 +5223,7 @@ snapshots:
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
-      rollup: '@rollup/wasm-node@4.16.4'
+      rollup: '@rollup/wasm-node@4.17.0'
     optionalDependencies:
       '@types/node': 20.12.7
       fsevents: 2.3.3
