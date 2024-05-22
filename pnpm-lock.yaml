@@ -18,14 +18,14 @@ importers:
         specifier: 4.0.6
         version: 4.0.6
       '@astrojs/sitemap':
-        specifier: 3.1.4
-        version: 3.1.4
+        specifier: 3.1.5
+        version: 3.1.5
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.8.7(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
       astro:
-        specifier: 4.8.6
-        version: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
+        specifier: 4.8.7
+        version: 4.8.7(@types/node@20.12.12)(typescript@5.4.5)
       dayjs:
         specifier: 1.11.11
         version: 1.11.11
@@ -119,8 +119,8 @@ packages:
   '@astrojs/rss@4.0.6':
     resolution: {integrity: sha512-hpfHz6OZVD4ME1ZmpNQim0yV0AOetVFUHv0vmL8+Bw4GNcmL0ibGkGtMv+PY72HLJUVfDtizrBjfN5HHg+LScA==}
 
-  '@astrojs/sitemap@3.1.4':
-    resolution: {integrity: sha512-po8CqDCK14O6phU1mB5C8SyVLyQEa+7pJM8oXxs1mVh8DgvxxaA5E7lak1vzOmBcyyyHBW32jakGqNYc66sBRw==}
+  '@astrojs/sitemap@3.1.5':
+    resolution: {integrity: sha512-GLdzJ01387Uzb8RKYpsYLlg/GzoPnGbmDeQNkarSE11i2+l9Qp8Nj/WoTEy9nkTS25fxxy0kxDfJmreeVleCqg==}
 
   '@astrojs/tailwind@5.1.0':
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
@@ -728,8 +728,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  '@rollup/wasm-node@4.17.2':
-    resolution: {integrity: sha512-4F6C3XaUn02XY/GJMQTXncWrLyCkRHdRZe4OyWuQUprWKmU2u+esISOtCYdr3Bp9AqCIo/X3So2Ik7N9dNDwow==}
+  '@rollup/wasm-node@4.18.0':
+    resolution: {integrity: sha512-DkLoyblRMhJw9ZogW9zCpyH0CNJ+7GaM7Ty+Vl+G21z/Gr7uKBaXqcJqwWUiNYVxTOgxZrxhDG6pmOFxOuswvw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -941,8 +941,8 @@ packages:
     resolution: {integrity: sha512-yTgzioUI9MKgBF4LxP7YI+uuZLrnXgHDeW4dpa3VqCNbDmPzL7ix93tc0JJIwWGcskoSAAHZZVaBSp8bHyZZZA==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  astro@4.8.6:
-    resolution: {integrity: sha512-psHIfK+e+bMPhRwghV9yCGH/uc1jvY4DHmDZdoEepax9yA7kzYH0wt3dpkqlcrO2zxl5jzSC3DmqZfkD6wnW9A==}
+  astro@4.8.7:
+    resolution: {integrity: sha512-bTtv6zv94+U5cQdwy89LWTnocEfJ2Tfy6vpYYSUthfj12HtOpk0ykGW7YBe9a69NHqPwivSOvRjXOxGKigL9qA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2636,9 +2636,6 @@ packages:
     peerDependencies:
       zod: ^3.23.3
 
-  zod@3.22.4:
-    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
-
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
@@ -2700,15 +2697,15 @@ snapshots:
       fast-xml-parser: 4.3.6
       kleur: 4.1.5
 
-  '@astrojs/sitemap@3.1.4':
+  '@astrojs/sitemap@3.1.5':
     dependencies:
       sitemap: 7.1.1
       stream-replace-string: 2.0.0
-      zod: 3.22.4
+      zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.8.7(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
-      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
+      astro: 4.8.7(@types/node@20.12.12)(typescript@5.4.5)
       autoprefixer: 10.4.15(postcss@8.4.32)
       postcss: 8.4.32
       postcss-load-config: 4.0.2(postcss@8.4.32)
@@ -3186,7 +3183,7 @@ snapshots:
     dependencies:
       playwright: 1.44.0
 
-  '@rollup/wasm-node@4.17.2':
+  '@rollup/wasm-node@4.18.0':
     dependencies:
       '@types/estree': 1.0.5
     optionalDependencies:
@@ -3438,7 +3435,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5):
+  astro@4.8.7(@types/node@20.12.12)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
@@ -5458,7 +5455,7 @@ snapshots:
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
-      rollup: '@rollup/wasm-node@4.17.2'
+      rollup: '@rollup/wasm-node@4.18.0'
     optionalDependencies:
       '@types/node': 20.12.12
       fsevents: 2.3.3
@@ -5512,8 +5509,6 @@ snapshots:
   zod-to-json-schema@3.23.0(zod@3.23.8):
     dependencies:
       zod: 3.23.8
-
-  zod@3.22.4: {}
 
   zod@3.23.8: {}
 
