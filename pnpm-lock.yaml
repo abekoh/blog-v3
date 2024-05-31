@@ -22,10 +22,10 @@ importers:
         version: 3.1.5
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.9.2(@types/node@20.12.13)(typescript@5.4.5))(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.9.2(@types/node@20.13.0)(typescript@5.4.5))(tailwindcss@3.4.3)
       astro:
         specifier: 4.9.2
-        version: 4.9.2(@types/node@20.12.13)(typescript@5.4.5)
+        version: 4.9.2(@types/node@20.13.0)(typescript@5.4.5)
       dayjs:
         specifier: 1.11.11
         version: 1.11.11
@@ -52,8 +52,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0
       '@types/node':
-        specifier: 20.12.13
-        version: 20.12.13
+        specifier: 20.13.0
+        version: 20.13.0
       '@typescript-eslint/eslint-plugin':
         specifier: 7.11.0
         version: 7.11.0(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -773,8 +773,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@20.12.13':
-    resolution: {integrity: sha512-gBGeanV41c1L171rR7wjbMiEpEI/l5XFQdLLfhr/REwpgDy/4U8y89+i8kRiLzDyZdOkXh+cRaTetUnCYutoXA==}
+  '@types/node@20.13.0':
+    resolution: {integrity: sha512-FM6AOb3khNkNIXPnHFDYaHerSv8uN22C91z098AnGccVu+Pcdhi+pNUFDi0iLmPIsVE0JBD0KVS7mzUYt4nRzQ==}
 
   '@types/sax@1.2.4':
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
@@ -2702,9 +2702,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.9.2(@types/node@20.12.13)(typescript@5.4.5))(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.9.2(@types/node@20.13.0)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
-      astro: 4.9.2(@types/node@20.12.13)(typescript@5.4.5)
+      astro: 4.9.2(@types/node@20.13.0)(typescript@5.4.5)
       autoprefixer: 10.4.15(postcss@8.4.32)
       postcss: 8.4.32
       postcss-load-config: 4.0.2(postcss@8.4.32)
@@ -3239,13 +3239,13 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@20.12.13':
+  '@types/node@20.13.0':
     dependencies:
       undici-types: 5.26.5
 
   '@types/sax@1.2.4':
     dependencies:
-      '@types/node': 20.12.13
+      '@types/node': 20.13.0
 
   '@types/unist@2.0.8': {}
 
@@ -3434,7 +3434,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@4.9.2(@types/node@20.12.13)(typescript@5.4.5):
+  astro@4.9.2(@types/node@20.13.0)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
@@ -3493,8 +3493,8 @@ snapshots:
       tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.11(@types/node@20.12.13)
-      vitefu: 0.2.5(vite@5.2.11(@types/node@20.12.13))
+      vite: 5.2.11(@types/node@20.13.0)
+      vitefu: 0.2.5(vite@5.2.11(@types/node@20.13.0))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -5450,18 +5450,18 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.2.11(@types/node@20.12.13):
+  vite@5.2.11(@types/node@20.13.0):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: '@rollup/wasm-node@4.18.0'
     optionalDependencies:
-      '@types/node': 20.12.13
+      '@types/node': 20.13.0
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.2.11(@types/node@20.12.13)):
+  vitefu@0.2.5(vite@5.2.11(@types/node@20.13.0)):
     optionalDependencies:
-      vite: 5.2.11(@types/node@20.12.13)
+      vite: 5.2.11(@types/node@20.13.0)
 
   web-namespaces@2.0.1: {}
 
