@@ -38,7 +38,7 @@
     "eslint-plugin-astro": "1.2.3",
     "prettier": "3.3.3",
     "prettier-plugin-astro": "0.14.1",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   },
   "packageManager": "pnpm@9.6.0",
   "engines": {
