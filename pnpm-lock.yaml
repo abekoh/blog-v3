@@ -22,10 +22,10 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.12.2(@types/node@20.14.13)(typescript@5.5.4))(tailwindcss@3.4.7)
+        version: 5.1.0(astro@4.12.3(@types/node@20.14.13)(typescript@5.5.4))(tailwindcss@3.4.7)
       astro:
-        specifier: 4.12.2
-        version: 4.12.2(@types/node@20.14.13)(typescript@5.5.4)
+        specifier: 4.12.3
+        version: 4.12.3(@types/node@20.14.13)(typescript@5.5.4)
       dayjs:
         specifier: 1.11.12
         version: 1.11.12
@@ -92,6 +92,9 @@ packages:
   '@ampproject/remapping@2.2.1':
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
+
+  '@astrojs/compiler@2.10.0':
+    resolution: {integrity: sha512-V8ym+4kYCKmMeSdfDvm/SrlmUlKLkKzfWV3cKyiStEKW/D+YsXaQiBZcSCtuKXq8aQhsDw9HtCTZilhEMBX+BA==}
 
   '@astrojs/compiler@2.8.1':
     resolution: {integrity: sha512-NGfPAgU/9rvDEwsXu82RI1AxiivaxtEYBK9saW1f+2fTHUUqCJQ27HYtb2akG2QxCmFikgZ9zk26BEWgiHho1Q==}
@@ -594,8 +597,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  '@shikijs/core@1.10.3':
-    resolution: {integrity: sha512-D45PMaBaeDHxww+EkcDQtDAtzv00Gcsp72ukBtaLSmqRvh0WgGMq3Al0rl1QQBZfuneO75NXMIzEZGFitThWbg==}
+  '@shikijs/core@1.12.0':
+    resolution: {integrity: sha512-mc1cLbm6UQ8RxLc0dZES7v5rkH+99LxQp/ZvTqV3NLyYsO/fD6JhEflP1H5b2SDq9gI0+0G36AVZWxvounfR9w==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -799,8 +802,8 @@ packages:
     resolution: {integrity: sha512-8hJaCuqxObShWl2wEsnASqh/DbQ2O+S66m0Q3ctJlzBPEQ4pfGwwama3FCjZO3GDLQsjvn1T0v93Vxyu/+5fGw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@4.12.2:
-    resolution: {integrity: sha512-l6OmqlL+FiuSi9x6F+EGZitteOznq1JffOil7st7cdqeMCTEIym4oagI1a6zp6QekliKWEEZWdplGhgh1k1f7Q==}
+  astro@4.12.3:
+    resolution: {integrity: sha512-rFcRktbZk8CsHufLOB51gYAia3RTuOyaBD8iZXRHP7Oqo6QviquNaa/5U6RoUqyF5KS8vyq/ldJ5jfboJzxuuw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2048,6 +2051,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.6.3:
+    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   sharp@0.33.4:
     resolution: {integrity: sha512-7i/dt5kGl7qR4gwPRD2biwD2/SvBn3O04J77XKFgL2OnZtQw+AG9wnuS/csmu80nPRHLYE9E41fyEiG8nhH6/Q==}
     engines: {libvips: '>=8.15.2', node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -2060,8 +2068,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki@1.10.3:
-    resolution: {integrity: sha512-eneCLncGuvPdTutJuLyUGS8QNPAVFO5Trvld2wgEq1e002mwctAhJKeMGWtWVXOIEzmlcLRqcgPSorR6AVzOmQ==}
+  shiki@1.12.0:
+    resolution: {integrity: sha512-BuAxWOm5JhRcbSOl7XCei8wGjgJJonnV0oipUupPY58iULxUGyHhW5CF+9FRMuM1pcJ5cGEJGll1LusX6FwpPA==}
 
   signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
@@ -2408,6 +2416,8 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
+  '@astrojs/compiler@2.10.0': {}
+
   '@astrojs/compiler@2.8.1': {}
 
   '@astrojs/compiler@2.9.1': {}
@@ -2428,7 +2438,7 @@ snapshots:
       remark-parse: 11.0.0
       remark-rehype: 11.1.0
       remark-smartypants: 3.0.2
-      shiki: 1.10.3
+      shiki: 1.12.0
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -2456,9 +2466,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.12.2(@types/node@20.14.13)(typescript@5.5.4))(tailwindcss@3.4.7)':
+  '@astrojs/tailwind@5.1.0(astro@4.12.3(@types/node@20.14.13)(typescript@5.5.4))(tailwindcss@3.4.7)':
     dependencies:
-      astro: 4.12.2(@types/node@20.14.13)(typescript@5.5.4)
+      astro: 4.12.3(@types/node@20.14.13)(typescript@5.5.4)
       autoprefixer: 10.4.15(postcss@8.4.32)
       postcss: 8.4.32
       postcss-load-config: 4.0.2(postcss@8.4.32)
@@ -2875,7 +2885,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  '@shikijs/core@1.10.3':
+  '@shikijs/core@1.12.0':
     dependencies:
       '@types/hast': 3.0.4
 
@@ -3127,9 +3137,9 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@4.12.2(@types/node@20.14.13)(typescript@5.5.4):
+  astro@4.12.3(@types/node@20.14.13)(typescript@5.5.4):
     dependencies:
-      '@astrojs/compiler': 2.9.1
+      '@astrojs/compiler': 2.10.0
       '@astrojs/internal-helpers': 0.4.1
       '@astrojs/markdown-remark': 5.2.0
       '@astrojs/telemetry': 3.1.0
@@ -3178,8 +3188,8 @@ snapshots:
       preferred-pm: 4.0.0
       prompts: 2.4.2
       rehype: 13.0.1
-      semver: 7.6.2
-      shiki: 1.10.3
+      semver: 7.6.3
+      shiki: 1.12.0
       string-width: 7.2.0
       strip-ansi: 7.1.0
       tsconfck: 3.1.1(typescript@5.5.4)
@@ -4677,6 +4687,8 @@ snapshots:
 
   semver@7.6.2: {}
 
+  semver@7.6.3: {}
+
   sharp@0.33.4:
     dependencies:
       color: 4.2.3
@@ -4709,9 +4721,9 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@1.10.3:
+  shiki@1.12.0:
     dependencies:
-      '@shikijs/core': 1.10.3
+      '@shikijs/core': 1.12.0
       '@types/hast': 3.0.4
 
   signal-exit@3.0.7: {}
