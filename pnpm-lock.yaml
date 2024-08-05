@@ -69,6 +69,9 @@ importers:
       eslint-plugin-astro:
         specifier: 1.2.3
         version: 1.2.3(eslint@9.8.0)(typescript@5.5.4)
+      globals:
+        specifier: ^15.9.0
+        version: 15.9.0
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -1249,8 +1252,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@15.3.0:
-    resolution: {integrity: sha512-cCdyVjIUVTtX8ZsPkq1oCsOsLmGIswqnjZYMJJTGaNApj1yHtLSymKhwH51ttirREn75z3p4k051clwg7rvNKA==}
+  globals@15.9.0:
+    resolution: {integrity: sha512-SmSKyLLKFbSr6rptvP8izbyxJL4ILwqO9Jg23UA0sDlGlu58V59D1//I3vlc0KJphVdUR7vMjHIplYnzBxorQA==}
     engines: {node: '>=18'}
 
   globby@11.1.0:
@@ -3405,7 +3408,7 @@ snapshots:
       astro-eslint-parser: 1.0.2(typescript@5.5.4)
       eslint: 9.8.0
       eslint-compat-utils: 0.5.0(eslint@9.8.0)
-      globals: 15.3.0
+      globals: 15.9.0
       postcss: 8.4.39
       postcss-selector-parser: 6.0.13
     transitivePeerDependencies:
@@ -3607,7 +3610,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@15.3.0: {}
+  globals@15.9.0: {}
 
   globby@11.1.0:
     dependencies:
