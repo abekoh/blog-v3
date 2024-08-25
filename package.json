@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix . && prettier --write '**/*.{ts,tsx,astro,cjs,mjs}'",
     "install:browsers": "playwright install chromium --with-deps",
     "test:e2e": "playwright test",
-    "test:e2e:snapshot": "docker run --rm --network host -v $(pwd):/work/ -w /work/ -it mcr.microsoft.com/playwright:jammy /bin/bash -c 'npm i -g pnpm && pnpm playwright test --update-snapshots'"
+    "test:e2e:snapshot": "docker run --rm --network host -v $(pwd):/work/ -w /work/ --pull always -it mcr.microsoft.com/playwright:jammy /bin/bash -c 'npm i -g pnpm && pnpm playwright test --update-snapshots'"
   },
   "dependencies": {
     "@astrojs/prefetch": "0.4.1",
