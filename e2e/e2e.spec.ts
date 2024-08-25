@@ -129,8 +129,8 @@ test.describe("search", () => {
     await page.goto("/search");
     await page.getByPlaceholder("検索").click();
     await page.getByPlaceholder("検索").fill("go");
-    await page.getByRole("button", { name: "もっと読み込む" }).click();
-    await page.getByRole("button", { name: "もっと読み込む" }).click();
+    await page.getByRole("button", { name: "次を読み込む" }).click();
+    await page.getByRole("button", { name: "次を読み込む" }).click();
   });
   test("visual", async ({ page }) => {
     await page.goto("/search");
