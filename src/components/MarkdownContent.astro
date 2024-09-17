@@ -1,14 +1,7 @@
 ---
-import { AstroComponentFactory } from "astro";
-
-interface Props {
-    Content: AstroComponentFactory;
-}
-
-const {  Content } = Astro.props;
 ---
 <div class="post-content py-2">
-  <Content />
+  <slot />
 </div>
 <style is:global>
     .post-content h1 {
