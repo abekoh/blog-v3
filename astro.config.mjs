@@ -4,6 +4,8 @@ import sitemap from "@astrojs/sitemap";
 
 import prefetch from "@astrojs/prefetch";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   markdown: {
@@ -17,5 +19,5 @@ export default defineConfig({
   build: {
     format: "file",
   },
-  integrations: [tailwind(), sitemap(), prefetch()],
+  integrations: [tailwind(), sitemap(), prefetch(), mdx()],
 });
