@@ -62,7 +62,7 @@ test.describe("profile", () => {
   test("hask link to resume", async ({ page }) => {
     await page.goto("/profile");
     await page.getByRole("link", { name: "職務経歴書" }).click();
-    await expect(page).toHaveURL("https://blog.abekoh.dev/resume");
+    await expect(page).toHaveURL("/resume");
   });
   test("visual", async ({ page }) => {
     await page.goto("/profile");
