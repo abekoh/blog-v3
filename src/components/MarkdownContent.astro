@@ -1,0 +1,82 @@
+---
+import { AstroComponentFactory } from "astro";
+
+interface Props {
+    Content: AstroComponentFactory;
+}
+
+const {  Content } = Astro.props;
+---
+<div class="post-content py-2">
+  <Content />
+</div>
+<style is:global>
+    .post-content h1 {
+        @apply text-lg font-bold text-gray-900 leading-relaxed py-3;
+    }
+
+    .post-content h2 {
+        @apply text-lg font-bold text-gray-900 leading-relaxed py-2;
+    }
+
+    .post-content h3 {
+        @apply text-base font-semibold text-gray-900 leading-relaxed py-1;
+    }
+
+    .post-content h4 {
+        @apply text-base font-medium text-gray-900 leading-relaxed py-1;
+    }
+
+    .post-content hr {
+        @apply my-4 border-gray-200;
+    }
+
+    .post-content p {
+        @apply text-base text-gray-700 leading-relaxed py-2;
+    }
+
+    .post-content a {
+        @apply text-base text-blue-500 leading-relaxed hover:underline;
+    }
+
+    .post-content ul {
+        @apply pl-6 list-disc list-outside leading-relaxed text-gray-700 py-1;
+    }
+
+    .post-content ol {
+        @apply pl-6 list-decimal list-outside leading-relaxed text-gray-700 py-1;
+    }
+
+    .post-content blockquote {
+        @apply p-2 border-l-4 border-gray-200;
+    }
+
+    .post-content pre {
+        @apply p-2 rounded;
+    }
+
+    .post-content table {
+        @apply w-full table-auto;
+    }
+
+    .post-content th {
+        @apply p-2 border border-gray-200 text-gray-900 bg-gray-100 leading-relaxed;
+    }
+
+    .post-content td {
+        @apply p-2 border border-gray-200 text-gray-700 leading-relaxed;
+    }
+
+    .post-content img {
+        @apply py-2;
+    }
+
+    .post-content code {
+        @apply px-1 py-0.5 text-gray-700 bg-[#eef1f2] rounded;
+    }
+
+    /* use github-dark https://github.com/shikijs/shiki/blob/1706cb82deac8d88a2dc60c099b6cf92e42b76f4/packages/shiki/themes/github-dark.json */
+    .post-content pre code {
+        @apply px-0 py-0 text-[#e1e4e8] bg-[#24292e] rounded;
+    }
+</style>
