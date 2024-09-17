@@ -10,15 +10,14 @@ interface Props {
   publishedAt: Date;
   modifiedAt: Date | undefined;
   tags: string[];
-  Content: AstroComponentFactory;
+  children: AstroComponentFactory;
   tocHTML?: string;
   draft?: boolean;
 }
 
 const tagMap = await getTagMap();
 
-const { title, publishedAt, modifiedAt, Content, tags, tocHTML, draft } =
-  Astro.props;
+const { title, publishedAt, modifiedAt, tags, tocHTML, draft } = Astro.props;
 ---
 
 <article data-pagefind-body={!draft}>
@@ -48,12 +47,15 @@ const { title, publishedAt, modifiedAt, Content, tags, tocHTML, draft } =
         </div>
       )
     }
-    <MarkdownContent><Content/></MarkdownContent>
+    <MarkdownContent>
+      <slot />
+    </MarkdownContent>
   </div>
   <style is:global>
     .toc-content ul {
       @apply pl-6 list-disc list-outside leading-relaxed text-gray-700 py-1;
     }
+
     .toc-content a {
       @apply text-sm text-blue-500 leading-normal hover:underline;
     }
