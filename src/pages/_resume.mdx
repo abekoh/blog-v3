@@ -1,3 +1,5 @@
+最終更新日: 2024/09/18
+
 ## 基本情報
 
 名前: 阿部 耕太郎 (Kotaro Abe, abekoh)
@@ -11,6 +13,7 @@ SNS等へのリンク: [abekoh.dev](https://abekoh.dev)
 ### 2021/10- 株式会社MICIN
 
 - DCT事業のリードエンジニア
+  - DCT=Decentrized Clinical Trial、分散型臨床試験
   - 治験の業務支援サービスの開発・運用・保守
   - Go, TypeScript, React.js, PostgreSQL, AWS, Terraform, DocuSign, etc...
   - PdM2名, エンジニア3-5名, QA2-3名, etc (インターン、業務委託含む)
@@ -30,7 +33,7 @@ SNS等へのリンク: [abekoh.dev](https://abekoh.dev)
     - 2022年: [MICIN Advent Calendar 2022 を終えて | MICIN Developers](https://medium.com/micin-developers/remember-micin-advent-calendar-2022-acc9557f9089)
     - 2023年も貢献しました: [MICIN Advent Calendar 2023 - Adventar](https://adventar.org/calendars/9595)
 
-### 2018/04-2021/10 LINEヤフー株式会社 (旧: ヤフー株式会社)
+### 2018/04-2021/10 ヤフー株式会社 (現: LINEヤフー株式会社)
 
 - 広告審査システムのサーバサイドエンジニア
   - 広告審査システムの開発・運用・保守
@@ -38,7 +41,6 @@ SNS等へのリンク: [abekoh.dev](https://abekoh.dev)
   - デイリー数百万リクエストされる広告の審査を、分散サービスを構築して処理
   - Apache Kafka, Apache Pulsarを多く活用したイベント駆動サービスを長らく保守
   - 秒間数万リクエストを数ミリ秒以内に返却するシステムの構築
-    - こちらに関連: [ヤフー、Yahoo!広告のさらなる安全性向上に向け、 アドフラウド排除とブランドセーフティ制御を強化する リアルタイム不正解析機能を導入 - ニュース - ヤフー株式会社](https://about.yahoo.co.jp/pr/release/2020/10/15m/)
   - 社内オンプレとGoogle Cloudとの連携
   - OJT/新卒メンバー育成(OJT6名、新卒4名)
 
@@ -89,17 +91,16 @@ SNS等へのリンク: [abekoh.dev](https://abekoh.dev)
 
 ### 技術
 
-やってきたことに加えて、私見も挟んでおく。
+やってきたこと・考え方・希望など
 
-- 静的型付け言語中心に組み立てたい
-  - Java, Go, TypeScriptが業務経験として長い
-  - Kotlin, Rustあたりも興味あり
+- 静的型付け言語を中心に扱いたい
+  - Go, TypeScript, Javaが業務経験として長い
+  - Rust, Kotlinなども興味あり
   - 長く続くプロジェクトであれば必ずメンバー入れ替え・忘却・大規模リファクタリングが発生する。そのとき静的型付けでないと余計な負担を強いられる。それを防ぐためにも最初から型はきっちり対応してきたい
-  - 小規模・分析用・スクリプト等であればその限りでない。ちょっとしたスクリプトはPythonでよく書く
 - Go
-  - 業務で2年、趣味含めると4年ほど
-  - 最近では一番手慣れている
-  - golang/goのAccepted/Declinedのキャッチアップもやるようになった
+  - 業務で3年、趣味含めると5年ほど
+  - 最近では一番手慣れている。サーバからワンタイムのスクリプトまで何でもGoで書いてしまう
+  - Go関連のコミュニティにもよく参加している
   - 平易な文法だからこそ、平易な書き方で完結させるのが正しい姿という考えで最近はコーディングしている
 - Java
   - Spring Bootを使った実務経験3年
@@ -109,25 +110,28 @@ SNS等へのリンク: [abekoh.dev](https://abekoh.dev)
 - アーキテクチャ・設計観
   - モデリングは、エンジニアだけではなくステークホルダーをなるだけ集めて全員で同じ方向を向いて行うようにしたい。とにかく図に落として議論したい
   - プロダクトのあるべき姿に向かって、モノリスからマイクロサービスまで順応に選んだ設計がしたい
-  - テストは可能な範囲で書く、テスタビリティの高い設計にしたい
-- DDD
-  - DDDに関する記事を多く投稿してきているが、最近は難しく考え過ぎずでいいじゃんというスタンス。特に実装に関して。
+- ドメイン駆動設計
+  - ドメイン駆動設計に関するアウトプットを多く行ってきているが、最近は難しく考え過ぎずでいいじゃんというスタンス。特に実装に関しては
   - Java, ないしクラス指向に縛られたプラクティスが多いと見ている。GoやTypeScriptを扱う場合はそれらに惑わされないような書き方にすべき
 - データベース
-  - RDBはOracle Database, PostgreSQLの経験が長い
-  - ORMを使わずSQLやそれに近いものを書くスタイルが好き。Goだと[sqlc](https://sqlc.dev/)、Javaだと[MyBatis](https://mybatis.org/mybatis-3/)をよく使っていた
+  - RDBはPostgreSQL, Oracle Databaseの経験が長い
+  - ORMを使わずSQLやそれに近いものを書くスタイルが好き。Goだと[sqlc](https://sqlc.dev/)、Javaだと[MyBatis](https://mybatis.org/mybatis-3/)をよく使う
   - その他NoSQL系はRedis, Cassandra, DynamoDB, Firestoreを少々
+- テスト
+  - 自動テストはかなり重視している
+  - ユニットテスト、統合テスト、E2Eテストそれぞれの既存のプロジェクトに導入・文化として浸透させた経験あり
+  - レイヤーごとにテストが果たすべき役割を定義・その役割に過不足なく記述できるようにしたい
 - API
   - REST API, GraphQL経験あり
-  - スキーマ→コード、コード→スキーマと生成する仕組みがほしい
+  - スキーマ→コード、コード→スキーマと生成する仕組みは必ず取り入れたい
   - GraphQLとCQRSを組み合わせた開発がコスパよくて最近お気に入り
 - インフラ
-  - AWS, GCP, オンプレの経験あり
-  - GCPが最も好み。Goとの相性・SDKの完成度・多すぎないのプロダクト群など
+  - AWS, Google Cloud, オンプレの経験あり
+  - Google Cloudが最も好み。Goとの相性・SDKの完成度・多すぎないのプロダクト群など
   - Terraform, AnsibleなどIaCもよく扱う
-- フロントエンド
+- Webフロントエンド
   - Reactを中心に一通り書ける
-  - 最先端なところは追いきれていない、詳しい人にリード任せつつ後追いする形
+  - 最先端的なところは追いきれていない、詳しい人にリード任せつつ後追いする形
 
 ### 技術以外
 
@@ -140,18 +144,22 @@ SNS等へのリンク: [abekoh.dev](https://abekoh.dev)
 
 ## 読書
 
-- 技術書漁るのが好きで、割とよく読む
+- 技術書漁るのが好きで、よく読む
   - [今年読んだ本まとめ2023 - abekoh's tech note](https://blog.abekoh.dev/posts/books-2023)
   - [今年読んだ本まとめ2022 - abekoh's tech note](https://blog.abekoh.dev/posts/books-2022)
   - [今年読んだ本まとめ2021 - abekoh's tech note](https://blog.abekoh.dev/posts/books-2021)
+- 特に好きな本、3冊あえて選ぶなら
+  - [単体テストの考え方/使い方](https://book.mynavi.jp/ec/products/detail/id=134252)
+  - [Goならわかるシステムプログラミング 第2版](https://www.lambdanote.com/products/go-2)
+  - [岩田さん](https://www.1101.com/books/iwatasan/free/?srsltid=AfmBOoobxrkfgO_sWg_dWLpKcZusOpXooNVc-I2IeKDcjcA-JE8v5oWf)
 
 ## 資格
 
-- 応用情報技術者
-- Google Cloud Professional Cloud Architect (2023年に失効)
+- 応用情報技術者 (2017/10合格)
+- Google Cloud Professional Cloud Architect (2021/07合格、2023/06失効)
 
 ## 作業環境
 
 - OSはWindows,Mac,Linuxどれでも。WindowsだとWSL2を活用したい
-- エディタはJetBrains系、NeoVimが好き
+- エディタはJetBrains IDEs、NeoVimが好き
 - 適度に対面でコミュニケーション取りながらチーム構築していくのが好き。リモートが基本の現場であってもたまに対面でラフに話す場がほしい。難しいモデリングや設計を行っていくときも物理ホワイトボードを囲んで決めていきたい
