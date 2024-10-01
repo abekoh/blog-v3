@@ -73,8 +73,8 @@ importers:
         specifier: 1.2.4
         version: 1.2.4(eslint@9.11.1(jiti@1.21.0))(typescript@5.6.2)
       globals:
-        specifier: 15.9.0
-        version: 15.9.0
+        specifier: 15.10.0
+        version: 15.10.0
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -602,8 +602,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/wasm-node@4.22.5':
-    resolution: {integrity: sha512-42RTxk/g1NFaTRT7yo9T0K1OeJPS7xXAWQdUaajjmPPzZmfWjcms+tns8IQkwSlVrBB3EvE2y/FGwGwHmFAqEg==}
+  '@rollup/wasm-node@4.23.0':
+    resolution: {integrity: sha512-jEeXqGlX+FpWml3/A15rv1mgNqhY5dyvtX8U5w2ff0p5PkxIjU1Y/GABHEjkoE7EF29ayGBtKR6kUZ+JELtjyg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -1322,8 +1322,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@15.9.0:
-    resolution: {integrity: sha512-SmSKyLLKFbSr6rptvP8izbyxJL4ILwqO9Jg23UA0sDlGlu58V59D1//I3vlc0KJphVdUR7vMjHIplYnzBxorQA==}
+  globals@15.10.0:
+    resolution: {integrity: sha512-tqFIbz83w4Y5TCbtgjZjApohbuh7K9BxGYFm7ifwDR240tvdb7P9x+/9VvUKlmkPoiknoJtanI8UOrqxS3a7lQ==}
     engines: {node: '>=18'}
 
   globby@11.1.0:
@@ -3005,7 +3005,7 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 2.3.1
 
-  '@rollup/wasm-node@4.22.5':
+  '@rollup/wasm-node@4.23.0':
     dependencies:
       '@types/estree': 1.0.6
     optionalDependencies:
@@ -3643,7 +3643,7 @@ snapshots:
       astro-eslint-parser: 1.0.2(typescript@5.6.2)
       eslint: 9.11.1(jiti@1.21.0)
       eslint-compat-utils: 0.5.0(eslint@9.11.1(jiti@1.21.0))
-      globals: 15.9.0
+      globals: 15.10.0
       postcss: 8.4.41
       postcss-selector-parser: 6.0.13
     transitivePeerDependencies:
@@ -3856,7 +3856,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@15.9.0: {}
+  globals@15.10.0: {}
 
   globby@11.1.0:
     dependencies:
@@ -5336,7 +5336,7 @@ snapshots:
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.45
-      rollup: '@rollup/wasm-node@4.22.5'
+      rollup: '@rollup/wasm-node@4.23.0'
     optionalDependencies:
       '@types/node': 20.16.10
       fsevents: 2.3.3
