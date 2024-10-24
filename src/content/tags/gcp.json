@@ -1,1 +1,4 @@
-{"id":"gcp","name":"GCP"}
+{
+  "id": "gcp",
+  "name": "Google Cloud"
+}
