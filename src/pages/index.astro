@@ -8,7 +8,7 @@ import { BASE_URL, BLOG_TITLE, PAGE_SIZE } from "../constraint";
 
 const allPosts = (await getCollection("posts")).sort(postsDefaultSortFunc);
 
-const posts = allPosts.slice(0, PAGE_SIZE);
+const posts = allPosts.slice(0, PAGE_SIZE).filter((post) => !post.data.draft);
 
 const urlPrefix = "/posts/page";
 ---
