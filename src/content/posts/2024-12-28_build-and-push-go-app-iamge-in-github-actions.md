@@ -4,7 +4,7 @@ title: '[Zenn] GitHub ActionsでGoのコンテナイメージをビルド・プ�
 summary: '2024年のAdvent Calendarの記事です。'
 categories: [ 'tech' ]
 tags: [ 'zenn', 'golang', 'docker' ]
-publishedAt: 2023-12-24T18:00:00.000+09:00
+publishedAt: 2024-12-28T13:10:00.000+09:00
 modifiedAt:
 draft: false
 isHtml: false
