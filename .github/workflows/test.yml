@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   lint-and-build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
@@ -25,7 +25,7 @@ jobs:
         run: pnpm build
   test-e2e:
     timeout-minutes: 10
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
@@ -34,10 +34,16 @@ jobs:
         with:
           node-version-file: '.tool-versions'
           cache: 'pnpm'
+      - uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-browsers-${{ hashFiles('**/pnpm-lock.yaml') }}
       - name: Install dependencies
         run: pnpm i
       - name: Install Playwright Browsers
         run: pnpm install:browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
       - name: Run Playwright tests
         run: pnpm test:e2e
       - uses: actions/upload-artifact@v4
