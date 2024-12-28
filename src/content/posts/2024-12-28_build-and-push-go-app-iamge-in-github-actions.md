@@ -15,3 +15,7 @@ Goのコンテナ化に関する話です。
 
 [GitHub ActionsでGoのコンテナイメージをビルド・プッシュする際のベストプラクティスを考える](https://zenn.dev/micin/articles/build-and-push-go-app-iamge-in-github-actions)
 
+また今年は実行委員長として、1日目の記事も書きました。
+
+[MICIN Advent Calendar 2024、始まります！｜MICIN公式note「MICINの邁進Days」](https://note.micin.jp/n/n93a9cb28af4e)
+
