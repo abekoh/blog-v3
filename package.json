@@ -17,10 +17,10 @@
 	"dependencies": {
 		"@astrojs/mdx": "4.0.3",
 		"@astrojs/prefetch": "0.4.1",
-		"@astrojs/rss": "4.0.10",
+		"@astrojs/rss": "4.0.11",
 		"@astrojs/sitemap": "3.2.1",
 		"@astrojs/tailwind": "5.1.4",
-		"astro": "5.1.1",
+		"astro": "5.1.2",
 		"dayjs": "1.11.13",
 		"github-slugger": "2.0.0",
 		"marked": "15.0.4",
