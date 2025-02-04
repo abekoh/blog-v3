@@ -13,7 +13,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 4.0.8
-        version: 4.0.8(astro@5.2.4(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3))
+        version: 4.0.8(astro@5.2.5(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3))
       '@astrojs/prefetch':
         specifier: 0.4.1
         version: 0.4.1
@@ -25,10 +25,10 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: 5.1.5
-        version: 5.1.5(astro@5.2.4(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.2.5(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3))(tailwindcss@3.4.17)
       astro:
-        specifier: 5.2.4
-        version: 5.2.4(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3)
+        specifier: 5.2.5
+        version: 5.2.5(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3)
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
@@ -794,8 +794,8 @@ packages:
     resolution: {integrity: sha512-8hJaCuqxObShWl2wEsnASqh/DbQ2O+S66m0Q3ctJlzBPEQ4pfGwwama3FCjZO3GDLQsjvn1T0v93Vxyu/+5fGw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.2.4:
-    resolution: {integrity: sha512-zTWiOyRIy+cKzdjG4mvb5gJ8/Gy0z1s9nAZVirlzpYXd8j5LORlKPywEalNU+Q+nssG2QadBTxXCmAjhKYB93Q==}
+  astro@5.2.5:
+    resolution: {integrity: sha512-AYXyYkc+c5xbKTm48FyQA91y81nXyNPAaoyafR0LUugE4lAwuvIUcXDBfMzmbuP1lGRvsE33G2oypv6gbGaPFg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1919,8 +1919,8 @@ packages:
     resolution: {integrity: sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  preferred-pm@4.1.0:
-    resolution: {integrity: sha512-cNKMVcSvE3hZBRukdRsvPtlUaM2fYLFbIvBz620XaDA5SjHsCRsAjNE2baI90Hh7QvJIjCHJYnpPtyqJ1/kOjQ==}
+  preferred-pm@4.1.1:
+    resolution: {integrity: sha512-rU+ZAv1Ur9jAUZtGPebQVQPzdGhNzaEiQ7VL9+cjsAWPHFYOccNXPNiev1CCDSOg/2j7UujM7ojNhpkuILEVNQ==}
     engines: {node: '>=18.12'}
 
   prelude-ls@1.2.1:
@@ -2062,6 +2062,11 @@ packages:
 
   semver@7.7.0:
     resolution: {integrity: sha512-DrfFnPzblFmNrIZzg5RzHegbiRWg7KMR7btwi2yjHwx06zsUbO5g613sVwEV7FTwmzJu+Io0lJe2GJ3LxqpvBQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.7.1:
+    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2443,8 +2448,8 @@ packages:
     resolution: {integrity: sha512-n1brCuqClxfFfq/Rb0ICg9giSZqCS+pLtccdag6C2HyufBrh3fBOiy9nb6ggRMvWOVH5GrdJskj5iGTZNxd7SA==}
     engines: {node: '>=4'}
 
-  which-pm@3.0.0:
-    resolution: {integrity: sha512-ysVYmw6+ZBhx3+ZkcPwRuJi38ZOTLJJ33PSHaitLxSKUMsh0LkKd0nC69zZCwt5D+AYUcMK2hhw4yWny20vSGg==}
+  which-pm@3.0.1:
+    resolution: {integrity: sha512-v2JrMq0waAI4ju1xU5x3blsxBBMgdgZve580iYMN5frDaLGjbA24fok7wKCsya8KLVO19Ju4XDc5+zTZCJkQfg==}
     engines: {node: '>=18.12'}
 
   which@2.0.2:
@@ -2552,12 +2557,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.8(astro@5.2.4(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3))':
+  '@astrojs/mdx@4.0.8(astro@5.2.5(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3))':
     dependencies:
       '@astrojs/markdown-remark': 6.1.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.2.4(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3)
+      astro: 5.2.5(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.4
@@ -2590,9 +2595,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.5(astro@5.2.4(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.2.5(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.2.4(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3)
+      astro: 5.2.5(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)
@@ -3238,7 +3243,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@5.2.4(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3):
+  astro@5.2.5(@types/node@22.13.1)(jiti@2.4.2)(typescript@5.7.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.5.1
@@ -3279,10 +3284,10 @@ snapshots:
       neotraverse: 0.6.18
       p-limit: 6.2.0
       p-queue: 8.1.0
-      preferred-pm: 4.1.0
+      preferred-pm: 4.1.1
       prompts: 2.4.2
       rehype: 13.0.2
-      semver: 7.7.0
+      semver: 7.7.1
       shiki: 1.29.2
       tinyexec: 0.3.2
       tsconfck: 3.1.4(typescript@5.7.3)
@@ -3292,7 +3297,7 @@ snapshots:
       vfile: 6.0.3
       vite: 6.0.11(@types/node@22.13.1)(jiti@2.4.2)
       vitefu: 1.0.5(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2))
-      which-pm: 3.0.0
+      which-pm: 3.0.1
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.0
@@ -4809,11 +4814,11 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preferred-pm@4.1.0:
+  preferred-pm@4.1.1:
     dependencies:
       find-up-simple: 1.0.0
       find-yarn-workspace-root2: 1.2.16
-      which-pm: 3.0.0
+      which-pm: 3.0.1
 
   prelude-ls@1.2.1: {}
 
@@ -5020,6 +5025,8 @@ snapshots:
   semver@7.6.3: {}
 
   semver@7.7.0: {}
+
+  semver@7.7.1: {}
 
   sharp@0.33.5:
     dependencies:
@@ -5383,7 +5390,7 @@ snapshots:
 
   which-pm-runs@1.1.0: {}
 
-  which-pm@3.0.0:
+  which-pm@3.0.1:
     dependencies:
       load-yaml-file: 0.2.0
 
