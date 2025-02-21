@@ -13,7 +13,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 4.0.8
-        version: 4.0.8(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(typescript@5.7.3))
+        version: 4.0.8(astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(typescript@5.7.3))
       '@astrojs/prefetch':
         specifier: 0.4.1
         version: 0.4.1
@@ -25,10 +25,10 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: 5.1.5
-        version: 5.1.5(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(typescript@5.7.3))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(typescript@5.7.3))(tailwindcss@3.4.17)
       astro:
         specifier: 5.3.0
-        version: 5.3.0(@types/node@22.13.4)(jiti@2.4.2)(typescript@5.7.3)
+        version: 5.3.0(@types/node@22.13.5)(jiti@2.4.2)(typescript@5.7.3)
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
@@ -61,8 +61,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0
       '@types/node':
-        specifier: 22.13.4
-        version: 22.13.4
+        specifier: 22.13.5
+        version: 22.13.5
       eslint:
         specifier: 9.20.1
         version: 9.20.1(jiti@2.4.2)
@@ -644,8 +644,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@22.13.4':
-    resolution: {integrity: sha512-ywP2X0DYtX3y08eFVx5fNIw7/uIv8hYUKgXoK8oayJlLnKcRfEYCxWMVE1XagUdVtCJlZT1AU4LXEABW+L1Peg==}
+  '@types/node@22.13.5':
+    resolution: {integrity: sha512-+lTU0PxZXn0Dr1NBtC7Y8cR21AJr87dLLU953CWA6pMxxv/UDc7jYAY90upcrie1nRcD6XNG5HOYEDtgW5TxAg==}
 
   '@types/sax@1.2.4':
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
@@ -2547,12 +2547,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.8(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(typescript@5.7.3))':
+  '@astrojs/mdx@4.0.8(astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(typescript@5.7.3))':
     dependencies:
       '@astrojs/markdown-remark': 6.1.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.3.0(@types/node@22.13.4)(jiti@2.4.2)(typescript@5.7.3)
+      astro: 5.3.0(@types/node@22.13.5)(jiti@2.4.2)(typescript@5.7.3)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.4
@@ -2585,9 +2585,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.5(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(typescript@5.7.3))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(typescript@5.7.3))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.3.0(@types/node@22.13.4)(jiti@2.4.2)(typescript@5.7.3)
+      astro: 5.3.0(@types/node@22.13.5)(jiti@2.4.2)(typescript@5.7.3)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)
@@ -3048,13 +3048,13 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@22.13.4':
+  '@types/node@22.13.5':
     dependencies:
       undici-types: 6.20.0
 
   '@types/sax@1.2.4':
     dependencies:
-      '@types/node': 22.13.4
+      '@types/node': 22.13.5
 
   '@types/unist@2.0.11': {}
 
@@ -3237,7 +3237,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(typescript@5.7.3):
+  astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(typescript@5.7.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.5.1
@@ -3289,8 +3289,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
       vfile: 6.0.3
-      vite: 6.0.11(@types/node@22.13.4)(jiti@2.4.2)
-      vitefu: 1.0.5(vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2))
+      vite: 6.0.11(@types/node@22.13.5)(jiti@2.4.2)
+      vitefu: 1.0.5(vite@6.0.11(@types/node@22.13.5)(jiti@2.4.2))
       which-pm: 3.0.1
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -5360,19 +5360,19 @@ snapshots:
       '@types/unist': 3.0.0
       vfile-message: 4.0.2
 
-  vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2):
+  vite@6.0.11(@types/node@22.13.5)(jiti@2.4.2):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
       rollup: '@rollup/wasm-node@4.34.8'
     optionalDependencies:
-      '@types/node': 22.13.4
+      '@types/node': 22.13.5
       fsevents: 2.3.3
       jiti: 2.4.2
 
-  vitefu@1.0.5(vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2)):
+  vitefu@1.0.5(vite@6.0.11(@types/node@22.13.5)(jiti@2.4.2)):
     optionalDependencies:
-      vite: 6.0.11(@types/node@22.13.4)(jiti@2.4.2)
+      vite: 6.0.11(@types/node@22.13.5)(jiti@2.4.2)
 
   web-namespaces@2.0.1: {}
 
