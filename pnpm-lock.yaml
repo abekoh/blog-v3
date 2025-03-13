@@ -13,7 +13,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 4.2.0
-        version: 4.2.0(astro@5.5.1(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2))
+        version: 4.2.0(astro@5.5.2(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2))
       '@astrojs/prefetch':
         specifier: 0.4.1
         version: 0.4.1
@@ -25,10 +25,10 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: 5.1.5
-        version: 5.1.5(astro@5.5.1(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.5.2(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2))(tailwindcss@3.4.17)
       astro:
-        specifier: 5.5.1
-        version: 5.5.1(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2)
+        specifier: 5.5.2
+        version: 5.5.2(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2)
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
@@ -97,9 +97,6 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
-
-  '@astrojs/compiler@2.10.4':
-    resolution: {integrity: sha512-86B3QGagP99MvSNwuJGiYSBHnh8nLvm2Q1IFI15wIUJJsPeQTO3eb2uwBmrqRsXykeR/mBzH8XCgz5AAt1BJrQ==}
 
   '@astrojs/compiler@2.11.0':
     resolution: {integrity: sha512-zZOO7i+JhojO8qmlyR/URui6LyfHJY6m+L9nwyX5GiKD78YoRaZ5tzz6X0fkl+5bD3uwlDHayf6Oe8Fu36RKNg==}
@@ -785,8 +782,8 @@ packages:
     resolution: {integrity: sha512-8hJaCuqxObShWl2wEsnASqh/DbQ2O+S66m0Q3ctJlzBPEQ4pfGwwama3FCjZO3GDLQsjvn1T0v93Vxyu/+5fGw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.5.1:
-    resolution: {integrity: sha512-1bA4e7lbGKO0eXcuXy6GV8wjsypdrOO6EPLP3l1rNddMdkmj67VlMjWUp/3bti+kOe46ocXxJDh7Ux2L77YWjQ==}
+  astro@5.5.2:
+    resolution: {integrity: sha512-SOTJxB8mqxe/KEYEJiLIot0YULiCffyfTEclwmdeaASitDJ7eLM/KYrJ9sx3U5hq9GVI17Z4Y0P/1T2aQ0ZN3A==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2457,8 +2454,6 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@astrojs/compiler@2.10.4': {}
-
   '@astrojs/compiler@2.11.0': {}
 
   '@astrojs/compiler@2.9.1': {}
@@ -2491,12 +2486,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.2.0(astro@5.5.1(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2))':
+  '@astrojs/mdx@4.2.0(astro@5.5.2(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.5.1(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2)
+      astro: 5.5.2(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2529,9 +2524,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.5(astro@5.5.1(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.5.2(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.5.1(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2)
+      astro: 5.5.2(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)
@@ -3131,11 +3126,11 @@ snapshots:
 
   astro-eslint-parser@1.0.2(typescript@5.8.2):
     dependencies:
-      '@astrojs/compiler': 2.10.4
+      '@astrojs/compiler': 2.11.0
       '@typescript-eslint/scope-manager': 7.16.0
       '@typescript-eslint/types': 7.16.0
       '@typescript-eslint/typescript-estree': 7.16.0(typescript@5.8.2)
-      astrojs-compiler-sync: 1.0.0(@astrojs/compiler@2.10.4)
+      astrojs-compiler-sync: 1.0.0(@astrojs/compiler@2.11.0)
       debug: 4.4.0
       entities: 4.5.0
       eslint-scope: 8.2.0
@@ -3148,7 +3143,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@5.5.1(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2):
+  astro@5.5.2(@types/node@22.13.10)(jiti@2.4.2)(typescript@5.8.2):
     dependencies:
       '@astrojs/compiler': 2.11.0
       '@astrojs/internal-helpers': 0.6.1
@@ -3244,9 +3239,9 @@ snapshots:
       - uploadthing
       - yaml
 
-  astrojs-compiler-sync@1.0.0(@astrojs/compiler@2.10.4):
+  astrojs-compiler-sync@1.0.0(@astrojs/compiler@2.11.0):
     dependencies:
-      '@astrojs/compiler': 2.10.4
+      '@astrojs/compiler': 2.11.0
       synckit: 0.9.0
 
   autoprefixer@10.4.20(postcss@8.5.1):
