@@ -76,8 +76,8 @@ importers:
         specifier: 16.2.0
         version: 16.2.0
       prettier:
-        specifier: 3.6.1
-        version: 3.6.1
+        specifier: 3.6.2
+        version: 3.6.2
       prettier-plugin-astro:
         specifier: 0.14.1
         version: 0.14.1
@@ -685,8 +685,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/wasm-node@4.44.0':
-    resolution: {integrity: sha512-9PvS/NpzOdVXhPY/qTxcgYyvE0OfiHZFYplMtba0E+vrqm90qq0983VOJEg7exz7By0cBfl0IYaYJfohs9pVQg==}
+  '@rollup/wasm-node@4.44.1':
+    resolution: {integrity: sha512-V4DrsdyFm+QTHL7LAfx2CwVZRayPUnNuAWIV/3nrAD6hxlVzQja7kHL8k5bUoZ3pcveQ0uUgWGdN4087gEdtLw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -2075,8 +2075,8 @@ packages:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier@3.6.1:
-    resolution: {integrity: sha512-5xGWRa90Sp2+x1dQtNpIpeOQpTDBs9cZDmA/qs2vDNN2i18PdapqY7CmBeyLlMuGqXJRIOPaCaVZTLNQRWUH/A==}
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3193,7 +3193,7 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 4.0.2
 
-  '@rollup/wasm-node@4.44.0':
+  '@rollup/wasm-node@4.44.1':
     dependencies:
       '@types/estree': 1.0.8
     optionalDependencies:
@@ -5093,10 +5093,10 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.9.1
-      prettier: 3.6.1
+      prettier: 3.6.2
       sass-formatter: 0.7.7
 
-  prettier@3.6.1: {}
+  prettier@3.6.2: {}
 
   prismjs@1.30.0: {}
 
@@ -5685,7 +5685,7 @@ snapshots:
       fdir: 6.4.4(picomatch@4.0.2)
       picomatch: 4.0.2
       postcss: 8.5.3
-      rollup: '@rollup/wasm-node@4.44.0'
+      rollup: '@rollup/wasm-node@4.44.1'
       tinyglobby: 0.2.13
     optionalDependencies:
       '@types/node': 22.15.33
