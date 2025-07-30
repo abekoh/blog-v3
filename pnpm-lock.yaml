@@ -13,7 +13,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 4.3.1
-        version: 4.3.1(astro@5.12.5(@types/node@22.16.5)(jiti@2.4.2)(typescript@5.8.3))
+        version: 4.3.1(astro@5.12.5(@types/node@22.17.0)(jiti@2.4.2)(typescript@5.8.3))
       '@astrojs/prefetch':
         specifier: 0.4.1
         version: 0.4.1
@@ -25,10 +25,10 @@ importers:
         version: 3.4.2
       '@astrojs/tailwind':
         specifier: 5.1.5
-        version: 5.1.5(astro@5.12.5(@types/node@22.16.5)(jiti@2.4.2)(typescript@5.8.3))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.12.5(@types/node@22.17.0)(jiti@2.4.2)(typescript@5.8.3))(tailwindcss@3.4.17)
       astro:
         specifier: 5.12.5
-        version: 5.12.5(@types/node@22.16.5)(jiti@2.4.2)(typescript@5.8.3)
+        version: 5.12.5(@types/node@22.17.0)(jiti@2.4.2)(typescript@5.8.3)
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
@@ -61,8 +61,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0
       '@types/node':
-        specifier: 22.16.5
-        version: 22.16.5
+        specifier: 22.17.0
+        version: 22.17.0
       eslint:
         specifier: 9.32.0
         version: 9.32.0(jiti@2.4.2)
@@ -691,8 +691,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/wasm-node@4.46.1':
-    resolution: {integrity: sha512-3vOhhqH3c3YJoIvyHsAOqdnH8KOl+LhvVjyfzd/BI1RvhnfA3RMRCporxlQCriUtEoA1JzCok1UWDrMqj5nejQ==}
+  '@rollup/wasm-node@4.46.2':
+    resolution: {integrity: sha512-lZRiZl+B1R3VhqZgORtuUpc2YYbgIv+X6g3LgQHS5sjlf1ENiK1HZ6N5e8pEZ04nAWiwYM0JX7rP0eyxflkJRg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -760,8 +760,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@22.16.5':
-    resolution: {integrity: sha512-bJFoMATwIGaxxx8VJPeM8TonI8t579oRvgAuT8zFugJsJZgzqv0Fu8Mhp68iecjzG7cnN3mO2dJQ5uUM2EFrgQ==}
+  '@types/node@22.17.0':
+    resolution: {integrity: sha512-bbAKTCqX5aNVryi7qXVMi+OkB3w/OyblodicMbvE38blyAz7GxXf6XYhklokijuPwwVg9sDLKRxt0ZHXQwZVfQ==}
 
   '@types/sax@1.2.4':
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
@@ -2710,12 +2710,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.1(astro@5.12.5(@types/node@22.16.5)(jiti@2.4.2)(typescript@5.8.3))':
+  '@astrojs/mdx@4.3.1(astro@5.12.5(@types/node@22.17.0)(jiti@2.4.2)(typescript@5.8.3))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.3
       '@mdx-js/mdx': 3.1.0(acorn@8.15.0)
       acorn: 8.15.0
-      astro: 5.12.5(@types/node@22.16.5)(jiti@2.4.2)(typescript@5.8.3)
+      astro: 5.12.5(@types/node@22.17.0)(jiti@2.4.2)(typescript@5.8.3)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2748,9 +2748,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.76
 
-  '@astrojs/tailwind@5.1.5(astro@5.12.5(@types/node@22.16.5)(jiti@2.4.2)(typescript@5.8.3))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.12.5(@types/node@22.17.0)(jiti@2.4.2)(typescript@5.8.3))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.12.5(@types/node@22.16.5)(jiti@2.4.2)(typescript@5.8.3)
+      astro: 5.12.5(@types/node@22.17.0)(jiti@2.4.2)(typescript@5.8.3)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)
@@ -3194,7 +3194,7 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 4.0.2
 
-  '@rollup/wasm-node@4.46.1':
+  '@rollup/wasm-node@4.46.2':
     dependencies:
       '@types/estree': 1.0.8
     optionalDependencies:
@@ -3253,7 +3253,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 22.16.5
+      '@types/node': 22.17.0
 
   '@types/hast@3.0.4':
     dependencies:
@@ -3279,13 +3279,13 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@22.16.5':
+  '@types/node@22.17.0':
     dependencies:
       undici-types: 6.21.0
 
   '@types/sax@1.2.4':
     dependencies:
-      '@types/node': 22.16.5
+      '@types/node': 22.17.0
 
   '@types/unist@2.0.11': {}
 
@@ -3486,7 +3486,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@5.12.5(@types/node@22.16.5)(jiti@2.4.2)(typescript@5.8.3):
+  astro@5.12.5(@types/node@22.17.0)(jiti@2.4.2)(typescript@5.8.3):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -3542,8 +3542,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.3.4(@types/node@22.16.5)(jiti@2.4.2)
-      vitefu: 1.0.6(vite@6.3.4(@types/node@22.16.5)(jiti@2.4.2))
+      vite: 6.3.4(@types/node@22.17.0)(jiti@2.4.2)
+      vitefu: 1.0.6(vite@6.3.4(@types/node@22.17.0)(jiti@2.4.2))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
@@ -5669,22 +5669,22 @@ snapshots:
       '@types/unist': 3.0.0
       vfile-message: 4.0.2
 
-  vite@6.3.4(@types/node@22.16.5)(jiti@2.4.2):
+  vite@6.3.4(@types/node@22.17.0)(jiti@2.4.2):
     dependencies:
       esbuild: 0.25.0
       fdir: 6.4.4(picomatch@4.0.2)
       picomatch: 4.0.2
       postcss: 8.5.3
-      rollup: '@rollup/wasm-node@4.46.1'
+      rollup: '@rollup/wasm-node@4.46.2'
       tinyglobby: 0.2.13
     optionalDependencies:
-      '@types/node': 22.16.5
+      '@types/node': 22.17.0
       fsevents: 2.3.3
       jiti: 2.4.2
 
-  vitefu@1.0.6(vite@6.3.4(@types/node@22.16.5)(jiti@2.4.2)):
+  vitefu@1.0.6(vite@6.3.4(@types/node@22.17.0)(jiti@2.4.2)):
     optionalDependencies:
-      vite: 6.3.4(@types/node@22.16.5)(jiti@2.4.2)
+      vite: 6.3.4(@types/node@22.17.0)(jiti@2.4.2)
 
   web-namespaces@2.0.1: {}
 
