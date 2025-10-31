@@ -21,7 +21,7 @@
 		"@astrojs/sitemap": "3.6.0",
 		"@astrojs/tailwind": "5.1.5",
 		"astro": "5.15.3",
-		"dayjs": "1.11.18",
+		"dayjs": "1.11.19",
 		"github-slugger": "2.0.0",
 		"marked": "16.4.1",
 		"pagefind": "1.4.0",
