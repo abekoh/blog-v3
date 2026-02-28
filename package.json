@@ -19,7 +19,7 @@
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/rss": "4.0.15",
 		"@astrojs/sitemap": "3.7.0",
-		"@astrojs/tailwind": "5.1.5",
+		"@astrojs/tailwind": "6.0.2",
 		"astro": "5.18.0",
 		"dayjs": "1.11.19",
 		"github-slugger": "2.0.0",
