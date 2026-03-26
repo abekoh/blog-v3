@@ -17,8 +17,8 @@
 	"dependencies": {
 		"@astrojs/mdx": "4.3.14",
 		"@astrojs/prefetch": "0.4.1",
-		"@astrojs/rss": "4.0.17",
-		"@astrojs/sitemap": "3.7.1",
+		"@astrojs/rss": "4.0.18",
+		"@astrojs/sitemap": "3.7.2",
 		"@astrojs/tailwind": "5.1.5",
 		"astro": "5.18.1",
 		"dayjs": "1.11.20",
