@@ -73,8 +73,8 @@ importers:
         specifier: 1.7.0
         version: 1.7.0(eslint@9.39.4(jiti@2.4.2))
       globals:
-        specifier: 16.5.0
-        version: 16.5.0
+        specifier: 17.5.0
+        version: 17.5.0
       prettier:
         specifier: 3.8.2
         version: 3.8.2
@@ -778,8 +778,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/wasm-node@4.60.1':
-    resolution: {integrity: sha512-FAfGj5Ferzyna11iUwGdkYus/Y9d/H75PEpsseP5DZOsEsyPvP/Q7mJiSXhUYSEmyfHPaZyC8EsJCjqzDbtcfg==}
+  '@rollup/wasm-node@4.60.2':
+    resolution: {integrity: sha512-FOfZOg752WSyKNefpSM3WrhggSTSuKuwcSfF7tdWC9PBYYg7BLwBR267uShFAI1ZyA0gNkdqK16LL9mNOPsQ1Q==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -1497,6 +1497,10 @@ packages:
 
   globals@16.5.0:
     resolution: {integrity: sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==}
+    engines: {node: '>=18'}
+
+  globals@17.5.0:
+    resolution: {integrity: sha512-qoV+HK2yFl/366t2/Cb3+xxPUo5BuMynomoDmiaZBIdbs+0pYbjfZU+twLhGKp4uCZ/+NbtpVepH5bGCxRyy2g==}
     engines: {node: '>=18'}
 
   h3@1.15.5:
@@ -3231,7 +3235,7 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 4.0.3
 
-  '@rollup/wasm-node@4.60.1':
+  '@rollup/wasm-node@4.60.2':
     dependencies:
       '@types/estree': 1.0.8
     optionalDependencies:
@@ -4137,6 +4141,8 @@ snapshots:
   globals@14.0.0: {}
 
   globals@16.5.0: {}
+
+  globals@17.5.0: {}
 
   h3@1.15.5:
     dependencies:
@@ -5639,7 +5645,7 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
       postcss: 8.5.3
-      rollup: '@rollup/wasm-node@4.60.1'
+      rollup: '@rollup/wasm-node@4.60.2'
       tinyglobby: 0.2.15
     optionalDependencies:
       '@types/node': 24.12.2
