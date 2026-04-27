@@ -20,7 +20,7 @@
 		"@astrojs/rss": "4.0.18",
 		"@astrojs/sitemap": "3.7.2",
 		"@astrojs/tailwind": "5.1.5",
-		"astro": "5.18.1",
+		"astro": "6.1.6",
 		"dayjs": "1.11.20",
 		"github-slugger": "2.0.0",
 		"marked": "17.0.6",
