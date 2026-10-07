@@ -33,7 +33,7 @@
 		"@eslint/js": "9.39.5",
 		"@playwright/test": "1.49.1",
 		"@types/marked": "6.0.0",
-		"@types/node": "24.13.3",
+		"@types/node": "24.19.0",
 		"eslint": "9.39.5",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-astro": "1.7.0",
@@ -45,7 +45,7 @@
 	},
 	"packageManager": "pnpm@10.34.6",
 	"engines": {
-		"node": "24.20.0"
+		"node": "24.21.0"
 	},
 	"pnpm": {
 		"overrides": {
