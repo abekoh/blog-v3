@@ -10,10 +10,10 @@ jobs:
   lint-and-build:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v6.1.0
+      - uses: pnpm/action-setup@v2.4.1
       - name: Use Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.5.0
         with:
           node-version-file: '.tool-versions'
           cache: 'pnpm'
@@ -27,14 +27,14 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v6.1.0
+      - uses: pnpm/action-setup@v2.4.1
       - name: Use Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.5.0
         with:
           node-version-file: '.tool-versions'
           cache: 'pnpm'
-      - uses: actions/cache@v5
+      - uses: actions/cache@v5.1.0
         id: playwright-cache
         with:
           path: ~/.cache/ms-playwright
@@ -46,7 +46,7 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
       - name: Run Playwright tests
         run: pnpm test:e2e
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v6.0.0
         if: always()
         with:
           name: playwright-report
