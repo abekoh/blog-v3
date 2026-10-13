@@ -36,8 +36,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       marked:
-        specifier: 17.0.6
-        version: 17.0.6
+        specifier: 18.1.0
+        version: 18.1.0
       pagefind:
         specifier: 1.5.2
         version: 1.5.2
@@ -946,8 +946,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/wasm-node@4.64.1':
-    resolution: {integrity: sha512-NX7sXK/FT9RBgFxkMKB3jFcc3LCcUL/44PMJ8BBE0t0ljgXih0tZrUPUdZEN/JnN1N7i5axbGQtt5iPwlFJDQw==}
+  '@rollup/wasm-node@4.64.6':
+    resolution: {integrity: sha512-ufelhiGxNl8RuflC/Tie5ZVcI3MJUtd27nJ0jC2I4LroyZb7n4iwmajEmXXeTLxJtDiiWUwU8v2UjkACBHqQvw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -1888,8 +1888,8 @@ packages:
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
-  marked@17.0.6:
-    resolution: {integrity: sha512-gB0gkNafnonOw0obSTEGZTT86IuhILt2Wfx0mWH/1Au83kybTayroZ/V6nS25mN7u8ASy+5fMhgB3XPNrOZdmA==}
+  marked@18.1.0:
+    resolution: {integrity: sha512-PamYXWWWg2nboG3oX5Ffzpy3EFZROqZJK9hSlMmUnekp7TxPs5DcT95vwd46m73/exfKCRVMtgXoPMI4FEJL6w==}
     engines: {node: '>= 20'}
     hasBin: true
 
@@ -3531,7 +3531,7 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 4.0.3
 
-  '@rollup/wasm-node@4.64.1':
+  '@rollup/wasm-node@4.64.6':
     dependencies:
       '@types/estree': 1.0.9
     optionalDependencies:
@@ -3595,7 +3595,7 @@ snapshots:
 
   '@types/marked@6.0.0':
     dependencies:
-      marked: 17.0.6
+      marked: 18.1.0
 
   '@types/mdast@4.0.0':
     dependencies:
@@ -4721,7 +4721,7 @@ snapshots:
 
   markdown-table@3.0.3: {}
 
-  marked@17.0.6: {}
+  marked@18.1.0: {}
 
   mdast-util-definitions@6.0.0:
     dependencies:
@@ -5980,7 +5980,7 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
       postcss: 8.5.3
-      rollup: '@rollup/wasm-node@4.64.1'
+      rollup: '@rollup/wasm-node@4.64.6'
       tinyglobby: 0.2.15
     optionalDependencies:
       '@types/node': 24.19.0
