@@ -2,8 +2,8 @@
 slug: 'warmup-java-with-spring-and-k8s'
 title: 'Spring Boot+Kubernetesでサービスイン前にウォームアップ処理を行う'
 summary: 'HotSpot JVMを用いた一般的なJavaは、起動直後はインタプリタのように動作するため、パフォーマンスが出ません。
-サービスインからすぐにパフォーマンスを出すためには、ウォームアップ(暖機運転)が必須です。
-本記事ではSpring Boot+Kubernetesという環境という前提で、その対応方法を紹介します。'
+  サービスインからすぐにパフォーマンスを出すためには、ウォームアップ(暖機運転)が必須です。
+  本記事ではSpring Boot+Kubernetesという環境という前提で、その対応方法を紹介します。'
 categories: ['tech']
 tags: ['java','spring','kubernetes']
 publishedAt: 2021-05-04T02:00:00.150Z

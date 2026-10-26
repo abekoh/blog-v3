@@ -20,7 +20,7 @@ pnpm test:e2e:snapshot
 
 ## Architecture
 
-Astro 5.x による静的ブログサイト。テックブログ (https://blog.abekoh.dev/)。
+Astro 7.x による静的ブログサイト。テックブログ (https://blog.abekoh.dev/)。
 
 ### コンテンツ管理
 
@@ -28,7 +28,7 @@ Astro 5.x による静的ブログサイト。テックブログ (https://blog.a
 - `posts/` — Markdown/MDX のブログ記事。フロントマター: `title`, `summary`, `categories`, `tags`, `publishedAt`, `modifiedAt`, `draft`
 - `tags/` — タグのデータ (JSON)。`id` と `name` を持つ
 
-スキーマ定義は `src/content/config.ts`、ソート・タグ取得ユーティリティは `src/content/utils.ts`。
+スキーマ定義は `src/content.config.ts` (glob loader)、ソート・タグ取得ユーティリティは `src/content/utils.ts`。
 
 ### ページルーティング
 
@@ -45,7 +45,7 @@ Astro 5.x による静的ブログサイト。テックブログ (https://blog.a
 
 ### スタイリング
 
-Tailwind CSS (`tailwind.config.cjs`)。`src/global.css` でグローバルスタイルを管理。フォントは Google Fonts の M PLUS 1p。
+Tailwind CSS v4 (`@tailwindcss/vite`)。`src/global.css` が Tailwind のエントリーで、テーマ設定 (`@theme`) とグローバルスタイルを管理する。コンポーネントの `<style>` で `@apply` を使う場合は `@reference "../global.css";` が必要。フォントは Google Fonts の M PLUS 1p。
 
 ### 定数・ユーティリティ
 

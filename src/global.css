@@ -1,4 +1,19 @@
-p {
-    @apply font-bold text-lg pb-2 pt-4;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "M PLUS 1p", sans-serif;
 }
 
+/*
+  Tailwind CSS v4 ではデフォルトの border 色が currentColor に変わったため、
+  v3 と同じ gray-200 に戻す。
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
