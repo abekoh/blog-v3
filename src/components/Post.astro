@@ -52,6 +52,8 @@ const { title, publishedAt, modifiedAt, tags, tocHTML, draft } = Astro.props;
     </MarkdownContent>
   </div>
   <style is:global>
+    @reference "../global.css";
+
     .toc-content ul {
       @apply pl-6 list-disc list-outside leading-relaxed text-gray-700 py-1;
     }

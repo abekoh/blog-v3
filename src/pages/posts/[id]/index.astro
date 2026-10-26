@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { BASE_URL, BLOG_TITLE } from "../../../constraint";
 import Post from "@/components/Post.astro";
@@ -60,7 +60,7 @@ export async function getStaticPaths() {
   const allPosts = await getCollection("posts");
   return allPosts.map((post) => {
     return {
-      params: { id: post.slug },
+      params: { id: post.id },
       props: { post },
     };
   });
@@ -70,11 +70,13 @@ interface Props {
   post: CollectionEntry<"posts">;
 }
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const title = `${post.data.title} - ${BLOG_TITLE}`;
 
-const tocHTML = createTocFromHTML(marked.parse(post.body));
+const tocHTML = createTocFromHTML(
+  marked.parse(post.body ?? "", { async: false }),
+);
 ---
 
 <BaseLayout
