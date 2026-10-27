@@ -9,8 +9,8 @@ dependencies:
     specifier: 13.0.6
     version: 13.0.6
   he:
-    specifier: 1.2.0
-    version: 1.2.0
+    specifier: 2.0.0
+    version: 2.0.0
 
 packages:
 
@@ -42,8 +42,9 @@ packages:
       path-scurry: 2.0.2
     dev: false
 
-  /he@1.2.0:
-    resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
+  /he@2.0.0:
+    resolution: {integrity: sha512-0jE+JPv08nhXWmI1dULybzqNt34RbkH6Ul6V4cmDONpjYx1SfyObKF38FJLaJ1K7WWD93LWL9lewzk4E1Ria4A==}
+    engines: {node: '>=22'}
     hasBin: true
     dev: false
 
