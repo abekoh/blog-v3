@@ -25,28 +25,24 @@ const { title, publishedAt, modifiedAt, tags, tocHTML, draft } = Astro.props;
     <DateInfo publishedAt={publishedAt} modifiedAt={modifiedAt} />
     <h1 class="text-lg font-bold text-gray-900 leading-relaxed">{title}</h1>
     <div class="flex flex-wrap">
-      {
-        tags.map((tagId) => (
-          <Tag name={tagMap.get(tagId).name ?? ""} href={`/tags/${tagId}`} />
-        ))
-      }
+      {tags.map((tagId) => (
+        <Tag name={tagMap.get(tagId).name ?? ""} href={`/tags/${tagId}`} />
+      ))}
     </div>
-    {
-      !!tocHTML && (
-        <div class="toc-content py-2">
-          <button
-            id="toc-button"
-            class="text-sm font-semibold text-gray-900 leading-relaxed"
-            onclick="
+    {!!tocHTML && (
+      <div class="toc-content py-2">
+        <button
+          id="toc-button"
+          class="text-sm font-semibold text-gray-900 leading-relaxed"
+          onclick="
             toggleToc()
             "
-          >
-            目次 ∨
-          </button>
-          <div id="toc" class="border hidden" set:html={tocHTML} />
-        </div>
-      )
-    }
+        >
+          目次 ∨
+        </button>
+        <div id="toc" class="border hidden" set:html={tocHTML} />
+      </div>
+    )}
     <MarkdownContent>
       <slot />
     </MarkdownContent>

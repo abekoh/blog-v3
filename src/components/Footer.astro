@@ -18,17 +18,15 @@ const items = [
 <footer>
   <div class="flex flex-col items-center justify-center py-2">
     <div class="flex items-center justify-center pb-1">
-      {
-        items.map((item, index) => (
-          <a
-            key={index}
-            href={item.href}
-            class="px-1.5 text-base text-gray-700 text-sm hover:underline"
-          >
-            {item.name}
-          </a>
-        ))
-      }
+      {items.map((item, index) => (
+        <a
+          key={index}
+          href={item.href}
+          class="px-1.5 text-base text-gray-700 text-sm hover:underline"
+        >
+          {item.name}
+        </a>
+      ))}
     </div>
     <span class="text-base text-gray-700 text-sm">©2019 abekoh</span>
   </div>

@@ -13,11 +13,9 @@ const { publishedAt, modifiedAt } = Astro.props;
   <time class="text-sm text-base text-gray-500" datetime={publishedAt}>
     {formatDate(publishedAt)}
   </time>
-  {
-    modifiedAt && (
-      <time class="text-sm text-base text-gray-500" datetime={modifiedAt}>
-        ({formatDate(modifiedAt)})
-      </time>
-    )
-  }
+  {modifiedAt && (
+    <time class="text-sm text-base text-gray-500" datetime={modifiedAt}>
+      ({formatDate(modifiedAt)})
+    </time>
+  )}
 </div>

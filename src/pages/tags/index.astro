@@ -14,11 +14,9 @@ const filteredTags = tags
 <BaseLayout title={`Tags - ${BLOG_TITLE}`}>
   <nav>
     <div class="py-6">
-      {
-        filteredTags.map((tag) => (
-          <Tag name={tag.data.name} href={`/tags/${tag.data.id}`} />
-        ))
-      }
+      {filteredTags.map((tag) => (
+        <Tag name={tag.data.name} href={`/tags/${tag.data.id}`} />
+      ))}
     </div>
   </nav>
 </BaseLayout>
