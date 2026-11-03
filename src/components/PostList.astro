@@ -16,44 +16,42 @@ const { posts, focusedTagId } = Astro.props;
 
 <section>
   <ul class="divide-y divide-gray-200">
-    {
-      posts.map((post) => (
-        <li class="py-6">
-          <article>
-            <div class="space-y-1">
-              <DateInfo
-                publishedAt={post.data.publishedAt}
-                modifiedAt={post.data.modifiedAt}
-              />
-              <div>
-                <h2 class="text-lg text-gray-900 font-bold leading-relaxed hover:underline">
-                  <a href={`/posts/${post.id}`} rel="prefetch">
-                    {post.data.title}
-                  </a>
-                </h2>
-              </div>
-              {post.data.summary && (
-                <summary>
-                  <div class="text-base text-gray-700 leading-relaxed">
-                    <a href={`/posts/${post.id}`}>
-                      <p>{post.data.summary}</p>
-                    </a>
-                  </div>
-                </summary>
-              )}
-              <div class="flex flex-wrap">
-                {post.data.tags.map((tagId) => (
-                  <Tag
-                    name={tagMap.get(tagId).name ?? ""}
-                    href={`/tags/${tagId}`}
-                    focused={focusedTagId === tagId}
-                  />
-                ))}
-              </div>
+    {posts.map((post) => (
+      <li class="py-6">
+        <article>
+          <div class="space-y-1">
+            <DateInfo
+              publishedAt={post.data.publishedAt}
+              modifiedAt={post.data.modifiedAt}
+            />
+            <div>
+              <h2 class="text-lg text-gray-900 font-bold leading-relaxed hover:underline">
+                <a href={`/posts/${post.id}`} rel="prefetch">
+                  {post.data.title}
+                </a>
+              </h2>
             </div>
-          </article>
-        </li>
-      ))
-    }
+            {post.data.summary && (
+              <summary>
+                <div class="text-base text-gray-700 leading-relaxed">
+                  <a href={`/posts/${post.id}`}>
+                    <p>{post.data.summary}</p>
+                  </a>
+                </div>
+              </summary>
+            )}
+            <div class="flex flex-wrap">
+              {post.data.tags.map((tagId) => (
+                <Tag
+                  name={tagMap.get(tagId).name ?? ""}
+                  href={`/tags/${tagId}`}
+                  focused={focusedTagId === tagId}
+                />
+              ))}
+            </div>
+          </div>
+        </article>
+      </li>
+    ))}
   </ul>
 </section>

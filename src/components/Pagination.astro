@@ -25,54 +25,48 @@ const paginations = Array.from({ length: page.lastPage }, (_, i) => i + 1);
   <div class="flex justify-center py-2">
     <ul class="inline-flex items-center text-base text-gray-900">
       <li>
-        {
-          page.url.prev ? (
-            <a
-              href={page.url.prev}
-              class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
-            >
-              &lt;
-            </a>
-          ) : (
-            <span href={page.url.prev} class="px-3 py-2 leading-tight">
-              &lt;
-            </span>
-          )
-        }
+        {page.url.prev ? (
+          <a
+            href={page.url.prev}
+            class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
+          >
+            &lt;
+          </a>
+        ) : (
+          <span href={page.url.prev} class="px-3 py-2 leading-tight">
+            &lt;
+          </span>
+        )}
       </li>
-      {
-        paginations.map((i) =>
-          i === page.currentPage ? (
-            <li>
-              <a class="px-3 py-2 leading-tight bg-gray-100 rounded">{i}</a>
-            </li>
-          ) : (
-            <li>
-              <a
-                href={`${urlPrefix}/${i}`}
-                class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
-              >
-                {i}
-              </a>
-            </li>
-          ),
-        )
-      }
-      <li>
-        {
-          page.url.next ? (
+      {paginations.map((i) =>
+        i === page.currentPage ? (
+          <li>
+            <a class="px-3 py-2 leading-tight bg-gray-100 rounded">{i}</a>
+          </li>
+        ) : (
+          <li>
             <a
-              href={page.url.next}
+              href={`${urlPrefix}/${i}`}
               class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
             >
-              &gt;
+              {i}
             </a>
-          ) : (
-            <span href={page.url.next} class="px-3 py-2 leading-tight">
-              &gt;
-            </span>
-          )
-        }
+          </li>
+        ),
+      )}
+      <li>
+        {page.url.next ? (
+          <a
+            href={page.url.next}
+            class="px-3 py-2 leading-tight rounded hover:bg-gray-200"
+          >
+            &gt;
+          </a>
+        ) : (
+          <span href={page.url.next} class="px-3 py-2 leading-tight">
+            &gt;
+          </span>
+        )}
       </li>
     </ul>
   </div>
