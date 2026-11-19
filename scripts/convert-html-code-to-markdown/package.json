@@ -11,7 +11,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "glob": "14.0.4",
+    "glob": "14.0.5",
     "he": "2.0.0"
   }
 }
